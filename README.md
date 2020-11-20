@@ -25,15 +25,15 @@
 
 ## JavaScript Modern Interview Code Challenges by topic
 
-- [Primitives](https://github.com/sadanandpai/jsInterviewSnippets/blob/main/challenges/primitives.md)
+- [Primitives](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/primitives.md)
 
-- [Functions](https://github.com/sadanandpai/jsInterviewSnippets/blob/main/challenges/functions.md)
+- [Functions](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/functions.md)
 
-- [Objects](https://github.com/sadanandpai/jsInterviewSnippets/blob/main/challenges/objects.md)
+- [Objects](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/objects.md)
 
-- [Collections](https://github.com/sadanandpai/jsInterviewSnippets/blob/main/challenges/collections.md)
+- [Collections](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/collections.md)
 
-- [Asynchronousity](https://github.com/sadanandpai/jsInterviewSnippets/blob/main/challenges/async.md)
+- [Asynchronousity](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/async.md)
 
 ---
 
