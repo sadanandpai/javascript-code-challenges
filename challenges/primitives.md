@@ -21,7 +21,7 @@
 15. [Write a program to reverse a given integer number](#Q15)
 16. [Write a code to replace all the spaces of the string with underscores](#Q16)
 17. [Write a function which can convert the time input given in 12 hours format to 24 hours format](#Q17)
-18. [Write a function which accepts a string argument and returns the count of characters between the first and last character'X'](#Q18)
+18. [Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'](#Q18)
 19. [Write a function to truncate a string to a certain number of letters](#Q19)
 20. [Write a code to truncate a string to a certain number of words](#Q20)
 21. [Show the creation of Regular Expression in JavaScript](#Q21)
@@ -529,7 +529,7 @@ Conversion of string to lowerCase helps in case insensitive comparision
 <br />
 
 #### Q18
-### Write a function which accepts a string argument and returns the count of characters between the first and last character'X'
+### Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'
 ```js
 // Example
 getTheGapX('XeroX');                        // 4 
