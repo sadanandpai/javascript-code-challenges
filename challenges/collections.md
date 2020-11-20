@@ -266,13 +266,13 @@ Object.prototype.toString.call(arr) === '[object Array]'
 
 ```js
 function mergeArray(arr1, arr2 = arr1){
-    return [...arr, ...arr];
+    return [...arr1, ...arr2];
 }
 ```
 
 ```js
 function mergeArray(arr1, arr2 = arr1){
-    return arr.concat(...arr);
+    return arr1.concat(...arr2);
 }
 ```
 
