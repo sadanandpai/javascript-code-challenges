@@ -198,7 +198,7 @@ num1 > 0 || num2 < 0      // true
 const num1 = 10, num2 = 20;
 
 true && false;                // false
-false && false;               // true
+false && false;               // false
 true && num1;                 // 10
 num1 && num2;                 // 20
 "text" && (num1 + num2)       // 30
