@@ -500,7 +500,7 @@ convertTo24HrsFormat('10:10PM');       // 22:10
 ```
 
 - The check for 'AM' and 'PM' can be verified using `endsWith` String method
-- An extra would be needed if the hours have single digit
+- An extra 0 would be needed if the hours have single digit
 
 ```js
 function convertTo24HrsFormat(timeText) {
