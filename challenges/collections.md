@@ -835,7 +835,7 @@ Array.prototype.average = function (){
 if (!Array.prototype.filter) {
  Array.prototype.filter = function(callback) {
     
-    if(typeof callbak !== "function")
+    if(typeof callback !== "function")
         throw new Error("Argument passed has to be a function");
  
     let newArray = [];
