@@ -815,21 +815,21 @@ myTag`Note: ${person} is a member of following communities: ${membership}`;     
 ### Write a code to show the working of `try...catch...finally`
 
 - The `try` statement consists of a try-block, which contains one or more statements. At least one catch-block, or a finally-block, must be present
-- The exceptions and errors in from try block are caught in catch block
+- The exceptions and errors from try block are caught in catch block
 
 ```js
 try {
-    // statements
-    throw new Error("Unexpected error");
+	  callAPI(); // It will throw an Error
 } catch (error) {
-    // statements
+	  throw new Error(error); // ReferenceError: callAPI is not defined
 } finally {
-    // statements
+	  console.log("I will execute no matter what happened in try or catch");
 }
 ```
-
 ###### Notes
-`try` can be chained with `catch` block or `finally` block
+
+- `try` can be chained with `catch` block or `finally` block
+- `try..catch` only works synchronously and for runtime errors
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
