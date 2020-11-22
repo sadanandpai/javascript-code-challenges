@@ -826,7 +826,6 @@ try {
 	  console.log("I will execute no matter what happened in try or catch");
 }
 ```
-
 ###### Notes
 
 - `try` can be chained with `catch` block or `finally` block
