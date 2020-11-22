@@ -142,7 +142,7 @@ To remove the elements from the end of the array `pop` operation can be used but
 <br />
 
 #### Q4
-### Write a program toprepend a single or multiple values in to an array
+### Write a program to prepend a single or multiple values in to an array
 
 - Values to the array can be prepended using `unshift` method of array
 
