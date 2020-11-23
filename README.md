@@ -59,8 +59,12 @@
 - https://javascript.info/
 - https://tc39.es/ecma262/
 
-### Contributing
-If you want to contribute, improve and suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/contributing.md)
+### Contributors
+<a href="https://github.com/sadanandpai/javascript-code-challenges/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=sadanandpai/javascript-code-challenges" />
+</a>
+
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/contributing.md)
 
 ### Stargazers
 [![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/stargazers)
