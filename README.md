@@ -13,13 +13,9 @@
     <img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></p>
 </div>
 
-### This is a collection of JavaScript Modern Code Challenges suitable for 
-- Interviewees
-- Interviewers
-- Knowledge test
-- Practice
-
 <div align="center">
+    <h3>This is a collection of JavaScript Modern Code Challenges suitable for</h3>
+    <h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
     <img src="assets/code.png" alt="code" width="200"/>
 </div>
 
