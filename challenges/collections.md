@@ -7,7 +7,7 @@
 1. [Show the different ways of creating an array](#Q1)
 2. [Write a program to iterate over an array and print all the values of it](#Q2)
 3. [Write a program to append a single or multiple values in to an array](#Q3)
-4. [Write a program toprepend a single or multiple values in to an array](#Q4)
+4. [Write a program to prepend a single or multiple values in to an array](#Q4)
 5. [Remove an element from the array from a given index](#Q5)
 6. [Insert an element to the array at a given index..](#Q6)
 7. [Show the different ways of emptying an array which has values](#Q7)
