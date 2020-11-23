@@ -5,10 +5,13 @@
     <img src="assets/banner.jpg" alt="banner" />
 </div>
 
-[![](https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=flat-square)](#stars)
-[![](https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=flat-square)](#)
-[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-[![](https://img.shields.io/github/license/sadanandpai/javascript-code-challenges)]()
+<div align="center">
+    <p><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge">
+    <img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge">
+    <img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge">
+    <img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge">
+    <img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></p>
+</div>
 
 ### This is a collection of JavaScript Modern Code Challenges suitable for 
 - Interviewees
