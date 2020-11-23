@@ -24,7 +24,7 @@
 18. [Show the procedure of creating object using a factory function](#Q18)
 19. [Achieve prototypal inheritance using functions to create objects in JavaScript](#Q19)
 20. [Write a polyfill for bind function](#Q20)
-21. [Write a function which will create a function bounded to the context like `bind`, but can be overridden when explicit context](#Q21)
+21. [Write a function which will create a function bounded to the context like `bind`, but can be overridden when the context is set explicitly](#Q21)
 22. [Write a function which helps to achieve multiply(a)(b) and returns product of a and b](#Q22)
 23. [Write a code to show the differences between the techniques, currying and partial application](#Q23)
 24. [Create a function which takes another function as an argument and makes it eligible for currying or partial application](#Q24)
@@ -673,7 +673,7 @@ This is a simple polyfill for bind without handling corner cases. It does not wo
 <br />
 
 #### Q21
-### Write a function which will create a function bounded to the context like `bind`, but can be overridden when explicit context
+### Write a function which will create a function bounded to the context like `bind`, but can be overridden when the context is set explicitly
 
 - The functionality is similar to `bind` with exception that if there is a context set during the execution it will override
 
@@ -683,6 +683,8 @@ function softBind(fn, context) {
 
     return function() {
         var allArgs = fnArgs.concat(Array.prototype.slice.call(arguments));
+        
+        // override the context to incoming context if it is not undefined, null or window
         var context = (!this || this === window) ? obj : this;
         fn.apply(context, allArgs);
     };
