@@ -36,28 +36,9 @@
 
 ---
 
-### Usage Guide
-
-- The JavaScript modern interview code challenges are divided into 5 sections topic wise
-- These sections are mututally exclusive for most of the questions and _no ordering_ has to be followed for topics
-- Each section will have list of questions generally from easy to advanced level with _increasing difficulty_
-- All the questions are listed at the top of each section and clicking on the question will land to the answer section
-- Questions might have example which helps to understand the question better
-- Questions might have multiple solutions or answers divided in to multiple parts
-- Notes contain additional details about the solution
-- _Try to solve the questions on your own before looking in to the solutions_
-
-### Study materials
-
-##### Books 
-- https://eloquentjavascript.net/
-- https://github.com/getify/You-Dont-Know-JS
-- https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition
-
-##### Tutorials and references
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript
-- https://javascript.info/
-- https://tc39.es/ecma262/
+### Usage Guide and Study materials
+If you want to know more about using this repo or to check out the recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
+<br/><br/>
 
 ### Contributors
 <a href="https://github.com/sadanandpai/javascript-code-challenges/graphs/contributors">
@@ -65,6 +46,7 @@
 </a>
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/contributing.md)
+<br/><br/>
 
 ### Stargazers
 [![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/stargazers)
