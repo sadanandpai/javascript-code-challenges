@@ -127,7 +127,7 @@ func(1, "Hello", true);
 ```
 
 ###### Notes
-Though the keys of arguments object looks like numbers, "arguments" is not an array. Arrow functions will not have arguments object
+Though the keys of arguments object look like numbers, "arguments" is not an array. Arrow functions will not have arguments object
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
@@ -217,7 +217,9 @@ As the arrow functions are not verbose, majority of developers prefer to create 
 - Arrow functions with single statement with return, flower brackets and return keywords are optional
 
 ```js
-const noArgsFunc = () => { return "No args passed" };
+const noArgsFunc = () => { 
+    return "No args passed"
+};
 ```
 
 ```js
@@ -355,7 +357,7 @@ calc12And5.product();                   // 60
 calc12And5.dividend();                  // 2
 ```
 
-- Simple revealing module pattern is used which received inputs and executes different operations exposed through functions
+- Simple revealing module pattern can be used which receives inputs and executes different operations exposed through functions
 
 ```js
 function Calulator(num1, num2){
