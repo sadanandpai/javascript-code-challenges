@@ -1,12 +1,13 @@
 ### Contribution Guide
 - Feel free to contribute to this repo by raising the __pull request__
 - If you do not know to raise pull request, send an email with details to sadypai@gmail.com
-- Spelling mistakes, improvement of answers, code comments, rephrasing the questions / points, additional details, quality references and such contributions are highly appreciated
+- Spelling mistakes, improvement of answers, code comments, rephrasing the questions / points, additional details, quality references and similar contributions are highly appreciated
 
 #### Question contribution
 - The question should be unambiguous and as generic as possible
 - Only JavaScript questions with coding solutions are allowed (No theoretical question)
 - Any coding hints to be provided along with the question can be included as example
+- This repo does not aim to solve algorithm questions in JavaScript
 - Answer can contain maximum 4 parts
 	- Important points related to solving the question or about the implementation logic - optional but recommended
 	- Solution program (single or multiple solutions) - mandatory
