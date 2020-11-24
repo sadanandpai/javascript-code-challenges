@@ -1,5 +1,5 @@
 <div align="right">
-  <a href="/README.md#--javascript-modern-interview-code-challenges" id="home">Home</a>
+  <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
 ## JavaScript interview code challenges on Asynchronous programming
