@@ -1,22 +1,24 @@
 <h1 align="center">
-  JavaScript Modern Interview Code Challenges
+    JavaScript Modern Interview Code Challenges
 </h1>
 <div align="center">
-    <img src="assets/banner.jpg" alt="banner" />
+    <a href="#"><img src="assets/banner.jpg" alt="banner" /></a>
 </div>
 
 <div align="center">
-    <p><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge">
-    <img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge">
-    <img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge">
-    <img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge">
-    <img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></p>
+    <p>
+	    <a href="#"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+	    <a href="#"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+	    <a href="#"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+	    <a href="#"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
+	    <a href="#"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+    </p>
 </div>
 
 <div align="center">
     <h3>This is a collection of modern interview code challenges on JavaScript suitable for</h3>
     <h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    <img src="assets/code.png" alt="code" width="200"/>
+    <a href="#"><img src="assets/code.png" alt="code" width="200"/></a>
 </div>
 
 ---
