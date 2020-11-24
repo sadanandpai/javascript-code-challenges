@@ -2,7 +2,7 @@
     JavaScript Modern Interview Code Challenges
 </h1>
 <div align="center">
-    <a href="#"><img src="assets/banner.jpg" alt="banner" /></a>
+    <a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/banner.jpg" alt="banner" /></a>
 </div>
 
 <div align="center">
