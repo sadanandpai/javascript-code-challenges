@@ -7,7 +7,7 @@
 
 <div align="center">
     <p>
-	    <a href="#"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+	    <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
 	    <a href="#"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
 	    <a href="#"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
 	    <a href="#"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
@@ -18,7 +18,7 @@
 <div align="center">
     <h3>This is a collection of modern interview code challenges on JavaScript suitable for</h3>
     <h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    <a href="#"><img src="assets/code.png" alt="code" width="200"/></a>
+    <a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/code.png" alt="code" width="200"/></a>
 </div>
 
 ---
