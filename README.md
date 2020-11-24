@@ -8,10 +8,10 @@
 <div align="center">
     <p>
 	    <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
-	    <a href="#"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
-	    <a href="#"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
-	    <a href="#"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
-	    <a href="#"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+	    <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+	    <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+	    <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
+	    <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
     </p>
 </div>
 
