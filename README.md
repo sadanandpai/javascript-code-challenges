@@ -36,7 +36,7 @@
 ---
 
 ### Usage Guide and Study materials
-If you want to know more about using this repo or to check out the recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
+If you want to know more about using this repo or check out the recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
 <br/><br/>
 
 ### Contributors
