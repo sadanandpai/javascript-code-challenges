@@ -1,6 +1,6 @@
 ### Usage Guide for this repo
 
-- Familiarity and hands on experience in JavaScript is recommended before attempting these challenges
+- Familiarity and hands on experience in JavaScript are recommended before attempting these challenges
 - The JavaScript modern interview code challenges are divided into 5 sections topic wise
 - These sections are mututally exclusive for most of the questions and _no ordering_ has to be followed for topics
 - Each section will have list of questions generally from easy to advanced level with _increasing difficulty_
