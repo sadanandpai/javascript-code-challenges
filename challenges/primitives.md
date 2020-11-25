@@ -171,7 +171,7 @@ const total = bigNum1 + bigNum2 + BigInt(num3);
 The big integers cannot be operated directly with normal number datatype. `10n + 20` is not allowed
 
 ###### References
-- https://javascript.info/type-conversions
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
 
 <br />
 
