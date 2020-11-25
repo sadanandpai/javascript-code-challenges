@@ -534,7 +534,9 @@ const obj = {
         }
     },
 
-    key: "value"
+    key1: "value1",
+    key2: "value2",
+    key3: "value3"
 }
 ```
 
@@ -546,7 +548,9 @@ const obj = {
         }
     },
 
-    key: "value"
+    key1: "value1",
+    key2: "value2",
+    key3: "value3"
 }
 ```
 
@@ -559,10 +563,10 @@ const obj = {
 ### Stringify an object by excluding the 'password' property
 ```js
 // Example
-var obj = {
+const obj = {
     id: 1,
     username: 'John',
-    passowrd: 'secret',
+    password: 'secret',
     email: 'john@email.com',
 };
 ```
@@ -571,11 +575,11 @@ var obj = {
 - It accepts 2nd argument which can be a function or array
 
 ```js
-JSON.stringify(obj, (key, value) => key === 'password' ? undefined : value));
+JSON.stringify(obj, (key, value) => key === 'password' ? undefined : value);        // {"id":1,"username":"John","email":"john@email.com"}
 ```
 
 ```js
-JSON.stringify(obj, ['id', 'username', 'email']); 
+JSON.stringify(obj, ['id', 'username', 'email']);                                   // {"id":1,"username":"John","email":"john@email.com"}
 ```
 
 ###### References
@@ -598,10 +602,12 @@ var obj = {
         console.log("Id: " + this.id);
         return this;
     },
+    
     displayName(){
         console.log("Name: " + this.username);
         return this;
     },
+    
     displayDept(dept){
         if(typeof dept !== "undefined"){
             this.dept = dept;
