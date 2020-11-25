@@ -21,7 +21,7 @@
 15. [Create an object which has a property 'userid' which can only be set once and will be a read only property](#Q15)
 16. [Show the different options available to prevent the modifications to the object](#Q16)
 17. [Design a function which takes an array as input and returns a function 'next', calling which fetches a value one by one](#Q17)
-18. [Modify the given object so that it can be used inside a for..of loop](#Q18)
+18. [Modify the given object so that it can be used inside a for...of loop](#Q18)
 19. [Stringify an object by excluding the 'password' property](#Q19)
 20. [Create an object 'obj' with functions assigned to keys. Show how can we achieve 'obj.func1().func2().func3()' considering func1, func2, func3 are object keys](#Q20)
 21. [Write a polyfill for Object.create](#Q21)
@@ -514,7 +514,7 @@ it.next().done;                         // true
 <br />
 
 #### Q18
-### Modify the given object so that it can be used inside a for..of loop
+### Modify the given object so that it can be used inside a for...of loop
 
 - Symbol iterator can be used to define the iterator on the object
 - The values of the object can accessed with `for..of` the way we can do it for array
@@ -538,8 +538,20 @@ const obj = {
 }
 ```
 
+```js
+const obj = {
+    *[Symbol.iterator]() {
+        for (let key in obj) {
+            yield obj[key];
+        }
+    },
+
+    key: "value"
+}
+```
+
 ###### References
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+- https://javascript.info/generators#using-generators-for-iterables
 
 <br />
 
