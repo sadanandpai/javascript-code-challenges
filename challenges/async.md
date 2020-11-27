@@ -1226,8 +1226,8 @@ function asyncFunc(data, delay){
 
 function* gen() {
     // async function 
-    const num1 = yield new asyncFunc(2, 1000);
-    const num2 = yield new asyncFunc(1, 2000);
+    const num1 = yield asyncFunc(2, 1000);
+    const num2 = yield asyncFunc(1, 2000);
     console.log(num1 + num2);                         // 3 (2 + 1)
 }
 
