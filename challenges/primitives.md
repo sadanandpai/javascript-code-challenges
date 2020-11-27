@@ -197,8 +197,8 @@ num1 > 0 || num2 < 0          // true
 ```js
 const num1 = 10, num2 = 20;
 
-true && true;                // true
-true && false;               // false
+true && true;                 // true
+true && false;                // false
 true && num1;                 // 10
 num1 && num2;                 // 20
 "text" && (num1 + num2)       // 30
@@ -436,7 +436,6 @@ str.split(" ").map(val => val.split("").reverse().join("")).join(" ");          
 ```
 
 <br />
-
 
 #### Q15
 ### Write a program to reverse a given integer number
