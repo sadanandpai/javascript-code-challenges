@@ -1253,7 +1253,7 @@ executeGeneratorWithPromise(gen);
 ```
 
 ###### Notes
-`asyncFunc1` and `asyncFunc2` are considered as asynchronous functions returning promise which resolves returning an object having property value
+The generator and the helper function 'executeGeneratorWithPromise' executes hand in hand, where the generator pauses returning a promise and the helper function starts generator on that promise resolution
 
 ###### References
 - https://www.promisejs.org/generators/
