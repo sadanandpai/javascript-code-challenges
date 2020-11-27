@@ -141,11 +141,11 @@ const str = "12";
 
 Number(str);               // 12
 +str                       // 12
-Number.parseInt(str)       // 12
+parseInt(str)       // 12
 ```
 
 ###### Notes
-If the number is floating, `Number.parseFloat` can be used
+If the number is floating, `parseFloat` can be used
 
 ###### References
 - https://javascript.info/type-conversions
