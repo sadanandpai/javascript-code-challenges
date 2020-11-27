@@ -43,21 +43,21 @@
 - The `typeof` operator returns a string indicating the type of the operand
 
 ```js
-typeof 50                 -   "number"
-typeof "text"             -   "string"
-typeof true               -   "boolean"
-typeof undefined          -   "undefined"
-typeof function(){}       -   "function"
-typeof 10n                -   "bigint"
-typeof Symbol()           -   "symbol"
-typeof [1, 2]             -   "object"
-typeof {}                 -   "object"
+typeof 50                 //   "number"
+typeof "text"             //   "string"
+typeof true               //   "boolean"
+typeof undefined          //   "undefined"
+typeof function(){}       //   "function"
+typeof 10n                //   "bigint"
+typeof Symbol()           //   "symbol"
+typeof [1, 2]             //   "object"
+typeof {}                 //   "object"
 
-typeof NaN                -   "number"        // NaN is Not a Number
-typeof undeclaredVar      -   "undefined"     // undeclaredVariable is never declared
-typeof Infinity           -   "number"        // Infinity, -Infinity, -0 are all valid numbers in JavaScript
-typeof null               -   "object"        // This stands since the beginning of JavaScript
-typeof /regex/            -   "object"        // regular expressions start and end with '/' in literal form
+typeof NaN                //   "number"        // NaN is Not a Number
+typeof undeclaredVar      //   "undefined"     // undeclaredVariable is never declared
+typeof Infinity           //   "number"        // Infinity, -Infinity, -0 are all valid numbers in JavaScript
+typeof null               //   "object"        // This stands since the beginning of JavaScript
+typeof /regex/            //   "object"        // regular expressions start and end with '/' in literal form
 ```
 
 ###### Notes
@@ -75,16 +75,16 @@ Arrays and functions are sub type of objects
 
 ```js
 // numbers and strings
-1 + '2';                  // 12
-1 + 2 + '3';              // 33
-1 + 2 + '3' + '4';        // 334
-1 + 'One';                // 1One
+1 + '2';                            // 12
+1 + 2 + '3';                        // 33
+1 + 2 + '3' + '4';                  // 334
+1 + 'One';                          // 1One
 
 // strings and numbers
-'1' + 2;                    // 12
-'1' + '2' + 3;              // 123
-'1' + '2' + 3 + 4;          // 1234
-'1' + '2' + (3 + 4);        // 127
+'1' + 2;                            // 12
+'1' + '2' + 3;                      // 123
+'1' + '2' + 3 + 4;                  // 1234
+'1' + '2' + (3 + 4);                // 127
 'One' + 1;     // One1
 
 // mix of string and numbers
@@ -141,11 +141,11 @@ const str = "12";
 
 Number(str);               // 12
 +str                       // 12
-parseInt(str)       // 12
+parseInt(str)              // 12
 ```
 
 ###### Notes
-If the number is floating, `parseFloat` can be used
+If the number is floating, `parseFloat` can be used. `parseInt` and `parseFloat` are the methods present on the `Number` object also
 
 ###### References
 - https://javascript.info/type-conversions
@@ -186,19 +186,19 @@ The big integers cannot be operated directly with normal number datatype. `10n +
 ```js
 const num1 = 10, num2 = 20;
 
-true || false;            // true
-false || false;           // false
-false || num1;            // 10
-0 || num2;                // 20
-"text" || true            // "text"
-num1 > 0 || num2 < 0      // true
+true || false;                // true
+false || false;               // false
+false || num1;                // 10
+0 || num2;                    // 20
+"text" || true                // "text"
+num1 > 0 || num2 < 0          // true
 ```
 
 ```js
 const num1 = 10, num2 = 20;
 
-true && false;                // false
-false && false;               // false
+true && true;                // true
+true && false;               // false
 true && num1;                 // 10
 num1 && num2;                 // 20
 "text" && (num1 + num2)       // 30
@@ -206,17 +206,17 @@ num1 > 0 && num2 < 0          // false
 ```
 
 ```js
-undefined ?? 10;          // 10
-null ?? 20;               // 20
-false ?? num1;            // false
-0 ?? num2;                // 0
+undefined ?? 10;              // 10
+null ?? 20;                   // 20
+false ?? num1;                // false
+0 ?? num2;                    // 0
 ```
 
 ```js
-!!10;               // true
-!!{};               // true
-!!"";               // false
-!!0;                // false
+!!10;                         // true
+!!{};                         // true
+!!"";                         // false
+!!0;                          // false
 ```
 
 ###### Notes
