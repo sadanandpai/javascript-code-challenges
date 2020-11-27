@@ -1,5 +1,6 @@
 <h1 align="center">
-    JavaScript Modern Interview Code Challenges <a href="https://twitter.com/intent/tweet?text=A%20collection%20of%20modern%20interview%20code%20challenges%20on%20JavaScript&url=https://github.com/sadanandpai/javascript-code-challenges&hashtags=javascript,interview,HTML5,CSS,reactjs,angularjs,jobseekers,js"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="tweet" /></a>
+    JavaScript Modern Interview Code Challenges
+	<a target="_blank" href="https://twitter.com/intent/tweet?text=A%20collection%20of%20modern%20interview%20code%20challenges%20on%20JavaScript&url=https://github.com/sadanandpai/javascript-code-challenges&hashtags=javascript,interview,HTML5,CSS,reactjs,angularjs,jobseekers,js"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="tweet" /></a>
 
 </h1>
 <div align="center">
