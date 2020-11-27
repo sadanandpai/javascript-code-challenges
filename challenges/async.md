@@ -1221,14 +1221,14 @@ PromiseAll([
 ```js
 // asynchronous helper function returning a promise which gets resolved after the specified delay with data
 function asyncFunc(data, delay){
-    return new Promise(resolve => setTimeout(()=> resolve(data), delay));
+    return new Promise(resolve => setTimeout(resolve, delay, data));
 }
 
 function* gen() {
     // async function 
     const num1 = yield new asyncFunc(2, 1000);
     const num2 = yield new asyncFunc(1, 2000);
-    console.log(num1 + num2);
+    console.log(num1 + num2);                         // 3 (2 + 1)
 }
 
 function executeGeneratorWithPromise(gen) {
