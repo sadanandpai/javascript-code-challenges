@@ -1219,13 +1219,17 @@ PromiseAll([
 - Helper function is used to manage this flow which takes generator function as an argument and executes it
 
 ```js
-function* gen() {
-    var num1 = yield asyncFunc1();
-    var num2 = yield asyncFunc2();
-    console.log(num1 + num2);
+// asynchronous helper function returning a promise which gets resolved after the specified delay with data
+function asyncFunc(data, delay){
+    return new Promise(resolve => setTimeout(()=> resolve(data), delay));
 }
 
-executeGeneratorWithPromise(gen);
+function* gen() {
+    // async function 
+    const num1 = yield new asyncFunc(2, 1000);
+    const num2 = yield new asyncFunc(1, 2000);
+    console.log(num1 + num2);
+}
 
 function executeGeneratorWithPromise(gen) {
     const it = gen();
@@ -1235,13 +1239,17 @@ function executeGeneratorWithPromise(gen) {
         if (!promise.done)
             promise.value
                 .then(data => {
-                    handle(it.next(data.value));
+                    // continue the execution of generator after promise is resolved
+                    handle(it.next(data));
                 })
                 .catch(err => iterator.throw(err));
     }
 
     handle(it.next());
 }
+
+// call generator executor function and pass generator function reference
+executeGeneratorWithPromise(gen);
 ```
 
 ###### Notes
