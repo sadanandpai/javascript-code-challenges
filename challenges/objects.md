@@ -339,11 +339,12 @@ The lookup happens at the object level initially and if the key is not found, pr
 const obj = {};
 
 Object.defineProperty(obj, 'data', {
+    _data: 0,
     get() {
-        return data;
+        return this._data;
     },
     set(value) {
-        data = value;
+        this._data = value;
     }
 });
 ```
