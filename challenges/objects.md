@@ -339,7 +339,7 @@ The lookup happens at the object level initially and if the key is not found, pr
 const obj = {};
 
 Object.defineProperty(obj, 'data', {
-    _data: 0,
+    _data: 0,                           // closure variable to hold the data
     get() {
         return this._data;
     },
@@ -348,6 +348,9 @@ Object.defineProperty(obj, 'data', {
     }
 });
 ```
+
+###### Notes
+If the `this.data` is accessed directly, the function will call itself infinitely. Hence, we would require one more variable to store the data
 
 ###### References
 - https://javascript.info/property-accessors
