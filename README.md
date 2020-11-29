@@ -43,14 +43,10 @@
 ---
 
 ### Usage Guide and Study materials
-If you want to know more about using this repo or check out the recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
+If you want to know more about using this repo or view the list of recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
 <br/><br/>
 
-### Contributors
-<a href="https://github.com/sadanandpai/javascript-code-challenges/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=sadanandpai/javascript-code-challenges" />
-</a>
-
+### Contributing Guide
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/contributing.md)
 <br/><br/>
 
@@ -59,3 +55,6 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 
 ### Forkers
 [![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/network/members)
+
+### License
+This repository is MIT licensed. [Read more](https://github.com/sadanandpai/javascript-code-challenges/blob/main/LICENSE)
