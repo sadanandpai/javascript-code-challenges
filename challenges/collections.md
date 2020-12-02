@@ -373,7 +373,7 @@ function rangeGenFunc(start = 1, end = 0) {
 }
 
 const arr = rangeGenFunc(1, 10);                    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-arr.sort(i => 0.5 - Math.random());                 // [6, 8, 5, 10, 4, 3, 9, 2, 7, 1]
+arr.sort(() => 0.5 - Math.random());                // [6, 8, 5, 10, 4, 3, 9, 2, 7, 1]
 ```
 
 ```js
