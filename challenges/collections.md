@@ -6,45 +6,44 @@
 
 1. [Show the different ways of creating an array](#Q1)
 2. [Write a program to iterate over an array and print all the values of it](#Q2)
-3. [Write a program to append a single or multiple values in to an array](#Q3)
-4. [Write a program to prepend a single or multiple values in to an array](#Q4)
-5. [Remove an element from the array from a given index](#Q5)
-6. [Insert an element to the array at a given index..](#Q6)
-7. [Show the different ways of emptying an array which has values](#Q7)
-8. [Check if given input is an array or not](#Q8)
-9. [Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it](#Q9)
-10. [Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array](#Q10)
-11. [Show how an array in JavaScript can act like a stack and queue](#Q11)
-12. [Sort the given array of integers in ascending or descending order](#Q12)
-13. [Square all the positive numbers of the array and return the output array](#Q13)
-14. [Check if the user with the name "John" exists in the array of objects](#Q14)
-15. [Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname](#Q15)
-16. [Create an array by removing all the holes of the array](#Q16)
-17. [Write a program to calculate the sum of all the values of an array](#Q17)
-18. [Get the maximum value from a numbers array along with its index](#Q18)
-19. [Find the number of occurences of minimum value in the numbers list](#Q19)
-20. [Create an array of length n with all the values of it set to 10](#Q20)
-21. [Optimize the given statements having lot of logical checks to use a compact and cleaner logic](#Q21)
-22. [Write a program to iterate over a 2 dimensional array and print all the values of it](#Q22)
-23. [Write a program to store values in to a set](#Q23)
-24. [Write a program to store values in to a map](#Q24)
-25. [Write a code to iterate over a set](#Q25)
-26. [Write a code to iterate over a map](#Q26)
-27. [Show how map is different from object to store key value pairs with coding example](#Q27)
-28. [Write the code to remove the duplicates from the array](#Q28)
-29. [Design a flat function which flattens an array to any depth](#Q29)
-30. [Check if all the students of have passed or not (40 is the pass marks)](#Q30)
-31. [Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)](#Q31)
-32. [Extract the list of all the elements from the list of numbers given in 2 arrays](#Q32)
-33. [Get the list of all distinct elements which are present in both list of numbers](#Q33)
-34. [Extract list of elements present only in the first list given.](#Q34)
-35. [Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.](#Q35)
-36. [Write a program to polyfill `filter` functionality of the Array](#Q36)
-37. [Write a program to polyfill `map` functionality of the Array](#Q37)
-38. [Write a program to polyfill `reduce` functionality of the Array](#Q38)
-39. [Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed](#Q39)
-40. [Create an array which will only accept string values. (Homogeneous array of strings)](#Q40)
-41. [Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices](#Q41)
+3. [Write a program to append and prepend, single or multiple values in to an array](#Q3)
+4. [Show how insertion and removal of elements can happen in the array for given index](#Q5)
+5. [Show the different ways of emptying an array which has values](#Q7)
+6. [Check if given input is an array or not](#Q8)
+7. [Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it](#Q9)
+8. [Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array](#Q10)
+9. [Show how an array in JavaScript can act like a stack and queue](#Q11)
+10. [Sort the given array of integers in ascending or descending order](#Q12)
+11. [Square all the positive numbers of the array and return the output array](#Q13)
+12. Write a code to generate an array with range of numbers and shuffle them
+13. [Check if the user with the name "John" exists in the array of objects](#Q14)
+14. [Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname](#Q15)
+15. [Create an array by removing all the holes of the array](#Q16)
+16. [Write a program to calculate the sum of all the values of an array](#Q17)
+17. [Get the maximum value from a numbers array along with its index](#Q18)
+18. [Find the number of occurences of minimum value in the numbers list](#Q19)
+19. [Create an array of length n with all the values of it set to 10](#Q20)
+20. [Optimize the given statements having lot of logical checks to use a compact and cleaner logic](#Q21)
+21. [Write a program to iterate over a 2 dimensional array and print all the values of it](#Q22)
+22. [Write a program to store values in to a set](#Q23)
+23. [Write a program to store values in to a map](#Q24)
+24. [Write a code to iterate over a set](#Q25)
+25. [Write a code to iterate over a map](#Q26)
+26. [Show how map is different from object to store key value pairs with coding example](#Q27)
+27. [Write the code to remove the duplicates from the array](#Q28)
+28. [Design a flat function which flattens an array to any depth](#Q29)
+29. [Check if all the students of have passed or not (40 is the pass marks)](#Q30)
+30. [Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)](#Q31)
+31. [Extract the list of all the elements from the list of numbers given in 2 arrays](#Q32)
+32. [Get the list of all distinct elements which are present in both list of numbers](#Q33)
+33. [Extract list of elements present only in the first list given.](#Q34)
+34. [Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.](#Q35)
+35. [Write a program to polyfill `filter` functionality of the Array](#Q36)
+36. [Write a program to polyfill `map` functionality of the Array](#Q37)
+37. [Write a program to polyfill `reduce` functionality of the Array](#Q38)
+38. [Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed](#Q39)
+39. [Create an array which will only accept string values. (Homogeneous array of strings)](#Q40)
+40. [Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices](#Q41)
 
 ---
 
@@ -115,95 +114,74 @@ arr.forEach(val => console.log(val));
 <br />
 
 #### Q3
-### Write a program to append a single or multiple values in to an array
+### Write a program to append and prepend, single or multiple values in to an array
 
 - Values to the array can be appended using `push` method of array
+- Values to the array can be prepended using `unshift` method of array
 
 ```js
-arr.push(1);
+const arr = [2, 3];
+arr.push(4);                    // [2, 3, 4]
+arr.unshift(1);                 // [1, 2, 3, 4]
 ```
 
 ```js
-arr.push(1, 2);
+const arr = [3, 4];
+arr.push(5, 6);                 // [3, 4, 5, 6]
+arr.unshift(1, 2);              // [1, 2, 3, 4, 5, 6]
 ```
 
 ```js
-arr.push(...otherArr);
+const arr = [1, 2, 3];
+const otherArr = [4, 5, 6];
+arr.push(...otherArr);          // [1, 2, 3, 4, 5, 6]
+arr.unshift(...arr);            // [4, 5, 6, 1, 2, 3, 4, 5, 6]
 ```
 
 ###### Notes
-To remove the elements from the end of the array `pop` operation can be used but one element at a time
+To remove the elements from the end of the array `pop` operation can be used but one element at a time. To remove the elements from the start of the array `shift` operation can be used but one element at a time
 
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-
-<br />
-
-#### Q4
-### Write a program to prepend a single or multiple values in to an array
-
-- Values to the array can be prepended using `unshift` method of array
-
-```js
-arr.unshift(1);
-```
-
-```js
-arr.unshift(1, 2);
-```
-
-```js
-arr.unshift(...arr);
-```
-
-###### Notes
-To remove the elements from the start of the array `shift` operation can be used but one element at a time
-
-###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 
 <br />
 
-#### Q5
-### Remove an element from the array from a given index
+#### Q4
+### Show insertion and removal of elements can happen in the array for given index
 
 - Values of the array can be removed from any position using `splice` method of array
+- Values of the array can also be inserted to any position using `splice` method of array
+- 2nd argument is passed as 0 which inserts the elements without replacing
+- The values passed after 2nd argument are considered for insertion
 
 ```js
+const arr = [1, 2, 2, 3];
 const position = 2;
 const count = 1;
-arr.splice(position, count);
+arr.splice(position, count);        // [2]
+console.log(arr);               // [1, 2, 3]
+```
+
+```js
+const arr = [1, 2, 4, 5];
+const position = 2;
+arr.splice(position, 0, 3);
+console.log(arr);               // [1, 2, 3, 4, 5]
 ```
 
 ###### Notes
-'count' indicates the number of elements to be removed from the index 'position'
+'count' indicates the number of elements to be removed from the index 'position'. Multiple values can be inserted or removed using `splice`
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <br />
 
-#### Q6
-### Insert an element to the array at a given index..
-
-- Values of the array can also be inserted to any position using `splice` method of array
-- 2nd argument is passed as 0 which inserts the elements without replacing
-- The values passed after 2nd argument are considered for insertion
-
-```js
-const position = 2;
-arr.splice(position, 0, 6);
-```
-
-###### Notes
-Multiple values can be inserted with , sepeation for values
-
-<br />
-
-#### Q7
+#### Q5
 ### Show the different ways of emptying an array which has values
 
 - Array can be emptied by giving a new reference of an empty array
@@ -236,7 +214,7 @@ arr.splice(0, arr.length)
 
 <br />
 
-#### Q8
+#### Q6
 ### Check if given input is an array or not
 
 - `Array.isArray` is a method which checks if the given argument is an array or not
@@ -258,7 +236,7 @@ Object.prototype.toString.call(arr) === '[object Array]'
 
 <br />
 
-#### Q9
+#### Q7
 ### Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it
 
 - Function can take 2 arguments which concatenates arrays
@@ -291,7 +269,7 @@ When 2nd argument is not passed, the case is same as duplicating the array
 
 <br />
 
-#### Q10
+#### Q8
 ### Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array
 
 - `slice` method on array can be used to fetch the values of range in the array
@@ -311,7 +289,7 @@ The center most 3 values of array 'a' is replaced by 'b'
 
 <br />
 
-#### Q11
+#### Q9
 ### Show how an array in JavaScript can act like a stack and queue
 
 - Stack is a 'Last In First Out' data structure can be achieved using `push` and `pop` operations
@@ -335,7 +313,7 @@ arr.shift();
 
 <br />
 
-#### Q12
+#### Q10
 ### Sort the given array of integers in ascending or descending order
 
 - `sort` method sorts the elements of an array in place and returns the sorted array
@@ -354,7 +332,7 @@ If function is not passed an argument, default sorting will happen
 
 <br />
 
-#### Q13
+#### Q11
 ### Square all the positive numbers of the array and return the output array
 
 - `filter` is the method on Array which can be used to filter. It receives a function which can return boolean to filter the elements
@@ -370,7 +348,7 @@ const squaredPositiveArr = arr.filter((value) => value >= 0).map((value) => valu
 ```
 
 ###### Notes
-2nd solution uses chaining 
+2nd solution uses method chaining where the return value from `filter` fuction is an array on which `map` method is being called
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -378,7 +356,49 @@ const squaredPositiveArr = arr.filter((value) => value >= 0).map((value) => valu
 
 <br />
 
-#### Q14
+#### Q12
+### Write a code to generate an array with range of numbers and shuffle them
+
+- An array of numbers in the range can be generated from a function which can take start and end value of the range
+- The shuffling can be achieved simply by sorting the array using a function which randomly returns positive or negative numbers
+- The shuffling of the values can be also done by picking a value from a random index from the current array and moving it in to a new array
+
+```js
+function rangeGenFunc(start = 1, end = 0) {
+    const arr = [];
+    for (let i = start; i <= end; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+const arr = rangeGenFunc(1, 10);                    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.sort(i => 0.5 - Math.random());                 // [6, 8, 5, 10, 4, 3, 9, 2, 7, 1]
+```
+
+```js
+function* rangeGen(start = 1, end = 0) {
+  for (let i = start; i <= end; i++){
+      yield i;
+  }
+}
+
+let arr = [...rangeGen(1, 10)];                     // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let shuffledArr = [];
+const length = arr.length;
+for (let i = 0; i < length; i++) {
+    shuffledArr.push(...arr.splice(Math.floor(Math.random() * arr.length), 1));
+}
+
+console.log(shuffledArr)                             // [5, 4, 7, 10, 3, 6, 8, 2, 1, 9]
+```
+
+###### Notes
+2nd solution uses generator function to generate the range of values which can be converted to an array by spreading.
+
+<br />
+
+#### Q13
 ### Check if the user with the name "John" exists in the array of objects
 
 ```js
@@ -397,7 +417,7 @@ const doesJohnExist = jonhIndex < 0 ? false : true;
 
 <br />
 
-#### Q15
+#### Q14
 ### Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname
 
 - To manipulate array of objects `map` method can be used
@@ -408,7 +428,7 @@ const employeesListWithFullName = arr.map((obj) => { return { id, fullName: obj.
 
 <br />
 
-#### Q16
+#### Q15
 ### Create an array by removing all the holes of the array
 
 - Holes are `undefined` value present inside array
@@ -423,7 +443,7 @@ Holes can be formed when an array value by index is deleted. Example: `delete ar
 
 <br />
 
-#### Q17
+#### Q16
 ### Write a program to calculate the sum of all the values of an array
 
 - Sum of the values of an array can calculated by iterating and adding all the values of the array
@@ -452,7 +472,7 @@ for(let value of arr){
 
 <br />
 
-#### Q18
+#### Q17
 ### Get the maximum value from a numbers array along with its index
 
 - `Math.max` is a method which returns maximum value from a given list of values
@@ -489,7 +509,7 @@ Though 2nd solution is verbose compared but has good performance
 
 <br />
 
-#### Q19
+#### Q18
 ### Find the number of occurences of minimum value in the numbers list
 
 - `filter` method can be used to fetch all the minimum values and we can get the count of those valuses
@@ -502,7 +522,7 @@ minArr.length;                                  // count of minimum value occure
 
 <br />
 
-#### Q20
+#### Q19
 ### Create an array of length n with all the values of it set to 10
 
 - `fill` is a method on Array prototype which fills all the slots of array with the value given passed as the argument
@@ -521,7 +541,7 @@ If an object is passed the object reference is copied to all the slots and not t
 
 <br />
 
-#### Q21
+#### Q20
 ### Optimize the given statements having lot of logical checks to use a compact and cleaner logic
 ```js
 // Example1
@@ -554,7 +574,7 @@ Generally this use case can be implemented for `if` conditions
 
 <br />
 
-#### Q22
+#### Q21
 ### Write a program to iterate over a 2 dimensional array and print all the values of it
 
 - Arrays can be iterated by using its index to fetch the values
@@ -590,7 +610,7 @@ arr.forEach(rowArr => rowArr.forEach(val => console.log(val)));
 
 <br />
 
-#### Q23
+#### Q22
 ### Write a program to store values in to a set
 
 - Set lets us store unique values of any type
@@ -617,7 +637,7 @@ set;            // 1, 2, 3
 
 <br />
 
-#### Q24
+#### Q23
 ### Write a program to store values in to a map
 
 - `Map` holds key-value pairs and remembers the original insertion order of the keys
@@ -646,7 +666,7 @@ Unlike objects, `Map` can have any primitive or object as the key
 
 <br />
 
-#### Q25
+#### Q24
 ### Write a code to iterate over a set
 
 - `set` is an iterable object and can be iterated using for..of loop
@@ -662,7 +682,7 @@ set.forEach(value => console.log(value));
 
 <br />
 
-#### Q26
+#### Q25
 ### Write a code to iterate over a map
 
 - `map` is an iterable object and can be iterated using for..of loop
@@ -682,7 +702,7 @@ map.forEach((value, key) => console.log(key, value));
 
 <br />
 
-#### Q27
+#### Q26
 ### Show how map is different from object to store key value pairs with coding example
 
 - Map does not contain any keys by default unlike objects which has keys from its prototype
@@ -704,7 +724,7 @@ Maps perform better than objects in most of the scenarios involving addition and
 
 <br />
 
-#### Q28
+#### Q27
 ### Write the code to remove the duplicates from the array
 
 - Set is a data structure which does not allow duplicate elements
@@ -716,7 +736,7 @@ const distinctArr = [...set];
 
 <br />
 
-#### Q29
+#### Q28
 ### Design a flat function which flattens an array to any depth
 
 - Flat function can be used to flatten the array by recursive call
@@ -738,7 +758,7 @@ function flat(arr){
 
 <br />
 
-#### Q30
+#### Q29
 ### Check if all the students of have passed or not (40 is the pass marks)
 
 - `every` is a method on Array prototype which returns true only if all the elements condition satisfies the condition
@@ -749,7 +769,7 @@ const isAllPass = students.every((student) => student.marks >= 40);
 
 <br />
 
-#### Q31
+#### Q30
 ### Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)
 
 ```js
@@ -760,7 +780,7 @@ const itAvgSalaryGT10K = itTotalSalaryGT10K / itEmployeesWithSalaryGT10K.length;
 
 <br />
 
-#### Q32
+#### Q31
 ### Extract the list of all the elements from the list of numbers given in 2 arrays
 
 - The union array will be the result if all the elements from the 2 arrays are picked
@@ -773,7 +793,7 @@ const distinctArr = [...set1, ...set2];
 
 <br />
 
-#### Q33
+#### Q32
 ### Get the list of all distinct elements which are present in both list of numbers
 
 - The intersection array will be the result if the common elements from the 2 arrays are picked
@@ -791,7 +811,7 @@ const distinctIntersectionArr = [...set1].filter(value => set2.has(value));
 
 <br />
 
-#### Q34
+#### Q33
 ### Extract list of elements present only in the first list given.
 
 - The only present elements of 1st list will be the result when all the elements of 1st list not present in the 2nd are chosen
@@ -807,7 +827,7 @@ Elements of 2nd list only can be obtained by checking for all the elements of li
 
 <br />
 
-#### Q35
+#### Q34
 ### Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.
 
 - The function added to Array prototype are accessible to all the objects of Array
@@ -825,7 +845,7 @@ Array.prototype.average = function (){
 
 <br />
 
-#### Q36
+#### Q35
 ### Write a program to polyfill `filter` functionality of the Array
 
 - `filter` iterates over the all values of array and passes value, index and array (itself) as the arguments
@@ -855,7 +875,7 @@ The solution is a simple polyfill of `filter` and not intended to handle all the
 
 <br />
 
-#### Q37
+#### Q36
 ### Write a program to polyfill `map` functionality of the Array
 
 - `map` iterates over the all values of array and passes value, index and array (itself) as the arguments
@@ -882,7 +902,7 @@ The solution is a simple polyfill of `map` and not intended to handle all the co
 
 <br />
 
-#### Q38
+#### Q37
 ### Write a program to polyfill `reduce` functionality of the Array
 
 - `reduce` iterates over the all values of array and passes value, index and array (itself) as the arguments
@@ -908,7 +928,7 @@ The solution is a simple polyfill of `reduce` and not intended to handle all the
 
 <br />
 
-#### Q39
+#### Q38
 ### Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed
 ```js
 // Example
@@ -958,7 +978,7 @@ distinctArr = [...map.values()];
 
 <br />
 
-#### Q40
+#### Q39
 ### Create an array which will only accept string values. (Homogeneous array of strings)
 
 - Array in JavaScript a collection of values of any type by default
@@ -986,7 +1006,7 @@ The functionality of the code can be modified to make the array accept any one o
 
 <br />
 
-#### Q41
+#### Q40
 ### Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices
 ```js
 // Example
