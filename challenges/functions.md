@@ -38,7 +38,7 @@
 32. [Write a function to copy functions of an object to another object (mixin)](#Q32)
 33. [Create a single function which can perform sum(a, b, c), sum(a, b)(c), sum(a)(b, c) and sum(a)(b)(c) and returns sum of a, b and c](#Q33)
 34. [Design a function which can keep recieving the arguments on each function call and returns the sum when no argument is passed](#Q34)
-35. [Show the way of using Proxy for function](#Q35)
+35. [Show the usage Proxy for function](#Q35)
 36. [Create an interface for a function such that whenever a function is triggered the system should log the time. Do not modify the function code](#Q36)
 37. [Create an interface exposing subscribe and publish functionality, which allows publishing data which in turn invokes all the subscribers with the data](#Q37)
 
@@ -1202,7 +1202,7 @@ In the code value is checked if it is undefined reason being 0 is a falsy value 
 <br />
 
 #### Q35
-### Show the way of using Proxy for function
+### Show the usage Proxy for function
 
 - The Proxy object enables create a proxy for a function, which can intercept the function calls
 - Proxy takes 1st argument as an function and 2nd argument as a object with different function traps
