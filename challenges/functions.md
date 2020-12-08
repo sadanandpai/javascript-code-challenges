@@ -1169,6 +1169,10 @@ function sum() {
 #### Q34
 ### Design a function which can keep recieving the arguments on each function call and returns the sum when no argument is passed
 
+- The function can be designed to return another function which maintains the closure over the previous sum value
+- The check for breaking condition can be added using the argument check for `undefined`
+- 3rd solution uses the property on function to store the total which will be updated on each call hence the same function can be returned
+
 ```js
 // Example
 sum(2)(4)(6)(1)();          // 13
@@ -1191,6 +1195,16 @@ function sum(a) {
 
 ```js
 const sum = a => b => b === undefined ? a : sum(a + b);
+```
+
+```js
+function sum(a) {
+    if (typeof a === 'undefined') {
+        return sum.total;
+    }
+    sum.total = (sum.total ?? 0) + a;
+    return sum;
+}
 ```
 
 ###### Notes
