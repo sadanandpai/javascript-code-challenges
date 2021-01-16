@@ -842,7 +842,7 @@ try {
 
 - A "symbol" represents a unique identifier
 - `Symbol.for` method searches for existing symbols in a runtime-wide symbol registry returns the same. If not found, creates a new Symbol
-- `Symbol.forFor` method retrieves the name of the symbol
+- `Symbol.keyFor` method retrieves the name of the symbol
 
 ```js
 // new symbol
