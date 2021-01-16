@@ -322,7 +322,7 @@ Hoisting was thought up as a general way of thinking about how execution context
 ```js
 (function IIFE(param1, param2){
     console.log("I am an Immediately invoked function");
-    console.log("Parameter 1: " + parma1);
+    console.log("Parameter 1: " + param1);
     console.log("Parameter 2: " + typeof param2);
     console.log("Parameter 2 output: " + param2());
 })("hello", function(){ return "I am a string from a function passed to IIFE"; });
