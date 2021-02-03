@@ -13,27 +13,29 @@
 7. [Show the frequently and commonly used methods available on `Number` object with coding examples](#Q7)
 8. [Write the polyfill for `Number.isNaN`](#Q8)
 9. [Show the frequently and commonly used methods available on `Math` object with coding examples](#Q9)
-10. [Create a function which returns a random number in the given range of values both inclusive](#Q10)
-11. [How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails](#Q11)
-12. [Write a code to iterate over a string](#Q12)
-13. [Write a program to reverse a string](#Q13)
-14. [Write a program to reverse a string by words. Also show the reverse of each words in place](#Q14)
-15. [Write a program to reverse a given integer number](#Q15)
-16. [Write a code to replace all the spaces of the string with underscores](#Q16)
-17. [Write a function which can convert the time input given in 12 hours format to 24 hours format](#Q17)
-18. [Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'](#Q18)
-19. [Write a function to truncate a string to a certain number of letters](#Q19)
-20. [Write a code to truncate a string to a certain number of words](#Q20)
-21. [Show the creation of Regular Expression in JavaScript](#Q21)
-22. [Create a regular expression to validate if the given input is valid Indian mobile number or not](#Q22)
-23. [Write a function which checks if a given search text is present either in the beginning of the first name or the second name](#Q23)
-24. [Write a function to chop a string into chunks of a given length and return it as array](#Q24)
-25. [Write a code to remove all the vowels from a given string](#Q25)
-26. [Create a function which returns random hex color code](#Q26)
-27. [Write a function which accepts two valid dates and returns the difference between them as number of days](#Q27)
-28. [Show the usage of template literals, expression interpolation and tagged templates](#Q28)
-29. [Write a code to show the working of `try...catch...finally`](#Q29)
-30. [Show the creation and usage of `symbol` with code](#Q30)
+10. [Write a function which returns true if given value of number is an integer without using any inbuilt functions](#Q10)
+11. [Create a function which returns a random number in the given range of values both inclusive](#Q11)
+12. [How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails](#Q12)
+13. [Write a code to iterate over a string](#Q13)
+14. [Write a program to reverse a string](#Q14)
+15. [Write a program to reverse a string by words. Also show the reverse of each words in place](#Q15)
+16. [Write a program to reverse a given integer number](#Q16)
+17. [Write a code to replace all the spaces of the string with underscores](#Q17)
+18. [Write a function which can convert the time input given in 12 hours format to 24 hours format](#Q18)
+19. [Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'](#Q19)
+20. [Write a function to truncate a string to a certain number of letters](#Q20)
+21. [Write a code to truncate a string to a certain number of words](#Q21)
+22. [Show the creation of Regular Expression in JavaScript](#Q22)
+23. [Create a regular expression to validate if the given input is valid Indian mobile number or not](#Q23)
+24. [Write a function which returns a list of elements which contains at least one character as digit](#Q24)
+25. [Write a function which checks if a given search text is present either in the beginning of the first name or the second name](#Q25)
+26. [Write a function to chop a string into chunks of a given length and return it as array](#Q26)
+27. [Write a code to remove all the vowels from a given string](#Q27)
+28. [Create a function which returns random hex color code](#Q28)
+29. [Write a function which accepts two valid dates and returns the difference between them as number of days](#Q29)
+30. [Show the usage of template literals, expression interpolation and tagged templates](#Q30)
+31. [Write a code to show the working of `try...catch...finally`](#Q31)
+32. [Show the creation and usage of `symbol` with code](#Q32)
 
 ---
 
@@ -322,6 +324,24 @@ Math.trunc(-6.3));                  // -6
 <br />
 
 #### Q10
+### Write a function which returns true if given value of number is an integer without using any inbuilt functions
+```js
+// Example
+isInt(4.0);        // true
+isInt(12.2);       // false
+isInt(0.3);        // false 
+```
+- Modulo operator can be used to check if there is a remainder left when divided by 1
+
+```js
+function isInt(value){
+    return value % 1 === 0;
+}
+```
+
+<br />
+
+#### Q11
 ### Create a function which returns a random number in the given range of values both inclusive
 
 - `Math.random` function returns a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive)
@@ -342,7 +362,7 @@ Usage of `Math.round` depends on the logic used to accomplish the requirement
 
 <br />
 
-#### Q11
+#### Q12
 ### How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails
 
 - The addition of 0.1 and 0.2 will result in to 0.30000000000000004 and the comparision with 0.3 fails
@@ -357,7 +377,7 @@ Usage of `Math.round` depends on the logic used to accomplish the requirement
 
 <br />
 
-#### Q12
+#### Q13
 ### Write a code to iterate over a string
 
 - String can be traversed using its string index or value as string can act like an iterable
@@ -389,7 +409,7 @@ for(let value of str){
 
 <br />
 
-#### Q13
+#### Q14
 ### Write a program to reverse a string
 
 - String can be reversed by iterating it and storing it in reverse order
@@ -419,7 +439,7 @@ The string can be tested if it is __palindrome__, by comparing the actual string
 <br />
 
 
-#### Q14
+#### Q15
 ### Write a program to reverse a string by words. Also show the reverse of each words in place
 
 - The string can be reversed by words, by splitting the string with spaces and joining them back after reverse
@@ -437,7 +457,7 @@ str.split(" ").map(val => val.split("").reverse().join("")).join(" ");          
 
 <br />
 
-#### Q15
+#### Q16
 ### Write a program to reverse a given integer number
 
 - The remainder of the number can be fetched and the number can be divided by 10 to remvoe the the digit in loop till number becomes 0
@@ -464,7 +484,7 @@ let numStr = String(num);
 
 <br />
 
-#### Q16
+#### Q17
 ### Write a code to replace all the spaces of the string with underscores
 
 - The string can be split using the space character and can be joined back with underscore to replace all the spaces with strings
@@ -487,7 +507,7 @@ str.replaceAll(" ", "_");
 
 <br />
 
-#### Q17
+#### Q18
 ### Write a function which can convert the time input given in 12 hours format to 24 hours format
 ```js
 // Example
@@ -527,7 +547,7 @@ Conversion of string to lowerCase helps in case insensitive comparision
 
 <br />
 
-#### Q18
+#### Q19
 ### Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'
 ```js
 // Example
@@ -554,7 +574,7 @@ function getTheGapX(str) {
 
 <br />
 
-#### Q19
+#### Q20
 ### Write a function to truncate a string to a certain number of letters
 ```js
 // Example
@@ -578,7 +598,7 @@ function truncateString(str, charCount) {
 
 <br />
 
-#### Q20
+#### Q21
 ### Write a code to truncate a string to a certain number of words
 
 - The string can be broken in to words array and then `slice` method of array can be used to get the number of words which will then be joined back
@@ -592,7 +612,7 @@ str.split(' ').slice(0, wordLimit).join(' ');               // "JavaScript is si
 
 <br />
 
-#### Q21
+#### Q22
 ### Show the creation of Regular Expression in JavaScript
 
 - Regular expressions are patterns used to match character combinations in strings
@@ -618,7 +638,7 @@ In JavaScript, regular expressions are objects
 
 <br />
 
-#### Q22
+#### Q23
 ### Create a regular expression to validate if the given input is valid Indian mobile number or not
 ```js
 // Example 
@@ -651,7 +671,29 @@ String has method `match` which returns array of matches or null
 
 <br />
 
-#### Q23
+#### Q24
+### Write a function which returns a list of elements which contains at least one character as digit
+```js
+// Example 
+numInStr(['1a', 'a', '2b', 'b']));              // ['1a', '2b']
+numInStr(['abc', 'abc10']));                    // ['abc10']
+numInStr(['abc', 'ab10c', 'a10bc', 'bcd']));    // ['ab10c', 'a10bc']
+numInStr(['this is a test', 'test1']));         // ['test1']
+```
+
+- A test for digit after looping through the array would give the list of values having at least one digit string
+
+```js
+function numInStr(mixArray){
+    return mixArray.filter((value) => {
+        return /[0-9]/.test(value);
+    });
+}
+```
+
+<br />
+
+#### Q25
 ### Write a function which checks if a given search text is present either in the beginning of the first name or the second name
 ```js
 // Example
@@ -676,7 +718,7 @@ Case insensitive match is happening for the search text in the string represente
 
 <br />
 
-#### Q24
+#### Q26
 ### Write a function to chop a string into chunks of a given length and return it as array
 ```js
 // Example
@@ -711,7 +753,7 @@ function stringChop(str, size = str.length) {
 
 <br />
 
-#### Q25
+#### Q27
 ### Write a code to remove all the vowels from a given string
 
 - `replace` method on String accepts a string or regex as the argument
@@ -726,7 +768,7 @@ str.replace(/[aeiou]/gi, '');            // _lv_JvScrpt
 
 <br />
 
-#### Q26
+#### Q28
 ### Create a function which returns random hex color code
 
 - The color code is popularly represented in hexadecimal format for RGB colors
@@ -749,7 +791,7 @@ function getGetHEXColorCode() {
 
 <br />
 
-#### Q27
+#### Q29
 ### Write a function which accepts two valid dates and returns the difference between them as number of days
 
 - The difference between 2 dates in JavaScript will give the time difference in milliseconds
@@ -774,7 +816,7 @@ getDaysBetweenDates('10/15/2020', '12/1/2020');                 // 47
 
 <br />
 
-#### Q28
+#### Q30
 ### Show the usage of template literals with expression interpolation and tagged templates
 
 - Template literals are string literals allowing embedded expressions and support multi lines
@@ -810,7 +852,7 @@ myTag`Note: ${person} is a member of following communities: ${membership}`;     
 
 <br />
 
-#### Q29
+#### Q31
 ### Write a code to show the working of `try...catch...finally`
 
 - The `try` statement consists of a try-block, which contains one or more statements. At least one catch-block, or a finally-block, must be present
@@ -837,7 +879,7 @@ try {
 
 <br />
 
-#### Q30
+#### Q32
 ### Show the creation and usage of `symbol` with code
 
 - A "symbol" represents a unique identifier
