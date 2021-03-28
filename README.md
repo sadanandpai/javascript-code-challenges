@@ -23,7 +23,6 @@
     <a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/code.png" alt="code" width="200"/></a>
 	<br/>
 	<p>Show your support by giving a ⭐ to this repo</p>
-	<p>Visit <a href="https://github.com/sadanandpai/javascript-code-challenges/discussions">Discussions</a>, if you need help or want to discuss</p>
 	<h5>Feel free to connect with me on <a href="https://linkedin.com/in/sadanandpai" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="sadanandpai" height="20" width="20" /></a></h5>
 </div>
 
