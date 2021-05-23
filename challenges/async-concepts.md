@@ -2,7 +2,7 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Asynchronous programming - concpets
+## JavaScript interview code challenges on Asynchronous programming - concepts
 
 1. [Show the execution of 3 asynchronous block of code, one after the other in sequence](#Q1)
 1. [Write a code to make xmlHTTPRequest to get data from the server asynchronously](#Q2)
