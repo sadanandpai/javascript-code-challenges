@@ -214,7 +214,7 @@ Object.prototype.toString.call(arr) === '[object Array]'
 
 <br />
 
-#### Q9
+#### Q7
 ### Show how an array in JavaScript can act like a stack and queue
 
 - Stack is a 'Last In First Out' data structure can be achieved using `push` and `pop` operations
@@ -238,7 +238,7 @@ arr.shift();
 
 <br />
 
-#### Q16
+#### Q8
 ### Create an array by removing all the holes of the array
 
 - Holes are `undefined` value present inside array
@@ -253,7 +253,7 @@ Holes can be formed when an array value by index is deleted. Example: `delete ar
 
 <br />
 
-#### Q21
+#### Q9
 ### Optimize the given statements having lot of logical checks to use a compact and cleaner logic
 ```js
 // Example1
@@ -286,7 +286,7 @@ Generally this use case can be implemented for `if` conditions
 
 <br />
 
-#### Q22
+#### Q10
 ### Write a program to iterate over a 2 dimensional array and print all the values of it
 
 - Arrays can be iterated by using its index to fetch the values
@@ -322,7 +322,7 @@ arr.forEach(rowArr => rowArr.forEach(val => console.log(val)));
 
 <br />
 
-#### Q23
+#### Q11
 ### Write a program to store values in to a set
 
 - Set lets us store unique values of any type
@@ -349,7 +349,7 @@ set;            // 1, 2, 3
 
 <br />
 
-#### Q24
+#### Q12
 ### Write a program to store values in to a map
 
 - `Map` holds key-value pairs and remembers the original insertion order of the keys
@@ -378,7 +378,7 @@ Unlike objects, `Map` can have any primitive or object as the key
 
 <br />
 
-#### Q25
+#### Q13
 ### Write a code to iterate over a set
 
 - `set` is an iterable object and can be iterated using for..of loop
@@ -394,7 +394,7 @@ set.forEach(value => console.log(value));
 
 <br />
 
-#### Q26
+#### Q14
 ### Write a code to iterate over a map
 
 - `map` is an iterable object and can be iterated using for..of loop
@@ -414,7 +414,7 @@ map.forEach((value, key) => console.log(key, value));
 
 <br />
 
-#### Q27
+#### Q15
 ### Show how map is different from object to store key value pairs with coding example
 
 - Map does not contain any keys by default unlike objects which has keys from its prototype
@@ -436,7 +436,7 @@ Maps perform better than objects in most of the scenarios involving addition and
 
 <br />
 
-#### Q36
+#### Q16
 ### Write a program to polyfill `filter` functionality of the Array
 
 - `filter` iterates over the all values of array and passes value, index and array (itself) as the arguments
@@ -466,7 +466,7 @@ The solution is a simple polyfill of `filter` and not intended to handle all the
 
 <br />
 
-#### Q37
+#### Q17
 ### Write a program to polyfill `map` functionality of the Array
 
 - `map` iterates over the all values of array and passes value, index and array (itself) as the arguments
@@ -493,7 +493,7 @@ The solution is a simple polyfill of `map` and not intended to handle all the co
 
 <br />
 
-#### Q38
+#### Q18
 ### Write a program to polyfill `reduce` functionality of the Array
 
 - `reduce` iterates over the all values of array and passes value, index and array (itself) as the arguments
