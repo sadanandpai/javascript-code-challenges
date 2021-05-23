@@ -30,31 +30,50 @@
 
 ## JavaScript Modern Interview Code Challenges by topic
 
-- [Primitives](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/primitives.md#home)
+- Primitives
 
-- [Functions](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/functions.md#home)
+  - [Concepts](./challenges/primitives-concepts.md#home)
+  - [Challenges](./challenges/primitives-challenges.md#home)
 
-- [Objects](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/objects.md#home)
+- Functions
 
-- [Collections](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/collections.md#home)
+  - [Concepts](./challenges/functions-concepts.md#home)
+  - [Challenges](./challenges/functions-challenges.md#home)
 
-- [Asynchronousity](https://github.com/sadanandpai/javascript-code-challenges/blob/main/challenges/async.md#home)
+- Objects
+
+  - [Concepts](./challenges/objects-concepts.md#home)
+  - [Challenges](./challenges/objects-challenges.md#home)
+
+- Collections
+
+  - [Concepts](./challenges/collections-concepts.md#home)
+  - [Challenges](./challenges/collections-challenges.md#home)
+
+- Asynchronousity
+  - [Concepts](./challenges/async-concepts.md#home)
+  - [Challenges](./challenges/async-challenges.md#home)
 
 ---
 
 ### Usage Guide and Study materials
-If you want to know more about using this repo or view the list of recommended list of study materials on JavaScript, check out [Usage and Study Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/usageAndStudyGuide.md)
+
+If you want to know more about using this repo or view the list of recommended list of study materials on JavaScript, check out [Usage and Study Guide](./usageAndStudyGuide.md)
 <br/><br/>
 
 ### Contributing Guide
-If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](https://github.com/sadanandpai/javascript-code-challenges/blob/main/contributing.md)
+
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./contributing.md)
 <br/><br/>
 
 ### Stargazers
+
 [![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/stargazers)
 
 ### Forkers
+
 [![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/network/members)
 
 ### License
-This repository is MIT licensed. [Read more](https://github.com/sadanandpai/javascript-code-challenges/blob/main/LICENSE)
+
+This repository is MIT licensed. [Read more](./LICENSE)
