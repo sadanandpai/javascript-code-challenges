@@ -142,8 +142,8 @@ function softBind(fn, context) {
         var allArgs = fnArgs.concat(Array.prototype.slice.call(arguments));
         
         // override the context to incoming context if it is not undefined, null or window
-        var context = (!this || this === window) ? obj : this;
-        fn.apply(context, allArgs);
+        var finalContext = (!this || this === window) ? context : this;
+        fn.apply(finalContext, allArgs);
     };
 }
 ```
