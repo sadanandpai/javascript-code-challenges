@@ -141,7 +141,7 @@ Once the promise is resolved or rejected, status will not change
 ```js
 function setTimeoutPromise(delay) {
     function resolver(resolve) {
-        setTimeout(resolve(), delay);
+        setTimeout(resolve, delay);
     }
     return new Promise(resolver);
 }
