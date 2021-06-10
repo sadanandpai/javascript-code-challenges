@@ -160,7 +160,7 @@ const obj = {
 #### Q6
 ### Create an object which has a property 'userid' which can only be set once and will be a read only property
 
-- Property accessor `writable` to true sets the property to be read only
+- Property accessor `writable` to `false` sets the property to be read only
 
 ```js
 function userObjectCreator(id){
