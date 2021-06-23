@@ -1,6 +1,6 @@
 ### Contribution Guide
 - Feel free to contribute to this repo by raising the __pull request__
-- If you do not know to raise pull request, send an email with details to sadypai@gmail.com
+- If you do not know to raise a pull request, send an email with details to sadypai@gmail.com
 - Spelling mistakes, improvement of answers, code comments, rephrasing the questions / points, additional details, quality references and similar contributions are highly appreciated
 
 #### Question contribution
@@ -16,8 +16,8 @@
 
 #### Standards followed
 - No full stop at the end of the question or points
-- Output of the code is mentioned infront of the statement with comments
-- Code comments should be before or after the code in seperate line
+- Output of the code is mentioned in front of the statement with comments
+- Code comments should be before or after the code in a separate line
 - Driver codes are added only when necessary
 - The difficulty level of the question in general increases with the question number
 - Follow the existing format of markdown and code
