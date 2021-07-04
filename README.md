@@ -20,8 +20,6 @@
 <div align="center">
     <h3>This is a collection of modern interview code challenges on JavaScript suitable for</h3>
     <h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    <a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/code.png" alt="code" width="200"/></a>
-	<br/>
 	<p>Show your support by giving a ⭐ to this repo</p>
 	<h5>Feel free to connect with me on <a href="https://linkedin.com/in/sadanandpai" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="sadanandpai" height="20" width="20" /></a></h5>
 	<a href="https://www.buymeacoffee.com/sadanandpai" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
