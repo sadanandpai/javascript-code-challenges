@@ -58,8 +58,8 @@
 
 ### Usage Guide and Study materials
 
-If you want to know more about using this repo or view the list of recommended list of study materials on JavaScript, check out [Usage and Study Guide](./usageAndStudyGuide.md)
-<br/><br/>
+- [Usage Guide](./usageAndStudyGuide.md)
+- [Study Materials](https://github.com/sadanandpai/frontend-learning-kit)
 
 ### Contributing Guide
 
