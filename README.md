@@ -58,7 +58,7 @@
 
 ### Usage Guide and Study materials
 
-- [Usage Guide](./usageAndStudyGuide.md)
+- [Usage Guide](./usageGuide.md)
 - [Study Materials](https://github.com/sadanandpai/frontend-learning-kit)
 
 ### Contributing Guide
