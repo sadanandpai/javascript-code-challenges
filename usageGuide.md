@@ -1,4 +1,4 @@
-### Usage Guide for this repo
+### Usage Guide
 
 - Familiarity and hands on experience in JavaScript are recommended before attempting these challenges
 - The JavaScript modern interview code challenges are divided into 5 sections topic wise
@@ -12,17 +12,3 @@
 
 ##### Note
 Do not use these challenges to learn JavaScript if you are new to JavaScript
-
----
-
-### Recommended study materials on JavaScript
-
-##### Books 
-- https://eloquentjavascript.net/
-- https://github.com/getify/You-Dont-Know-JS
-- https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition
-
-##### Tutorials and references
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript
-- https://javascript.info/
-- https://tc39.es/ecma262/
