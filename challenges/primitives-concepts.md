@@ -197,7 +197,7 @@ It is not possible to combine both the AND (&&) and OR operators (||) directly w
 - `isInteger` is used to check if the given number is integer or not
 - `parseInt` is used to convert a given value in to integer
 - `parseFloat` is used to convert a given value in to floating number
-- `isNan` is used to check if the given value is NaN or no
+- `isNaN` is used to check if the given value is NaN or no
 - `toFixed` is used to limit the number of digits after the decimal place
 - `toPrecision` is used to limit the total number of digits to represent the number
 
