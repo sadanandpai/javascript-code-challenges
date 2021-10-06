@@ -257,8 +257,8 @@ function getTheGapX(str) {
 ```js
 // Example
 truncateString("JavaScript", 7)             // "Java..."
-truncateString("JS is fun", 12)             // "JS is fun"
-truncateString("JS is funny", 12)           // "JS is funny"
+truncateString("JS is fun", 10)             // "JS is fun"
+truncateString("JS is funny", 10)           // "JS is f..."
 ```
 
 - Text can be truncated by fetching the substring from start till the count of characters
