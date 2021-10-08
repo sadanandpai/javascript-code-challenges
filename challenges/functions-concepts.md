@@ -42,7 +42,7 @@ function higherOrderFunction(){
 
 // driver code
 var func = higherOrderFunction();
-func();                                 // hello
+func();                                 // Hello
 ```
 
 ###### Notes
