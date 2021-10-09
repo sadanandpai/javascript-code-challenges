@@ -475,7 +475,7 @@ The solution is a simple polyfill of `filter` and not intended to handle all the
 ```js
 if (!Array.prototype.map) {
  Array.prototype.map = function(callback) {
-    if(typeof callbak !== "function")
+    if(typeof callback !== "function")
         throw new Error("Argument passed has to be a function");
         
     let newArray = [];
