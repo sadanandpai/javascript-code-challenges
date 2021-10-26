@@ -28,31 +28,16 @@
 
 ---
 
-## JavaScript Modern Interview Code Challenges by topic
+<div align="center">
+	<h2>JavaScript Modern Interview Code Challenges by topic</h2>
 
-- Primitives
+| Primitives  | Functions   | Objects     | Collections | Async |
+| ----------- | ----------- | ----------- | ----------- | --------------- |
+| [Concepts](./challenges/primitives-concepts.md#home)      | [Concepts](./challenges/functions-concepts.md#home)      | [Concepts](./challenges/objects-concepts.md#home)      | [Concepts](./challenges/collections-concepts.md#home)       | [Concepts](./challenges/async-concepts.md#home)     |
+| [Challenges](./challenges/primitives-challenges.md#home)  | [Challenges](./challenges/functions-challenges.md#home)  | [Challenges](./challenges/objects-challenges.md#home)  | [Challenges](./challenges/collections-challenges.md#home)   | [Challenges](./challenges/async-challenges.md#home) |
 
-  - [Concepts](./challenges/primitives-concepts.md#home)
-  - [Challenges](./challenges/primitives-challenges.md#home)
 
-- Functions
-
-  - [Concepts](./challenges/functions-concepts.md#home)
-  - [Challenges](./challenges/functions-challenges.md#home)
-
-- Objects
-
-  - [Concepts](./challenges/objects-concepts.md#home)
-  - [Challenges](./challenges/objects-challenges.md#home)
-
-- Collections
-
-  - [Concepts](./challenges/collections-concepts.md#home)
-  - [Challenges](./challenges/collections-challenges.md#home)
-
-- Asynchronousity
-  - [Concepts](./challenges/async-concepts.md#home)
-  - [Challenges](./challenges/async-challenges.md#home)
+</div>
 
 ---
 
