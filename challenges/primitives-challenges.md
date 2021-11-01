@@ -189,11 +189,12 @@ str.replaceAll(" ", "_");
 ### Write a function which can convert the time input given in 12 hours format to 24 hours format
 ```js
 // Example
-convertTo24HrsFormat('12:10AM');       // 00:10
-convertTo24HrsFormat('5:49AM');        // 05:49
-convertTo24HrsFormat('12:10PM');       // 12:10
-convertTo24HrsFormat('01:10PM');       // 13:10
-convertTo24HrsFormat('10:10PM');       // 22:10   
+console.log(convertTo24HrsFormat("12:10AM"));   // 00:10
+console.log(convertTo24HrsFormat("5:00AM"));    // 05:00
+console.log(convertTo24HrsFormat("12:33PM"));   // 12:33
+console.log(convertTo24HrsFormat("01:59PM"));   // 13:59
+console.log(convertTo24HrsFormat("10:8PM"));    // 22:08
+console.log(convertTo24HrsFormat("10:02PM"));   // 22:02
 ```
 
 - The check for 'AM' and 'PM' can be verified using `endsWith` String method
@@ -201,23 +202,16 @@ convertTo24HrsFormat('10:10PM');       // 22:10
 
 ```js
 function convertTo24HrsFormat(timeText) {
-    var timeTextLower = timeText.toLowerCase();
-    
-    if (timeTextLower.endsWith('am')) {
-        let [hours, mins] = timeTextLower.split(':');
-        hours = hours == 12 ? '0' : hours;
-        mins = Number.parseInt(mins)
-        mins = mins < 10 ? '0' + mins : mins;
-        return hours.padStart(2, 0) + ':' + mins;
-    } 
-    // 12 o clock is the special case to be handled both for AM and PM
-    else if (timeTextLower.endsWith('pm')) {
-        let [hours, mins] = timeTextLower.split(':');
-        hours = hours == 12 ? hours : +hours + 12;
-        mins = Number.parseInt(mins)
-        mins = mins < 10 ? '0' + mins : mins;
-        return hours + ':' + mins;
-    }
+  var timeTextLower = timeText.toLowerCase();
+  let [hours, mins] = timeTextLower.split(":");
+
+  // 12 o clock is the special case to be handled both for AM and PM
+  if (timeTextLower.endsWith("am"))
+        hours = hours == 12 ? "0" : hours;
+  else if (timeTextLower.endsWith("pm"))
+        hours = hours == 12 ? hours : String(+hours + 12);
+
+  return hours.padStart(2, 0) + ":" + mins.slice(0, -2).padStart(2, 0);
 }
 ```
 
