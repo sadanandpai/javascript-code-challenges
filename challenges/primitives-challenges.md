@@ -189,12 +189,12 @@ str.replaceAll(" ", "_");
 ### Write a function which can convert the time input given in 12 hours format to 24 hours format
 ```js
 // Example
-console.log(convertTo24HrsFormat("12:10AM"));   // 00:10
-console.log(convertTo24HrsFormat("5:00AM"));    // 05:00
-console.log(convertTo24HrsFormat("12:33PM"));   // 12:33
-console.log(convertTo24HrsFormat("01:59PM"));   // 13:59
-console.log(convertTo24HrsFormat("10:8PM"));    // 22:08
-console.log(convertTo24HrsFormat("10:02PM"));   // 22:02
+convertTo24HrsFormat("12:10AM");    // 00:10
+convertTo24HrsFormat("5:00AM");     // 05:00
+convertTo24HrsFormat("12:33PM");    // 12:33
+convertTo24HrsFormat("01:59PM");    // 13:59
+convertTo24HrsFormat("11:8PM");     // 23:08
+convertTo24HrsFormat("10:02PM");    // 22:02
 ```
 
 - The check for 'AM' and 'PM' can be verified using `endsWith` String method
