@@ -206,13 +206,17 @@ function convertTo24HrsFormat(timeText) {
     if (timeTextLower.endsWith('am')) {
         let [hours, mins] = timeTextLower.split(':');
         hours = hours == 12 ? '0' : hours;
-        return hours.padStart(2, 0) + ':' + Number.parseInt(mins);
+        mins = Number.parseInt(mins)
+        mins = mins < 10 ? '0' + mins : mins;
+        return hours.padStart(2, 0) + ':' + mins;
     } 
     // 12 o clock is the special case to be handled both for AM and PM
     else if (timeTextLower.endsWith('pm')) {
         let [hours, mins] = timeTextLower.split(':');
         hours = hours == 12 ? hours : +hours + 12;
-        return hours + ':' + Number.parseInt(mins);
+        mins = Number.parseInt(mins)
+        mins = mins < 10 ? '0' + mins : mins;
+        return hours + ':' + mins;
     }
 }
 ```
