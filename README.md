@@ -1,13 +1,8 @@
 <div align="center">
-	<h1>
-    JavaScript Modern Interview Code Challenges 2021
-	<a href="https://twitter.com/intent/tweet?text=A%20collection%20of%20modern%20interview%20code%20challenges%20on%20JavaScript&url=https://github.com/sadanandpai/javascript-code-challenges&hashtags=javascript,interview,HTML5,CSS,reactjs,angularjs,jobseekers,js" target="_blank"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="tweet" /></a></h1>
+	<h1>JavaScript Modern Interview Code Challenges 2021</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
     	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-</div>
-
-<div align="center">
-    <a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/banner.png" alt="banner" width="500px"/></a>
+    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/banner.png" alt="banner" width="500px"/></a>
 </div>
 
 <div align="center">
@@ -36,7 +31,6 @@
 | ----------- | ----------- | ----------- | ----------- | --------------- |
 | [Concepts](./challenges/primitives-concepts.md#home)      | [Concepts](./challenges/functions-concepts.md#home)      | [Concepts](./challenges/objects-concepts.md#home)      | [Concepts](./challenges/collections-concepts.md#home)       | [Concepts](./challenges/async-concepts.md#home)     |
 | [Challenges](./challenges/primitives-challenges.md#home)  | [Challenges](./challenges/functions-challenges.md#home)  | [Challenges](./challenges/objects-challenges.md#home)  | [Challenges](./challenges/collections-challenges.md#home)   | [Challenges](./challenges/async-challenges.md#home) |
-
 
 </div>
 
