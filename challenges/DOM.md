@@ -7,6 +7,8 @@
 1. [Show the different ways of selecting an element from DOM](#Q1)
 1. [Show the ways to loop over the Nodelist obtained after querying for the elements](#Q2)
 3. [Design and Implement a Node Store, which supports DOM element as key](#Q3)
+4. [Implement a function to find the closest ancestor with the provided selector](#Q4)
+5. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
  
 ---
 
@@ -112,5 +114,58 @@ Element.prototype.closest = function(selector) {
 
 <br />
 
+#### Q5
+### Write a function to find the corresponding node in two identical DOM trees
+
+- Given two same DOM tree A, B, and an Element a in A, find the corresponding Element b in B. By corresponding, we mean a and b have the same relative position to their DOM tree root.
+
+```js
+const A = document.createElement('div')
+A.innerHTML = `
+<div>
+<div>
+  <div>
+    <div id="node1"></div>
+  </div>
+  <div>
+  </div>
+  <div>
+    <div>
+      <p id="node2"></p>
+    </div>
+  </div>
+<div>
+</div>`
+
+
+const B = A.cloneNode(true)
+const node1 = A.querySelector('#node1')
+const node2 = A.querySelector('#node2')
+const node1Target = B.querySelector('#node1')
+const node2Target = B.querySelector('#node2')
+
+findCorrespondingNode(A, B, node1) // node1Target
+findCorrespondingNode(A, B, node2) // node2Target
+```
+
+```js
+const findCorrespondingNode = (rootA, rootB, target) => {
+  if(rootA === target) return rootB;
+
+  if(rootA.childElementCount) {
+    for(let i = 0; i < rootA.childElementCount; i++) {
+      let result = findCorrespondingNode(rootA.children[i], rootB.children[i], target);
+      if(result) {
+        return result
+      }
+    } 
+  }
+}
+```
+
+###### References
+- https://bigfrontend.dev/problem/find-corresponding-node-in-two-identical-DOM-tree
+
+<br />
 
 [[↑] Back to top](#home)
