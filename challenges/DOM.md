@@ -11,6 +11,7 @@
 5. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
 6. [Write a function to get depth of a given DOM tree](#Q6)
 7. [Implement a function to get the root node of a given DOM fragment](#Q7)
+8. [Implement a function to get unique tag names in a given DOM tree](#Q8)
  
 ---
 
@@ -226,6 +227,36 @@ function getRootNode (tree) {
 
 ###### References
 - https://javascript.info/dom-navigation
+
+
+#### Q8
+### Implement a function to get unique tag names in a given DOM tree
+
+```js
+/**
+ * @param {HTMLElement | null} tree
+ * @return {Array}
+ */
+function getUniqueTags(root, result = new Set()) {
+  if(!root) return [];
+
+  if(!result.has(root.tagName)) {
+    result.add(root.tagName);
+  }
+
+  if(root.hasChildNodes()) {
+    for(let child of root.children) {
+      getUniqueTags(child, result)
+    }
+  }
+
+  return [...result];
+}
+```
+
+###### References
+- https://bigfrontend.dev/problem/get-DOM-tags
+
 
 <br />
 
