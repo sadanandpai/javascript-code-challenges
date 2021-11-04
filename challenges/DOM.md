@@ -89,5 +89,28 @@ class NodeStore {
 <br />
 
 
+#### Q4
+### Implement a function to find the closest ancestor with the provided selector (Element.closest() method)
+
+- The closest() method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.
+
+```js
+Element.prototype.closest = function(selector) {
+  var el = this;
+  while (el) {
+    if (el.matches(selector)) {
+      return el;
+    }
+    el = el.parentElement;
+  }
+  return null;
+};
+```
+
+###### References
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+
+<br />
+
 
 [[↑] Back to top](#home)
