@@ -10,6 +10,7 @@
 4. [Implement a function to find the closest ancestor with the provided selector](#Q4)
 5. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
 6. [Write a function to get depth of a given DOM tree](#Q6)
+7. [Implement a function to get the root node of a given DOM fragment](#Q7)
  
 ---
 
@@ -200,9 +201,31 @@ function getHeight (root) {
 }
 ```
 
+
+#### Q7
+### Implement a function to get the root node of a given DOM fragment (document.getRootNode() method)
+
+- Root node is the topmost parent node of any given DOM fragment
+
+
+```js
+/**
+ * @param {HTMLElement | null} tree
+ * @return {HTMLElement | null}
+ */
+function getRootNode (tree) {
+  if(!tree) return null;
+
+  while(tree.parentElement) {
+    tree = tree.parentElement;
+  }
+
+  return tree;
+}
+```
+
 ###### References
-- https://web.dev/dom-size/
-- https://bigfrontend.dev/problem/get-DOM-tree-height
+- https://javascript.info/dom-navigation
 
 <br />
 
