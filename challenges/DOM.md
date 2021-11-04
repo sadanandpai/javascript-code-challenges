@@ -9,6 +9,7 @@
 3. [Design and Implement a Node Store, which supports DOM element as key](#Q3)
 4. [Implement a function to find the closest ancestor with the provided selector](#Q4)
 5. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
+6. [Write a function to get depth of a given DOM tree](#Q6)
  
 ---
 
@@ -165,6 +166,43 @@ const findCorrespondingNode = (rootA, rootB, target) => {
 
 ###### References
 - https://bigfrontend.dev/problem/find-corresponding-node-in-two-identical-DOM-tree
+
+<br />
+
+
+#### Q6
+### Write a function to get depth of a given DOM tree
+
+- A depth of a given DOM tree is the max depth till which DOM nodes are nested
+
+
+```js
+/**
+ * @param {HTMLElement | null} tree
+ * @return {number}
+ */
+function getHeight (root) {
+  if(!root) return 0;
+
+  let maxDepth = 0;
+
+  const helper = (current, depth = 1) =>  {
+    if(current.hasChildNodes()) {
+      for(let child of current.children) {
+        helper(child, depth + 1);
+      }
+    }
+    maxDepth = Math.max(maxDepth, depth)
+  }
+
+  helper(root)
+  return maxDepth
+}
+```
+
+###### References
+- https://web.dev/dom-size/
+- https://bigfrontend.dev/problem/get-DOM-tree-height
 
 <br />
 
