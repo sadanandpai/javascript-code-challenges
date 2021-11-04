@@ -260,4 +260,39 @@ function getUniqueTags(root, result = new Set()) {
 
 <br />
 
+
+#### Q8
+### Implement a function to get elements by tag name (document.getElementsByTagName() method)
+
+- The getElementsByTagName method of Document interface returns an HTMLCollection of elements with the given tag name.
+- For example, document.getElementsByTagName('div') returns a collection of all div elements in the document.
+
+```js
+/**
+ * @param {HTMLElement | null} tree
+ * @return {Array}
+ */
+function getElementsByTagName(root, tagName) {
+  if(!root) return [];
+
+  let result = [];
+
+  if(root.tagName.toLowerCase() === tagName.toLowerCase()) {
+    result.push(root);
+  }
+
+  if(root.hasChildNodes()) {
+    for(let child of root.children) {
+      result = result.concat(getElementsByTagName(child, tagName))
+    }
+  }
+
+  return result;
+}
+```
+
+###### References
+- https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
+
+
 [[↑] Back to top](#home)
