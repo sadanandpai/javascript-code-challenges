@@ -12,6 +12,7 @@
 6. [Write a function to get depth of a given DOM tree](#Q6)
 7. [Implement a function to get the root node of a given DOM fragment](#Q7)
 8. [Implement a function to get unique tag names in a given DOM tree](#Q8)
+9. [Implement a function to check if a given DOM tree has duplicate IDs](#Q9)
  
 ---
 
@@ -293,6 +294,36 @@ function getElementsByTagName(root, tagName) {
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
+
+
+#### Q9
+### Implement a function to check if a given DOM tree has duplicate IDs
+
+- In a given DOM tree, the id on each node has be unique
+- Although HTML is very forgiving, but we should avoid duplicate identifiers
+
+```js
+/**
+ * @param {HTMLElement | null} tree
+ * @return {Boolean}
+ */
+function hasDuplicateId(tree, idSet = new Set()) {
+  if(!tree) return false;
+
+  if(idSet.has(tree.id)) return true;
+
+  tree.id && idSet.add(tree.id);
+
+  if(tree.hasChildNodes()) {
+    for(let child of tree.children) {
+       const result = hasDuplicateId(child, idSet);
+       if(result) return true;
+    }
+  }
+
+  return false;
+}
+```
 
 
 [[↑] Back to top](#home)
