@@ -291,6 +291,8 @@ function getElementsByTagName(root, tagName) {
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
 
+<br>
+
 #### Q10
 ### Implement a function to check if a given DOM tree has duplicate IDs
 
