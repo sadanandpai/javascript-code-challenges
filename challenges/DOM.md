@@ -6,13 +6,14 @@
 
 1. [Show the different ways of selecting an element from DOM](#Q1)
 1. [Show the ways to loop over the Nodelist obtained after querying for the elements](#Q2)
-3. [Design and Implement a Node Store, which supports DOM element as key](#Q3)
-4. [Implement a function to find the closest ancestor with the provided selector](#Q4)
-5. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
-6. [Write a function to get depth of a given DOM tree](#Q6)
-7. [Implement a function to get the root node of a given DOM fragment](#Q7)
-8. [Implement a function to get unique tag names in a given DOM tree](#Q8)
-9. [Implement a function to check if a given DOM tree has duplicate IDs](#Q9)
+1. [Design and Implement a Node Store, which supports DOM element as key](#Q3)
+1. [Implement a function to find the closest ancestor with the provided selector](#Q4)
+1. [Write a function to find the corresponding node in two identical DOM trees](#Q5)
+1. [Write a function to get depth of a given DOM tree](#Q6)
+1. [Implement a function to get the root node of a given DOM fragment (document.getRootNode() method)](#Q7)
+1. [Implement a function to get the root node of a given DOM fragment](#Q8)
+1. [Implement a function to get unique tag names in a given DOM tree](#Q9)
+1. [Implement a function to check if a given DOM tree has duplicate IDs](#Q10)
  
 ---
 
@@ -49,7 +50,6 @@ Note goes here
 - 
 
 <br />
-
 
 #### Q3
 ### Design and Implement a Node Store, which supports DOM element as key
@@ -93,7 +93,6 @@ class NodeStore {
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
 <br />
-
 
 #### Q4
 ### Implement a function to find the closest ancestor with the provided selector (Element.closest() method)
@@ -141,7 +140,6 @@ A.innerHTML = `
 <div>
 </div>`
 
-
 const B = A.cloneNode(true)
 const node1 = A.querySelector('#node1')
 const node2 = A.querySelector('#node2')
@@ -171,7 +169,6 @@ const findCorrespondingNode = (rootA, rootB, target) => {
 - https://bigfrontend.dev/problem/find-corresponding-node-in-two-identical-DOM-tree
 
 <br />
-
 
 #### Q6
 ### Write a function to get depth of a given DOM tree
@@ -203,12 +200,12 @@ function getHeight (root) {
 }
 ```
 
+<br>
 
 #### Q7
 ### Implement a function to get the root node of a given DOM fragment (document.getRootNode() method)
 
 - Root node is the topmost parent node of any given DOM fragment
-
 
 ```js
 /**
@@ -229,6 +226,7 @@ function getRootNode (tree) {
 ###### References
 - https://javascript.info/dom-navigation
 
+<br>
 
 #### Q8
 ### Implement a function to get unique tag names in a given DOM tree
@@ -258,11 +256,9 @@ function getUniqueTags(root, result = new Set()) {
 ###### References
 - https://bigfrontend.dev/problem/get-DOM-tags
 
+<br>
 
-<br />
-
-
-#### Q8
+#### Q9
 ### Implement a function to get elements by tag name (document.getElementsByTagName() method)
 
 - The getElementsByTagName method of Document interface returns an HTMLCollection of elements with the given tag name.
@@ -295,8 +291,7 @@ function getElementsByTagName(root, tagName) {
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
 
-
-#### Q9
+#### Q10
 ### Implement a function to check if a given DOM tree has duplicate IDs
 
 - In a given DOM tree, the id on each node has be unique
@@ -325,5 +320,6 @@ function hasDuplicateId(tree, idSet = new Set()) {
 }
 ```
 
+<br>
 
 [[↑] Back to top](#home)
