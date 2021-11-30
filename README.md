@@ -2,7 +2,7 @@
 	<h1>JavaScript Modern Interview Code Challenges 2021</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
     	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="assets/banner.png" alt="banner" width="500px"/></a>
+    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="banner.png" alt="banner" width="500px"/></a>
 </div>
 
 <div align="center">
