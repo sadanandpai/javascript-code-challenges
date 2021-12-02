@@ -480,7 +480,7 @@ const map = new Map();
 
 arr.forEach(obj => {
     if (map.has(obj.id)) {
-        if (obj.rank > map.get(obj.id)) {
+        if (obj.rank < map.get(obj.id).rank) {
             map.set(obj.id, obj);
         }
     } else {
