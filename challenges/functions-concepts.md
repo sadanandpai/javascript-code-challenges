@@ -673,7 +673,7 @@ const proxy = new Proxy(function () { console.log(arguments); }, {
 
 // driver code
 proxy(1, 2, 3);                 // Proxy apply is invoked on target with context: undefined, arguments: 1,2,3
-proxy.call({}, 1, 2);           // Proxy apply is invoked on target with context: undefined, arguments: 1,2,3
+proxy.call({}, 1, 2);           // Proxy apply is invoked on target with context: [object Object], arguments: 1,2,3
 proxy.apply({}, [5, 10]);       // Proxy apply is invoked on target with context: [object Object], arguments: 5,10
 ```
 
