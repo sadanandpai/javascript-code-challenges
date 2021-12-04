@@ -381,16 +381,16 @@ Array and object are used in the programs to contain multiple values
 - Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed
 
 ```js
-function defaultValueFunc(num = 10, num2 = 20, string = "Hello", bool = false, sum = num1 + num2 ){
+function defaultValueFunc(num = 10, num2 = 20, bool = false, sum = num + num2, string = "Hello"){
     console.log(num, string, bool, sum);
 }
 
 // driver code
-defaultValueFunc();                                 //  10, 20, false, 30
-defaultValueFunc(4, 8);                             //  4, 8, false, 12
-defaultValueFunc(10, 4, true);                      //  10, 4, true, 14
-defaultValueFunc(5, 6, false, 11);                  //  5, 6, false, 11
-defaultValueFunc(undefined, undefined, false);      //  10, 20, false, 30
+defaultValueFunc();                                 //  10, 'Hello', false, 30
+defaultValueFunc(4, 8);                             //  4, 'Hello', false, 12
+defaultValueFunc(10, 4, true);                      //  10, 'Hello', true, 14
+defaultValueFunc(5, 6, false, 11);                  //  5, 'Hello', false, 11
+defaultValueFunc(undefined, undefined, false);      //  10, 'Hello', false, 30
 ```
 
 ###### Notes
@@ -673,7 +673,7 @@ const proxy = new Proxy(function () { console.log(arguments); }, {
 
 // driver code
 proxy(1, 2, 3);                 // Proxy apply is invoked on target with context: undefined, arguments: 1,2,3
-proxy.call({}, 1, 2);           // Proxy apply is invoked on target with context: undefined, arguments: 1,2,3
+proxy.call({}, 1, 2);           // Proxy apply is invoked on target with context: [object Object], arguments: 1,2,3
 proxy.apply({}, [5, 10]);       // Proxy apply is invoked on target with context: [object Object], arguments: 5,10
 ```
 
