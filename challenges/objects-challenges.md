@@ -637,6 +637,32 @@ function doesObjectHaveCircularRef(obj){
 }
 ```
 
+```js
+function hasCircularReference(originalObject){
+   // Using depth first search with backtracking and storing a visited set of object references
+   const visitedRefs = new Set([obj]);
+   
+   function containsCircularReference(curObj){
+      if(!curObj) return false;
+      
+      for(const key in curObj){
+          if(typeof curObj[key] === 'object'){
+               if(visitedRefs.has(curObj[key])) return true;
+               
+               visitedRefs.add(curObj[key]);
+               
+               if(isCircularRefObj(curObj[key])) return true;
+               
+               visitedRefs.delete(curObj[key]);
+          }
+      }
+      return false;
+   }
+   
+   return containsCircularReference(originalObject);
+}
+```
+
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cyclic_object_value
 
