@@ -640,18 +640,20 @@ function doesObjectHaveCircularRef(obj){
 ```js
 function hasCircularReference(originalObject){
    // Using depth first search with backtracking and storing a visited set of object references
-   const visitedRefs = new Set([obj]);
+   const visitedRefs = new WeakSet([obj]);
    
-   function containsCircularReference(curObj){
+   function containsCircularReference(originalObject){
       if(!curObj) return false;
       
       for(const key in curObj){
           if(typeof curObj[key] === 'object'){
-               if(visitedRefs.has(curObj[key])) return true;
+               if(visitedRefs.has(curObj[key]))
+                  return true;
                
                visitedRefs.add(curObj[key]);
                
-               if(isCircularRefObj(curObj[key])) return true;
+               if(isCircularRefObj(curObj[key])) 
+                  return true;
                
                visitedRefs.delete(curObj[key]);
           }
@@ -659,7 +661,9 @@ function hasCircularReference(originalObject){
       return false;
    }
    
-   return containsCircularReference(originalObject);
+   const hasCircularRef = containsCircularReference(originalObject);
+   visitedRefs.delete(originalObject);
+   return hasCircularRef;
 }
 ```
 
@@ -696,7 +700,7 @@ JSON.stringify(circularReferenceObj, getCircularReplacer());
 function removeCircularRef(obj) {
     const set = new WeakSet([obj]);
 
-    (function iterateObj(obj = circularReference) {
+    (function iterateObj(obj) {
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
                 if (typeof obj[key] === 'object')
@@ -707,7 +711,7 @@ function removeCircularRef(obj) {
                     }
             }
         }
-    })();
+    })(obj);
 }
 ```
 
