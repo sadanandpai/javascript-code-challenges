@@ -90,6 +90,25 @@ const x = { ...obj};
 const x = JSON.parse(JSON.stringify(obj));
 ```
 
+```js
+function deepCopy(obj){
+   if(!obj) return obj;
+   const copyObj = {};
+   for(const key in obj){
+      let val;
+      if(obj[key] !== 'object')
+        nVal[key] = obj[key];
+      else 
+        copyObj[key] = deepCopy(obj[key]);
+      
+      copyObj[key] = val;
+   }
+   return copyObj;
+}
+
+const x = deepCopy(obj);
+```
+
 ###### Notes
 3rd solution provided does deep copy of a nested object also but this technique results in loss of data
 
