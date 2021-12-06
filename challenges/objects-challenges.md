@@ -96,10 +96,10 @@ function deepCopy(obj){
    const copyObj = {};
    for(const key in obj){
       let val;
-      if(obj[key] !== 'object')
-        nVal[key] = obj[key];
+      if(typeof obj[key] !== 'object')
+        val = obj[key];
       else 
-        copyObj[key] = deepCopy(obj[key]);
+        val = deepCopy(obj[key]);
       
       copyObj[key] = val;
    }
