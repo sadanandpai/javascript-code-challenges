@@ -79,34 +79,33 @@ Object.setPrototypeOf(newObj, obj);
 - Deep copy is done by copying all the properties of the object to another object
 
 ```js
-const x = Object.assign({}, obj);
+Object.assign({}, obj);
 ```
 
 ```js
-const x = { ...obj};
+{ ...obj};
 ```
 
 ```js
-const x = JSON.parse(JSON.stringify(obj));
+JSON.parse(JSON.stringify(obj));
 ```
 
 ```js
 function deepCopy(obj){
-   if(!obj) return obj;
+   if(!obj)
+       return obj;
+   
    const copyObj = {};
    for(const key in obj){
-      let val;
-      if(typeof obj[key] !== 'object')
-        val = obj[key];
+      if(typeof obj[key] !== 'object' || Array.isArray(obj[key]))
+          copyObj[key] = obj[key];
       else 
-        val = deepCopy(obj[key]);
-      
-      copyObj[key] = val;
+          copyObj[key] = deepCopy(obj[key]);
    }
    return copyObj;
 }
 
-const x = deepCopy(obj);
+deepCopy(obj);
 ```
 
 ###### Notes
