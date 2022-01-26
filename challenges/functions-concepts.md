@@ -354,7 +354,8 @@ function multipleValueReturnFunc(){
 }
 
 // driver code
-const {x, y} = multipleValueReturnFunc();
+const { a: x, b: y } = multipleValueReturnFunc(); // x will have 'Java' and y will have 'Script'
+const { a, b } = multipleValueReturnFunc(); // a and b will have respective values
 ```
 
 ```js
