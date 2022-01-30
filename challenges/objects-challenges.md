@@ -10,21 +10,22 @@
 1. [Create an array of pair of values (key, value) from an object and store it in a map. Consider the object is not nested](#Q4)
 1. [Create an object with a property 'marks' which cannot be set to a value less than 0](#Q5)
 1. [Create an object which has a property 'userid' which can only be set once and will be a read only property](#Q6)
-1. [Design a function which takes an array as input and returns a function 'next', calling which fetches a value one by one](#Q7)
-1. [Create an object 'obj' with functions assigned to keys. Show how can we achieve 'obj.func1().func2().func3()' considering func1, func2, func3 are object keys](#Q8)
-1. [Create an object with property counter which keeps incrementing on every access](#Q9)
-1. [Create an object and make it behave like an array which allows push and pop operations on items](#Q10)
-1. [Write a function which can be used to deeply compare 2 nested objects](#Q11)
-1. [Design a class for employee which takes id and name in during construction of object and has a salary property](#Q12)
-1. [Write a program to make all the properties of an object ready only but allow the addition of new properties](#Q13)
-1. [Write a program which can return a boolean if value is present in the range with given start and end values in an object](#Q14)
-1. [Write a function which accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tagname](#Q15)
-1. [Write a function which accepts a collection of values & an iteratee as arguments and returns a grouped object](#Q16)
-1. [Create a constructor function which allows its functions present on prototype to be accessed only by the objects created by calling it](#Q17)
-1. [Design a utility on an array of objects where the access can be made to the object using index (as usual) and also from primary key of the object](#Q18)
-1. [Write a function which receives an object and returns a true if the object has circular reference](#Q19)
-1. [Write a code which can eliminate circular references in an object (Cyclic reference in an object)](#Q20)
-1. [Provide an object on which a value can be set to nested property even if it does not exist](#Q21)
+1. [Stringify an object by excluding the 'password' property](#Q7)
+1. [Design a function which takes an array as input and returns a function 'next', calling which fetches a value one by one](#Q8)
+1. [Create an object 'obj' with functions assigned to keys. Show how can we achieve 'obj.func1().func2().func3()' considering func1, func2, func3 are object keys](#Q9)
+1. [Create an object with property counter which keeps incrementing on every access](#Q10)
+1. [Create an object and make it behave like an array which allows push and pop operations on items](#Q11)
+1. [Write a function which can be used to deeply compare 2 nested objects](#Q12)
+1. [Design a class for employee which takes id and name in during construction of object and has a salary property](#Q13)
+1. [Write a program to make all the properties of an object ready only but allow the addition of new properties](#Q14)
+1. [Write a program which can return a boolean if value is present in the range with given start and end values in an object](#Q15)
+1. [Write a function which accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tagname](#Q16)
+1. [Write a function which accepts a collection of values & an iteratee as arguments and returns a grouped object](#Q17)
+1. [Create a constructor function which allows its functions present on prototype to be accessed only by the objects created by calling it](#Q18)
+1. [Design a utility on an array of objects where the access can be made to the object using index (as usual) and also from primary key of the object](#Q19)
+1. [Write a function which receives an object and returns a true if the object has circular reference](#Q20)
+1. [Write a code which can eliminate circular references in an object (Cyclic reference in an object)](#Q21)
+1. [Provide an object on which a value can be set to nested property even if it does not exist](#Q22)
 
 ---
 
@@ -201,6 +202,35 @@ const obj = userObjectCreator(1);
 <br />
 
 #### Q7
+### Stringify an object by excluding the 'password' property
+```js
+// Example
+const obj = {
+    id: 1,
+    username: 'John',
+    password: 'secret',
+    email: 'john@email.com',
+};
+```
+
+- `JSON.stringify` is the method which can be used for stringification of an object or any other value
+- It accepts 2nd argument which can be a function or array
+
+```js
+JSON.stringify(obj, (key, value) => key === 'password' ? undefined : value);        // {"id":1,"username":"John","email":"john@email.com"}
+```
+
+```js
+JSON.stringify(obj, ['id', 'username', 'email']);                                   // {"id":1,"username":"John","email":"john@email.com"}
+```
+
+###### References
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
+<br />
+
+
+#### Q8
 ### Design a function which takes an array as input and returns a function 'next', calling which fetches a value one by one
 
 - The function returned `next` will return an object which contains value and done properties
@@ -234,7 +264,7 @@ it.next().done;                         // true
 
 <br />
 
-#### Q8
+#### Q9
 ### Create an object 'obj' with functions assigned to keys. Show how can we achieve 'obj.func1().func2().func3()' considering func1, func2, func3 are object keys
 
 - For achieving chaining functionality, each function can return the calling context itself so that context is retained
@@ -276,7 +306,7 @@ Order of calling the functions does not matter as all the functions are returnin
 
 <br />
 
-#### Q9
+#### Q10
 ### Create an object with property counter which keeps incrementing on every access
 ```js
 const obj = counterObject();
@@ -312,7 +342,7 @@ Symbol is used to maintain the private variable in the object. Using the private
 
 <br />
 
-#### Q10
+#### Q11
 ### Create an object and make it behave like an array which allows push and pop operations on items
 
 - Object does not have by default a property named 'length' and hence we can define it on object which helps to track the length
@@ -341,7 +371,7 @@ As the context for array methods is set object, length of the object changes whe
 
 <br />
 
-#### Q11
+#### Q12
 ### Write a function which can be used to deeply compare 2 nested objects
 ```js
 // Example
@@ -396,7 +426,7 @@ Stringification of both objects and comparision will also work, but fails on key
 
 <br />
 
-#### Q12
+#### Q13
 ### Design a class for employee which takes id and name in during construction of object and has a salary property
 
 - Classes are a template for creating objects. They encapsulate data with code to work on that data
@@ -444,7 +474,7 @@ Class in JavaScript is functionality to achieve class based model on top of prot
 
 <br />
 
-#### Q13
+#### Q14
 ### Write a program to make all the properties of an object ready only but allow the addition of new properties
 
 - The exisiting properties of the object can be made read only with `set` keyword using Proxy
@@ -472,7 +502,7 @@ If condition takes care whether the property is new or existing to handle the re
 
 <br />
 
-#### Q14
+#### Q15
 ### Write a program which can return a boolean if value is present in the range with given start and end values in an object
 ```js
 // Example
@@ -497,7 +527,7 @@ range = new Proxy(range, {
 
 <br />
 
-#### Q15
+#### Q16
 ### Write a function which accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tagname
 ```js
 // Example
@@ -542,7 +572,7 @@ function TagManager() {
 
 <br />
 
-#### Q16
+#### Q17
 ### Write a function which accepts a collection of values & an iteratee as arguments and returns a grouped object
 ```js
 // Example
@@ -570,7 +600,7 @@ function groupBy(values, iteratee) {
 
 <br />
 
-#### Q17
+#### Q18
 ### Create a constructor function which allows its functions present on prototype to be accessed only by the objects created by calling it
 
 - The list of objects created by the function can be kept in track using a collection object inside function
@@ -600,7 +630,7 @@ ProtectedFunction.prototype.method.call(obj);           // Incompatible object!
 
 <br />
 
-#### Q18
+#### Q19
 ### Design a utility on an array of objects where the access can be made to the object using index (as usual) and also from primary key of the object
 ```js
 // Example
@@ -633,7 +663,7 @@ const flexEmployees = new Proxy(employees, {
 
 <br />
 
-#### Q19
+#### Q20
 ### Write a function which receives an object and returns a true if the object has circular reference
 ```js
 // Example
@@ -660,7 +690,7 @@ function doesObjectHaveCircularRef(obj){
 
 <br />
 
-#### Q20
+#### Q21
 ### Write a code which can eliminate circular references in an object (Cyclic reference in an object) 
 
 - Circular / cyclic reference exists when the object property value forms a cycle
@@ -708,7 +738,7 @@ function removeCircularRef(obj) {
 
 <br />
 
-#### Q21
+#### Q22
 ### Provide an object on which a value can be set to nested property even if it does not exist. 
 
 - The nested object can be accessed only if all the nested properties are defined on the object

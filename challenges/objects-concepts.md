@@ -15,7 +15,7 @@
 1. [Show the different types of accessor properties available for object property and write a code defining them](#Q9)
 1. [Show the different options available to prevent the modifications to the object](#Q10)
 1. [Modify the given object so that it can be used inside a for...of loop](#Q11)
-1. [Stringify an object by excluding the 'password' property](#Q12)
+1. [Show the creation of Regular Expression in JavaScript](#Q12)
 1. [Write a polyfill for Object.create](#Q13)
 1. [Write a code show Optional chaining for objects and functions](#Q14)
 1. [Show the usage of static variable & function in a class and accessing it from the code](#Q15)
@@ -355,30 +355,28 @@ const obj = {
 <br />
 
 #### Q12
-### Stringify an object by excluding the 'password' property
-```js
-// Example
-const obj = {
-    id: 1,
-    username: 'John',
-    password: 'secret',
-    email: 'john@email.com',
-};
-```
+### Show the creation of Regular Expression in JavaScript
 
-- `JSON.stringify` is the method which can be used for stringification of an object or any other value
-- It accepts 2nd argument which can be a function or array
+- Regular expressions are patterns used to match character combinations in strings
+- Regular expressions can be created using literal form or constructor form
+- Constructor form accepts regular expression as the first argument and flags as the 2nd argument
+- Literal form is simple which takes regular expression and flags in a single expression
 
 ```js
-JSON.stringify(obj, (key, value) => key === 'password' ? undefined : value);        // {"id":1,"username":"John","email":"john@email.com"}
+// literal form
+let re = /ab+c/g;
 ```
 
 ```js
-JSON.stringify(obj, ['id', 'username', 'email']);                                   // {"id":1,"username":"John","email":"john@email.com"}
+// constructor form
+let re = new RegExp('ab+c', 'g');
 ```
+
+###### Notes
+In JavaScript, regular expressions are objects
 
 ###### References
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 <br />
 

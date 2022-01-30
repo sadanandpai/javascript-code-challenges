@@ -14,10 +14,9 @@
 1. [Show the frequently and commonly used methods available on `Math` object with coding examples](#Q8)
 1. [How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails](#Q9)
 1. [Write a code to iterate over a string](#Q10)
-1. [Show the creation of Regular Expression in JavaScript](#Q11)
-1. [Show the usage of template literals, expression interpolation and tagged templates](#Q12)
-1. [Write a code to show the working of `try...catch...finally`](#Q13)
-1. [Show the creation and usage of `symbol` with code](#Q14)
+1. [Show the usage of template literals, expression interpolation and tagged templates](#Q11)
+1. [Write a code to show the working of `try...catch...finally`](#Q12)
+1. [Show the creation and usage of `symbol` with code](#Q13)
 
 ---
 
@@ -330,32 +329,6 @@ for(let value of str){
 <br />
 
 #### Q11
-### Show the creation of Regular Expression in JavaScript
-
-- Regular expressions are patterns used to match character combinations in strings
-- Regular expressions can be created using literal form or constructor form
-- Constructor form accepts regular expression as the first argument and flags as the 2nd argument
-- Literal form is simple which takes regular expression and flags in a single expression
-
-```js
-// literal form
-let re = /ab+c/g;
-```
-
-```js
-// constructor form
-let re = new RegExp('ab+c', 'g');
-```
-
-###### Notes
-In JavaScript, regular expressions are objects
-
-###### References
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-
-<br />
-
-#### Q12
 ### Show the usage of template literals with expression interpolation and tagged templates
 
 - Template literals are string literals allowing embedded expressions and support multi lines
@@ -391,7 +364,7 @@ myTag`Note: ${person} is a member of following communities: ${membership}`;     
 
 <br />
 
-#### Q13
+#### Q12
 ### Write a code to show the working of `try...catch...finally`
 
 - The `try` statement consists of a try-block, which contains one or more statements. At least one catch-block, or a finally-block, must be present
@@ -418,7 +391,7 @@ try {
 
 <br />
 
-#### Q14
+#### Q13
 ### Show the creation and usage of `symbol` with code
 
 - A "symbol" represents a unique identifier
