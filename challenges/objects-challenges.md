@@ -408,7 +408,7 @@ function deepEqual(object1, object2) {
     for (const key of keys1) {
         const val1 = object1[key];
         const val2 = object2[key];
-        const areObjects = val1 != null && typeof val1 === 'object' && val1 != null && typeof val2 === 'object';
+        const areObjects = val1 != null && typeof val1 === 'object' && val2 != null && typeof val2 === 'object';
         if ((areObjects && !deepEqual(val1, val2)) || (!areObjects && val1 !== val2)) {
             return false;
         }
