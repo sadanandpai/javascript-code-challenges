@@ -281,19 +281,19 @@ Except `value`, other accessort mentioned accept true or false
 #### Q10
 ### Show the different options available to prevent the modifications to the object
 
-- `preventExtension` is an Object method which prevents addition of any new property to an object
+- `preventExtensions` is an Object method which prevents addition of any new property to an object
 - `seal` is an Object method which prevents addition and deletion of any property in an object
 - `freeze` is an Object method which prevents addition, deletion and update of any property of an object
 - There are also methods `isExtensible`, `isSealed` and `isFrozen` on Object to check
 
 ```js
-Object.preventExtension(obj);
-Object.isExtensible(obj);       // true
+Object.preventExtensions(obj);
+Object.isExtensible(obj);       // false
 ```
 
 ```js
 Object.seal(obj);
-Object.isSealed(obj)            // true
+Object.isSealed(obj);            // true
 ```
 
 ```js
