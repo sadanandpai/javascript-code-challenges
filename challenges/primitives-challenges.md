@@ -73,7 +73,7 @@ function isInt(value){
 
 ```js
 function randomNumberGeneratorInRange(rangeStart, rangeEnd){
-    return rangeStart + Math.round(Math.random() * (rangeEnd - rangeStart));
+    return rangeStart + Math.round(Math.random() * (rangeEnd - rangeStart + 1));
 }
 
 randomNumberGeneratorInRange(10, 50);           // 12
