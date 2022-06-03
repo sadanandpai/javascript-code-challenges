@@ -685,6 +685,36 @@ function doesObjectHaveCircularRef(obj){
 }
 ```
 
+```js
+function hasCircularReference(originalObject){
+   // Using depth first search with backtracking and storing a visited set of object references
+   const visitedRefs = new WeakSet([obj]);
+   
+   function containsCircularReference(originalObject){
+      if(!curObj) return false;
+      
+      for(const key in curObj){
+          if(typeof curObj[key] === 'object'){
+               if(visitedRefs.has(curObj[key]))
+                  return true;
+               
+               visitedRefs.add(curObj[key]);
+               
+               if(isCircularRefObj(curObj[key])) 
+                  return true;
+               
+               visitedRefs.delete(curObj[key]);
+          }
+      }
+      return false;
+   }
+   
+   const hasCircularRef = containsCircularReference(originalObject);
+   visitedRefs.delete(originalObject);
+   return hasCircularRef;
+}
+```
+
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cyclic_object_value
 
@@ -718,7 +748,7 @@ JSON.stringify(circularReferenceObj, getCircularReplacer());
 function removeCircularRef(obj) {
     const set = new WeakSet([obj]);
 
-    (function iterateObj(obj = circularReference) {
+    (function iterateObj(obj) {
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
                 if (typeof obj[key] === 'object')
@@ -729,7 +759,7 @@ function removeCircularRef(obj) {
                     }
             }
         }
-    })();
+    })(obj);
 }
 ```
 
