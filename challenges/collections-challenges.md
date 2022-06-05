@@ -2,36 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Collections - challenges
+<h2 align="center">JavaScript challenges on Collections - challenges</h2>
 
-1. [Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it](#Q1)
-1. [Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array](#Q2)
-1. [Sort the given array of integers in ascending or descending order](#Q3)
-1. [Sort the given array of objects in ascending order according the authors lastname](#Q4)
-1. [Square all the positive numbers of the array and return the output array](#Q5)
-1. [Write a code to generate an array with range of numbers and shuffle them](#Q6)
-1. [Check if the user with the name "John" exists in the array of objects](#Q7)
-1. [Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname](#Q8)
-1. [Write a program to calculate the sum of all the values of an array](#Q9)
-1. [Get the maximum value from a numbers array along with its index](#Q10)
-1. [Find the number of occurences of minimum value in the numbers list](#Q11)
-1. [Create an array of length n with all the values of it set to 10](#Q12)
-1. [Write the code to remove the duplicates from the array](#Q13)
-1. [Design a flat function which flattens an array to any depth](#Q14)
-1. [Check if all the students of have passed or not (40 is the pass marks)](#Q15)
-1. [Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)](#Q16)
-1. [Extract the list of all the elements from the list of numbers given in 2 arrays](#Q17)
-1. [Get the list of all distinct elements which are present in both list of numbers](#Q18)
-1. [Extract list of elements present only in the first list given.](#Q19)
-1. [Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.](#Q20)
-1. [Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed](#Q21)
-1. [Create an array which will only accept string values. (Homogeneous array of strings)](#Q22)
-1. [Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices](#Q23)
+<br>
 
----
-
-#### Q1
-### Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it
+### Q. Write a function which can concatenate 2 arrays. If only one array is passed it will duplicate it
 
 - Function can take 2 arguments which concatenates arrays
 - 2nd array parameter can be defaulted to 1st array if the value is not passed
@@ -63,8 +38,7 @@ When 2nd argument is not passed, the case is same as duplicating the array
 
 <br />
 
-#### Q2
-### Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array
+### Q. Write a program to replace 3 center elements of the 1st array by center 3 elements of the 2nd array
 
 - `slice` method on array can be used to fetch the values of range in the array
 - `splice` method on array can be used to replace the value of range in the array
@@ -83,8 +57,7 @@ The center most 3 values of array 'a' is replaced by 'b'
 
 <br />
 
-#### Q3
-### Sort the given array of integers in ascending or descending order
+### Q. Sort the given array of integers in ascending or descending order
 
 - `sort` method sorts the elements of an array in place and returns the sorted array
 - It receives a function as an argument, which is used for comparision
@@ -102,8 +75,7 @@ If function is not passed an argument, default sorting will happen
 
 <br />
 
-#### Q4
-### Sort the given array of objects in ascending order according the authors lastname
+### Q. Sort the given array of objects in ascending order according the authors lastname
 ```js
 // Example
 const books = [
@@ -128,8 +100,7 @@ Returning a true or false will not work as the algorithm expects an integer valu
 
 <br />
 
-#### Q5
-### Square all the positive numbers of the array and return the output array
+### Q. Square all the positive numbers of the array and return the output array
 
 - `filter` is the method on Array which can be used to filter. It receives a function which can return boolean to filter the elements
 - `map` is the method on Array which can be used to map the values to new values. It receives a function which can return the modified value
@@ -152,8 +123,7 @@ const squaredPositiveArr = arr.filter((value) => value >= 0).map((value) => valu
 
 <br />
 
-#### Q6
-### Write a code to generate an array with range of numbers and shuffle them
+### Q. Write a code to generate an array with range of numbers and shuffle them
 
 - An array of numbers in the range can be generated from a function which can take start and end value of the range
 - The shuffling can be achieved simply by sorting the array using a function which randomly returns positive or negative numbers
@@ -194,8 +164,7 @@ console.log(shuffledArr)                             // [5, 4, 7, 10, 3, 6, 8, 2
 
 <br />
 
-#### Q7
-### Check if the user with the name "John" exists in the array of objects
+### Q. Check if the user with the name "John" exists in the array of objects
 
 ```js
 const doesJohnExist = arr.some((obj) => obj.name === "John");
@@ -213,8 +182,7 @@ const doesJohnExist = jonhIndex < 0 ? false : true;
 
 <br />
 
-#### Q8
-### Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname
+### Q. Generate an array of objects with properties id and full name from an array of objects where each object will have id, firstname and lastname
 
 - To manipulate array of objects `map` method can be used
 
@@ -224,8 +192,7 @@ const employeesListWithFullName = arr.map((obj) => { return { id, fullName: obj.
 
 <br />
 
-#### Q9
-### Write a program to calculate the sum of all the values of an array
+### Q. Write a program to calculate the sum of all the values of an array
 
 - Sum of the values of an array can calculated by iterating and adding all the values of the array
 - `reduce` method of array can be used efficiently to calculate the sum with or without initial value
@@ -253,8 +220,7 @@ for(let value of arr){
 
 <br />
 
-#### Q10
-### Get the maximum value from a numbers array along with its index
+### Q. Get the maximum value from a numbers array along with its index
 
 - `Math.max` is a method which returns maximum value from a given list of values
 - `reduce` can also be designed to return the maximum value of each comparision
@@ -290,8 +256,7 @@ Though 2nd solution is verbose compared but has good performance
 
 <br />
 
-#### Q11
-### Find the number of occurences of minimum value in the numbers list
+### Q. Find the number of occurences of minimum value in the numbers list
 
 - `filter` method can be used to fetch all the minimum values and we can get the count of those valuses
 
@@ -303,8 +268,7 @@ minArr.length;                                  // count of minimum value occure
 
 <br />
 
-#### Q12
-### Create an array of length n with all the values of it set to 10
+### Q. Create an array of length n with all the values of it set to 10
 
 - `fill` is a method on Array prototype which fills all the slots of array with the value given passed as the argument
 
@@ -322,8 +286,7 @@ If an object is passed the object reference is copied to all the slots and not t
 
 <br />
 
-#### Q13
-### Write the code to remove the duplicates from the array
+### Q. Write the code to remove the duplicates from the array
 
 - Set is a data structure which does not allow duplicate elements
 
@@ -334,8 +297,7 @@ const distinctArr = [...set];
 
 <br />
 
-#### Q14
-### Design a flat function which flattens an array to any depth
+### Q. Design a flat function which flattens an array to any depth
 
 - Flat function can be used to flatten the array by recursive call
 
@@ -356,8 +318,7 @@ function flat(arr){
 
 <br />
 
-#### Q15
-### Check if all the students of have passed or not (40 is the pass marks)
+### Q. Check if all the students of have passed or not (40 is the pass marks)
 
 - `every` is a method on Array prototype which returns true only if all the elements condition satisfies the condition
 
@@ -367,8 +328,7 @@ const isAllPass = students.every((student) => student.marks >= 40);
 
 <br />
 
-#### Q16
-### Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)
+### Q. Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)
 
 ```js
 const itEmployeesWithSalaryGT10K = employees.filter((employee) => employee.salary > 10000 && employee.dept === 'IT );
@@ -378,8 +338,7 @@ const itAvgSalaryGT10K = itTotalSalaryGT10K / itEmployeesWithSalaryGT10K.length;
 
 <br />
 
-#### Q17
-### Extract the list of all the elements from the list of numbers given in 2 arrays
+### Q. Extract the list of all the elements from the list of numbers given in 2 arrays
 
 - The union array will be the result if all the elements from the 2 arrays are picked
 
@@ -391,8 +350,7 @@ const distinctArr = [...set1, ...set2];
 
 <br />
 
-#### Q18
-### Get the list of all distinct elements which are present in both list of numbers
+### Q. Get the list of all distinct elements which are present in both list of numbers
 
 - The intersection array will be the result if the common elements from the 2 arrays are picked
 
@@ -409,8 +367,7 @@ const distinctIntersectionArr = [...set1].filter(value => set2.has(value));
 
 <br />
 
-#### Q19
-### Extract list of elements present only in the first list given.
+### Q. Extract list of elements present only in the first list given.
 
 - The only present elements of 1st list will be the result when all the elements of 1st list not present in the 2nd are chosen
 
@@ -425,8 +382,7 @@ Elements of 2nd list only can be obtained by checking for all the elements of li
 
 <br />
 
-#### Q20
-### Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.
+### Q. Create a function named "average" which can calculate the average of an array and should be available to be called from any Array object.
 
 - The function added to Array prototype are accessible to all the objects of Array
 
@@ -443,8 +399,7 @@ Array.prototype.average = function (){
 
 <br />
 
-#### Q21
-### Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed
+### Q. Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed
 ```js
 // Example
 const arr = [
@@ -493,8 +448,7 @@ distinctArr = [...map.values()];
 
 <br />
 
-#### Q22
-### Create an array which will only accept string values. (Homogeneous array of strings)
+### Q. Create an array which will only accept string values. (Homogeneous array of strings)
 
 - Array in JavaScript a collection of values of any type by default
 - Proxy can be used to validate and insert to the array only if the value satisfies the condition using `set` trap
@@ -521,8 +475,7 @@ The functionality of the code can be modified to make the array accept any one o
 
 <br />
 
-#### Q23
-### Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices
+### Q. Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices
 ```js
 // Example
 let arr = [10, 20, 30];
