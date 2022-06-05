@@ -2,31 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Collections - concepts
+<h2 align="center">JavaScript challenges on Collections - concepts</h2>
 
-1. [Show the different ways of creating an array](#Q1)
-1. [Write a program to iterate over an array and print all the values of it](#Q2)
-1. [Write a program to append and prepend, single or multiple values in to an array](#Q3)
-1. [Show how insertion and removal of elements can happen in the array for given index](#Q4)
-1. [Show the different ways of emptying an array which has values](#Q5)
-1. [Check if given input is an array or not](#Q6)
-1. [Show how an array in JavaScript can act like a stack and queue](#Q7)
-1. [Create an array by removing all the holes of the array](#Q8)
-1. [Optimize the given statements having lot of logical checks to use a compact and cleaner logic](#Q9)
-1. [Write a program to iterate over a 2 dimensional array and print all the values of it](#Q10)
-1. [Write a program to store values in to a set](#Q11)
-1. [Write a program to store values in to a map](#Q12)
-1. [Write a code to iterate over a set](#Q13)
-1. [Write a code to iterate over a map](#Q14)
-1. [Show how map is different from object to store key value pairs with coding example](#Q15)
-1. [Write a program to polyfill `filter` functionality of the Array](#Q16)
-1. [Write a program to polyfill `map` functionality of the Array](#Q17)
-1. [Write a program to polyfill `reduce` functionality of the Array](#Q18)
+<br>
 
----
-
-#### Q1
-### Show the different ways of creating an array
+### Q. Show the different ways of creating an array
 
 - Arrays are the collection of values in javascript. Array is a special type of object in JavaScript
 - Arrays values are indexed from 0 and have special property length which stores the count of elements present in array
@@ -61,8 +41,7 @@ const arr = new Array(1, true, "string");
 
 <br />
 
-#### Q2
-### Write a program to iterate over an array and print all the values of it
+### Q. Write a program to iterate over an array and print all the values of it
 
 - Arrays can be iterated by using its index to fetch the values
 - Arrays also can be iterated with for each style loops
@@ -91,8 +70,7 @@ arr.forEach(val => console.log(val));
 
 <br />
 
-#### Q3
-### Write a program to append and prepend, single or multiple values in to an array
+### Q. Write a program to append and prepend, single or multiple values in to an array
 
 - Values to the array can be appended using `push` method of array
 - Values to the array can be prepended using `unshift` method of array
@@ -128,8 +106,7 @@ To remove the elements from the end of the array `pop` operation can be used but
 
 <br />
 
-#### Q4
-### Show insertion and removal of elements can happen in the array for given index
+### Q. Show insertion and removal of elements can happen in the array for given index
 
 - Values of the array can be removed from any position using `splice` method of array
 - Values of the array can also be inserted to any position using `splice` method of array
@@ -159,8 +136,7 @@ console.log(arr);               // [1, 2, 3, 4, 5]
 
 <br />
 
-#### Q5
-### Show the different ways of emptying an array which has values
+### Q. Show the different ways of emptying an array which has values
 
 - Array can be emptied by giving a new reference of an empty array
 - Setting the `length` of the array to 0 will automatically makes the array empty
@@ -192,8 +168,7 @@ arr.splice(0, arr.length)
 
 <br />
 
-#### Q6
-### Check if given input is an array or not
+### Q. Check if given input is an array or not
 
 - `Array.isArray` is a method which checks if the given argument is an array or not
 - Alternatively the `toString` method present on Object prototype can be used to check if it is an array
@@ -214,8 +189,7 @@ Object.prototype.toString.call(arr) === '[object Array]'
 
 <br />
 
-#### Q7
-### Show how an array in JavaScript can act like a stack and queue
+### Q. Show how an array in JavaScript can act like a stack and queue
 
 - Stack is a 'Last In First Out' data structure can be achieved using `push` and `pop` operations
 - Queue is a 'First In First Out' data structure can be achieved using `push` and `shift` operations
@@ -238,8 +212,7 @@ arr.shift();
 
 <br />
 
-#### Q8
-### Create an array by removing all the holes of the array
+### Q. Create an array by removing all the holes of the array
 
 - Holes are `undefined` value present inside array
 - Holes do not get iterated in `filter` which will just fetch all the values except `undefined`
@@ -253,8 +226,7 @@ Holes can be formed when an array value by index is deleted. Example: `delete ar
 
 <br />
 
-#### Q9
-### Optimize the given statements having lot of logical checks to use a compact and cleaner logic
+### Q. Optimize the given statements having lot of logical checks to use a compact and cleaner logic
 ```js
 // Example1
 browser === "chrome" || browser === "firefox" || browser === "IE" || browser === "safari"
@@ -286,8 +258,7 @@ Generally this use case can be implemented for `if` conditions
 
 <br />
 
-#### Q10
-### Write a program to iterate over a 2 dimensional array and print all the values of it
+### Q. Write a program to iterate over a 2 dimensional array and print all the values of it
 
 - Arrays can be iterated by using its index to fetch the values
 - Arrays also can be iterated with for each style loops, with one loop to iterate the rows and inside it for cells
@@ -322,8 +293,7 @@ arr.forEach(rowArr => rowArr.forEach(val => console.log(val)));
 
 <br />
 
-#### Q11
-### Write a program to store values in to a set
+### Q. Write a program to store values in to a set
 
 - Set lets us store unique values of any type
 - Set can be created empty & then added with values or can be initialized also
@@ -349,8 +319,7 @@ set;            // 1, 2, 3
 
 <br />
 
-#### Q12
-### Write a program to store values in to a map
+### Q. Write a program to store values in to a map
 
 - `Map` holds key-value pairs and remembers the original insertion order of the keys
 - `Map` can be created empty & then added with values or can be initialized also with key-value pairs
@@ -378,8 +347,7 @@ Unlike objects, `Map` can have any primitive or object as the key
 
 <br />
 
-#### Q13
-### Write a code to iterate over a set
+### Q. Write a code to iterate over a set
 
 - `set` is an iterable object and can be iterated using for..of loop
 - `set` can also be iterated by simple `forEach` loop
@@ -394,8 +362,7 @@ set.forEach(value => console.log(value));
 
 <br />
 
-#### Q14
-### Write a code to iterate over a map
+### Q. Write a code to iterate over a map
 
 - `map` is an iterable object and can be iterated using for..of loop
 - `map` can also be iterated by simple `forEach` loop
@@ -414,8 +381,7 @@ map.forEach((value, key) => console.log(key, value));
 
 <br />
 
-#### Q15
-### Show how map is different from object to store key value pairs with coding example
+### Q. Show how map is different from object to store key value pairs with coding example
 
 - Map does not contain any keys by default unlike objects which has keys from its prototype
 - Map's keys can be any value (including functions, objects, or any primitive) unlike object where keys are only strings
@@ -436,8 +402,7 @@ Maps perform better than objects in most of the scenarios involving addition and
 
 <br />
 
-#### Q16
-### Write a program to polyfill `filter` functionality of the Array
+### Q. Write a program to polyfill `filter` functionality of the Array
 
 - `filter` iterates over the all values of array and passes value, index and array (itself) as the arguments
 - Function returns a new array which filtering the values of the original array
@@ -466,8 +431,7 @@ The solution is a simple polyfill of `filter` and not intended to handle all the
 
 <br />
 
-#### Q17
-### Write a program to polyfill `map` functionality of the Array
+### Q. Write a program to polyfill `map` functionality of the Array
 
 - `map` iterates over the all values of array and passes value, index and array (itself) as the arguments
 - Function returns a new array which is same as the length of the original array
@@ -493,8 +457,7 @@ The solution is a simple polyfill of `map` and not intended to handle all the co
 
 <br />
 
-#### Q18
-### Write a program to polyfill `reduce` functionality of the Array
+### Q. Write a program to polyfill `reduce` functionality of the Array
 
 - `reduce` iterates over the all values of array and passes value, index and array (itself) as the arguments
 - `reduce` accepts an optional initial value which when not provided can be skipped
