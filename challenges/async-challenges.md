@@ -2,31 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Asynchronous programming - challenges
+<h2 align="center">JavaScript challenges on Asynchronous programming - challenges</h2>
 
-1. [Print "Hello, world" with a delay of 3 seconds](#Q1)
-1. [Create a function which receives a function as argument and executes it after 2 seconds](#Q2)
-1. [Print numbers from 1 to 10 with delay of 1 second between each value being printed](#Q3)
-1. [Print numbers from 1 to 10 with delay of 1 second between each value being printed using setInterval](#Q4)
-1. [Print numbers from 10 to 1 with delay of 1 second between each value being printed using setTimeout using pre ES6 features only](#Q5)
-1. [Write a utility which prints numbers starting from an initial value and increment in steps which can be started and stopped by the user, any number of times](#Q6)
-1. [Execute an array of asynchronous functions one after the other in sequence using callbacks](#Q7)
-1. [Execute the given list of asynchronous functions in parallel and return the results as an array to the callback](#Q8)
-1. [Execute 3 asynchronous functions one after the other in sequence using promise chaining](#Q9)
-1. [Execute 3 asynchronous functions one after the other in sequence using async await](#Q10)
-1. [Execute 3 asynchronous functions one after the other in sequence using promise chaining and do not terminate on failure](#Q11)
-1. [Execute 3 asynchronous functions one after the other in sequence using async await and do not terminate on failure](#Q12)
-1. [Execute an array of asynchronous functions which returns a promise, one after the other in sequence](#Q13)
-1. [Execute an array of asynchronous functions simultaneously but print the output in the ordered sequence. Do not wait for printing the data if it already available after promise is settled](#Q14)
-1. [Design a utility which takes array of asynchronous functions and returns the 1st successful or non successful result with max waiting time set by the user](#Q15)
-1. [Design a utility which takes URL and a value for attempts which will attempt to make a fetch request. If on failure it tries again with increasing delay for number of times which user has requested](#Q16)
-1. [Create a generator to return a random number on every request](#Q17)
-1. [Search for the presence of a given value in the nested object using generator](#Q18)
+<br>
 
----
-
-#### Q1
-### Print "Hello, world" with a delay of 3 seconds
+### Q. Print "Hello, world" with a delay of 3 seconds
 
 - setTimeout takes a function as the 1st argument and optional timeout delay & list of values as the function parameters
 - setTimeout returns an id (number) which can be used to stop the setTimeout using clearTimeout function
@@ -53,8 +33,7 @@ Zero or more values that represent any parameters you want to pass to the functi
 
 <br />
 
-#### Q2
-### Create a function which receives a function as argument and executes it after 2 seconds
+### Q. Create a function which receives a function as argument and executes it after 2 seconds
 
 ```js
 function callbackExec(callback) {
@@ -75,8 +54,7 @@ callbackExec(displayHello);
 
 <br />
 
-#### Q3
-### Print numbers from 1 to 10 with delay of 1 second between each value being printed
+### Q. Print numbers from 1 to 10 with delay of 1 second between each value being printed
 
 ```js
 const num1 = 1, num2 = 10;
@@ -102,8 +80,7 @@ In the 2nd solution, recursive setTimeout is used.
 
 <br />
 
-#### Q4
-### Print numbers from 1 to 10 with delay of 1 second between each value being printed using setInterval
+### Q. Print numbers from 1 to 10 with delay of 1 second between each value being printed using setInterval
 
 - `setInterval` function repeats a block of code at every given timing event
 - `clearInterval` is used to stop the setInterval execution
@@ -120,8 +97,7 @@ const intervalId = setInterval(() => {
 
 <br />
 
-#### Q5
-### Print numbers from 10 to 1 with delay of 1 second between each value being printed using setTimeout using pre ES6 features only
+### Q. Print numbers from 10 to 1 with delay of 1 second between each value being printed using setTimeout using pre ES6 features only
 
 - We can use 3rd parameter of setTimeout to pass the value of iteration which creates a new scope each time loop iterates
 - We can also use an inner function scope (IIFE) within the for loop for each iteration
@@ -147,8 +123,7 @@ for (var i = num1; i >= num2; i--) {
 
 <br />
 
-#### Q6
-### Write a utility which prints numbers starting from an initial value and increment in steps which can be started and stopped by the user, any number of times
+### Q. Write a utility which prints numbers starting from an initial value and increment in steps which can be started and stopped by the user, any number of times
 
 - The functionality to start and stop can be exposed from a function which internally takes care of incrementing and displaying data
 - `setInterval` can be used to achieve the task and handle the start & stop of data display
@@ -191,8 +166,7 @@ The function can also be modified to have completion after which timer can not b
 
 <br />
 
-#### Q7
-### Execute an array of asynchronous functions one after the other in sequence using callbacks
+### Q. Execute an array of asynchronous functions one after the other in sequence using callbacks
 
 - The asynchronous function can be simulated using setTimeout which executes the callback
 - The array of functions execution can be managed by having a function which takes care of execution of all the async functions
@@ -242,8 +216,7 @@ callbackManager([asyncFunc1, asyncFunc2, asyncFunc3]);
 
 <br />
 
-#### Q8
-### Execute the given list of asynchronous functions in parallel and return the results as an array to the callback
+### Q. Execute the given list of asynchronous functions in parallel and return the results as an array to the callback
 ```js
 // Example
 function asyncFunc1(callback) {
@@ -294,8 +267,7 @@ function asyncParallel(asyncFuncArr, callback) {
 
 <br />
 
-#### Q9
-### Execute 3 asynchronous functions one after the other in sequence using promise chaining
+### Q. Execute 3 asynchronous functions one after the other in sequence using promise chaining
 
 - The implementation of chaining is that the result is passed through the chain of `then` handlers for all the promises
 - `then` method on Promise also returns a promise which can be used to perform `then` on the returned promise
@@ -344,8 +316,7 @@ If `then` method has a return statement which is a promise then it will be consi
 
 <br />
 
-#### Q10
-### Execute 3 asynchronous functions one after the other in sequence using async await
+### Q. Execute 3 asynchronous functions one after the other in sequence using async await
 
 - Async function with `await` for each promise can be used to execute in sequence
 
@@ -365,8 +336,7 @@ If `then` method has a return statement which is a promise then it will be consi
 
 <br />
 
-#### Q11
-### Execute 3 asynchronous functions one after the other in sequence using promise chaining and do not terminate on failure
+### Q. Execute 3 asynchronous functions one after the other in sequence using promise chaining and do not terminate on failure
 
 - The promise which gets rejected will invoke the 2nd function argument to `then` handler
 - The failure handler will receive the error and continue with next execution which will not propagate failures
@@ -403,8 +373,7 @@ async1()
 
 <br />
 
-#### Q12
-### Execute 3 asynchronous functions one after the other in sequence using async await and do not terminate on failure
+### Q. Execute 3 asynchronous functions one after the other in sequence using async await and do not terminate on failure
 
 - Unlike promises, `try-catch` block can be used on async functions
 - `catch` block for each asynchronous function can be used to catch errors and continue with next execution which will not propagate failures
@@ -435,8 +404,7 @@ async1()
 
 <br />
 
-#### Q13
-### Execute an array of asynchronous functions which returns a promise, one after the other in sequence
+### Q. Execute an array of asynchronous functions which returns a promise, one after the other in sequence
 
 - Asynchronous functions can be executed and promises can be captured in an array
 - Array method `reduce` can be used to make the sequential execution on promise settlement
@@ -463,8 +431,7 @@ asyncFuncArr.reduce(async (acc, asyncFunc) => {
 
 <br />
 
-#### Q14
-### Execute an array of asynchronous functions simultaneously but print the output in the ordered sequence. Do not wait for printing the data if it already available after promise is settled
+### Q. Execute an array of asynchronous functions simultaneously but print the output in the ordered sequence. Do not wait for printing the data if it already available after promise is settled
 
 - Array method `reduce` can be used to make the simultaneously execution on promise settlement
 - Unlike sequential execution, the parallel execution of asynchronous functions happen but the output will executed in order of sequence
@@ -491,8 +458,7 @@ asyncFuncArr
 
 <br />
 
-#### Q15
-### Design a utility which takes array of asynchronous functions and returns the 1st successful or non successful result with max waiting time set by the user
+### Q. Design a utility which takes array of asynchronous functions and returns the 1st successful or non successful result with max waiting time set by the user
 
 - `Promise.race` is an in built JavaScript method which helps us to return the first resolved or rejected promise data from promises array
 - Timeout feature can be set by adding a function returning a promise which rejects after specified amount of time
@@ -513,8 +479,7 @@ Promise.race(promiseArr).then(console.log).catch(console.log);
 
 <br />
 
-#### Q16
-### Design a utility which takes URL and a value for attempts which will attempt to make a fetch request. If on failure it tries again with increasing delay for number of times which user has requested
+### Q. Design a utility which takes URL and a value for attempts which will attempt to make a fetch request. If on failure it tries again with increasing delay for number of times which user has requested
 
 - Utility can designed which returns a promise which attempts to make requests and return the data on success
 - The `fetch` request attempts to make calls after increasing time delay on failure
@@ -554,8 +519,7 @@ requestManager('https://reqbin.com/echo/get/json', 3).then(
 
 <br />
 
-#### Q17
-### Create a generator to return a random number on every request
+### Q. Create a generator to return a random number on every request
 
 - The generation of random number can be implemented in the normal way in the function but will returned and function yields
 - The function will again continue to execute in loop to return a new random number
@@ -581,8 +545,7 @@ Genertor function need not complete its execution
 
 <br />
 
-#### Q18
-### Search for the presence of a given value in the nested object using generator
+### Q. Search for the presence of a given value in the nested object using generator
 
 - With the help of generator Inversion of control is possible
 - Instead of function seaching for the key by passing the callback or key, the logic can be implemented in the controlling code
