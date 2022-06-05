@@ -2,29 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Asynchronous programming - concepts
+<h2 align="center">JavaScript challenges on Asynchronous programming - concepts</h2>
 
-1. [Show the execution of 3 asynchronous block of code, one after the other in sequence](#Q1)
-1. [Write a code to make xmlHTTPRequest to get data from the server asynchronously](#Q2)
-1. [Show the working of promise along with resolve & reject code](#Q3)
-1. [Wrap the setTimeout function to convert to a promise](#Q4)
-1. [Convert the xmlHTTPRequest to promise based function to get the data from the server asynchronously (fetch)](#Q5)
-1. [Make a fetch request to retrieve and store JSON data from server](#Q6)
-1. [Cancel a fetch request](#Q7)
-1. [Show the working of async await work with promises](#Q8)
-1. [Write a code to resolve all the list of asynchronous executions of promises and stop if any of them is rejected. Print the output accordingly](#Q9)
-1. [Write a code to resolve all the list of asynchronous executions of promises no matter if each execution succeeds or fails. Print the output of each](#Q10)
-1. [Explain the working of Promise.race with few asynchronous function example](#Q11)
-1. [Show me the working of a generator function](#Q12)
-1. [Write a generator function which uses another generator function internally to fetch the values. Use for..of loop to consume the values](#Q13)
-1. [Write an interface to mock Promise in JavaScript which can be called to create a promise with resolve and reject. Also implement then functionality](#Q14)
-1. [Write a function which helps to achieve the `Promise.all` functionality using promises](#Q15)
-1. [Show the working generator function with promises](#Q16)
+<br>
 
----
-
-#### Q1
-### Show the execution of 3 asynchronous block of code, one after the other in sequence
+### Q. Show the execution of 3 asynchronous block of code, one after the other in sequence
 
 - The asynchronous block of code can be a function which executes asynchronously
 - The execution of such function can be simulated using setTimeout to with delay and execute different blocks of code inside each
@@ -58,8 +40,7 @@ The nested blocks of statements shown in the comments which get executed one aft
 
 <br />
 
-#### Q2
-### Write a code to make xmlHTTPRequest to get data from the server asynchronously
+### Q. Write a code to make xmlHTTPRequest to get data from the server asynchronously
 
 - XMLHttpRequest (XHR) objects are used to interact with server to retrieve data from a URL without having to do a full page refresh
 - XHR requests can be initiated by creating the object and providing the arguments such as 'method', url etc
@@ -88,8 +69,7 @@ XHR is used mainly in AJAX programming
 
 <br />
 
-#### Q3
-### Show the working of promise along with resolve & reject code
+### Q. Show the working of promise along with resolve & reject code
 
 - The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value
 - Promise returns an object which ramains in pending state until it is resolved or rejected
@@ -132,8 +112,7 @@ Once the promise is resolved or rejected, status will not change
 
 <br />
 
-#### Q4
-### Wrap the setTimeout function to convert to a promise
+### Q. Wrap the setTimeout function to convert to a promise
 
 - Promise can be used to wrap the `setTimeout` to make the code more readable
 - Function can take delay as argument and return a promise which gets resolved after timeout is complete
@@ -160,8 +139,7 @@ timeoutPromise.then(() => {
 
 <br />
 
-#### Q5
-### Convert the xmlHTTPRequest to promise based function to get the data from the server asynchronously (fetch)
+### Q. Convert the xmlHTTPRequest to promise based function to get the data from the server asynchronously (fetch)
 
 - The Promise can be used to wrap the XHR request and provide cleaner interface to user for AJAX requests
 - Success and failure of the XHR request can be handled to resolve or reject the promise respectively
@@ -208,8 +186,7 @@ XHR reuqest is no more in use and all the modern browsers use `fetch` API which 
 
 <br />
 
-#### Q6
-### Make a fetch request to retrieve and store JSON data from server
+### Q. Make a fetch request to retrieve and store JSON data from server
 
 - Fetch API is provided by the browser which returns a promise
 - Fetch takes url as the 1st argument and an object with request details as 2nd optional argument
@@ -241,8 +218,7 @@ response.then(response => {
 
 <br />
 
-#### Q7
-### Cancel a fetch request
+### Q. Cancel a fetch request
 
 - `AbortController` is an interface which can be used to abort a fetch request
 - `signal` object of the AbortController object can be used as the part of the argument to `fetch` and abort on controller object can be used to stop the request
@@ -266,8 +242,7 @@ controller.abort();
 
 <br />
 
-#### Q8
-### Show the working of async await work with promises
+### Q. Show the working of async await work with promises
 
 - `async` functions are asynchronous functions in which the asynchrous code can be executed in synchronous looking manner using `await`
 - `await` expects a promise and the execution will stop until the promise is resolved
@@ -294,8 +269,7 @@ async function asyncAwaitFunc() {
 
 <br />
 
-#### Q9
-### Write a code to resolve all the list of asynchronous executions of promises and stop if any of them is rejected. Print the output accordingly
+### Q. Write a code to resolve all the list of asynchronous executions of promises and stop if any of them is rejected. Print the output accordingly
 
 - `Promise.all` is the method which helps to achieve the functionality which settles if all the promises are resolved or any of them are rejected
 - It receives array of promises as an argument to it
@@ -340,8 +314,7 @@ On failure of one of the promise, rest of the pending promises will be cancelled
 
 <br />
 
-#### Q10
-### Write a code to resolve all the list of asynchronous executions of promises no matter if each execution succeeds or fails. Print the output of each
+### Q. Write a code to resolve all the list of asynchronous executions of promises no matter if each execution succeeds or fails. Print the output of each
 
 - `Promise.allSettled` is the method which helps to achieve the functionality which completes after all promises settle no matter of failures
 - It receives array of promises as an argument to it
@@ -385,8 +358,7 @@ const promiseArr = asyncArr.map(async => async());
 
 <br />
 
-#### Q11
-### Explain the working of Promise.race with few asynchronous function example
+### Q. Explain the working of Promise.race with few asynchronous function example
 
 - The `Promise.race` method returns a promise that fulfills or rejects as soon as one of the promises fulfills or rejects, with the success or failure
 
@@ -426,8 +398,7 @@ Promise.race(promiseArr).then(console.log).catch(console.log);    // Rejected as
 
 <br />
 
-#### Q12
-### Show me the working of a generator function
+### Q. Show me the working of a generator function
 
 - Generators are functions that can be exited and later re-entered
 - Generator function will have `*` after the keyword `function`
@@ -457,8 +428,7 @@ Data between generator and iterator can be passed in both direction
 
 <br />
 
-#### Q13
-### Write a generator function which uses another generator function internally to fetch the values. Use for..of loop to consume the values
+### Q. Write a generator function which uses another generator function internally to fetch the values. Use for..of loop to consume the values
 
 - Generator with the generator can be used to fetch the values using `yield*`
 - The code consuming the parent generator need to be aware of it and can be used directly
@@ -487,8 +457,7 @@ for (let value of gen1()) {
 
 <br />
 
-#### Q14
-### Write an interface to mock Promise in JavaScript which can be called to create a promise with resolve and reject. Also implement then functionality
+### Q. Write an interface to mock Promise in JavaScript which can be called to create a promise with resolve and reject. Also implement then functionality
 
 - Basic promise interface will allow creation of promise by passing resolver as the argument
 - `resolve` and `reject` methods will have to be passed to the resolver which the user code will ivoke with data once settled
@@ -557,8 +526,7 @@ ES6 Promise is much more complex and sophesticated than the above shown implemen
 
 <br />
 
-#### Q15
-### Write a function which helps to achieve the `Promise.all` functionality using promises
+### Q. Write a function which helps to achieve the `Promise.all` functionality using promises
 
 - `Promise.all` method is fail fast procedure to return all the promise resolved data in array or failed reason
 
@@ -606,8 +574,7 @@ PromiseAll([
 
 <br />
 
-#### Q16
-### Show the working generator function with promises
+### Q. Show the working generator function with promises
 
 - Generator can be used with promises where yield will return a promise and promise resolution can trigger continuation
 - Helper function is used to manage this flow which takes generator function as an argument and executes it
