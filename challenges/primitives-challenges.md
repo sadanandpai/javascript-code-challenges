@@ -2,31 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Primitives - challenges
+<h2 align="center">JavaScript challenges on Primitives - challenges</h2>
 
-1. [Swap 2 integers present in variables num1 and num2 without using temporary variable](#Q1)
-1. [Write a function which returns true if given value of number is an integer without using any inbuilt functions](#Q2)
-1. [Create a function which returns a random number in the given range of values both inclusive](#Q3)
-1. [Write a program to reverse a string](#Q4)
-1. [Write a program to reverse a string by words. Also show the reverse of each words in place](#Q5)
-1. [Write a program to reverse a given integer number](#Q6)
-1. [Write a code to replace all the spaces of the string with underscores](#Q7)
-1. [Write a function which can convert the time input given in 12 hours format to 24 hours format](#Q8)
-1. [Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'](#Q9)
-1. [Write a function to truncate a string to a certain number of letters](#Q10)
-1. [Write a code to truncate a string to a certain number of words](#Q11)
-1. [Create a regular expression to validate if the given input is valid Indian mobile number or not](#Q12)
-1. [Write a function which returns a list of elements which contains at least one character as digit](#Q13)
-1. [Write a function which checks if a given search text is present either in the beginning of the first name or the second name](#Q14)
-1. [Write a function to chop a string into chunks of a given length and return it as array](#Q15)
-1. [Write a code to remove all the vowels from a given string](#Q16)
-1. [Create a function which returns random hex color code](#Q17)
-1. [Write a function which accepts two valid dates and returns the difference between them as number of days](#Q18)
+<br>
 
----
-
-#### Q1
-### Swap 2 integers present in variables num1 and num2 without using temporary variable
+### Q. Swap 2 integers present in variables num1 and num2 without using temporary variable
 
 - The swapping of 2 variables is possible with simple Destructuring assignment using array
 - Traditional approach of swapping by using the given variables is also achievable
@@ -48,8 +28,7 @@ num1 = num1 - num2;
 
 <br />
 
-#### Q2
-### Write a function which returns true if given value of number is an integer without using any inbuilt functions
+### Q. Write a function which returns true if given value of number is an integer without using any inbuilt functions
 ```js
 // Example
 isInt(4.0);        // true
@@ -66,8 +45,7 @@ function isInt(value){
 
 <br />
 
-#### Q3
-### Create a function which returns a random number in the given range of values both inclusive
+### Q. Create a function which returns a random number in the given range of values both inclusive
 
 - `Math.random` function returns a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive)
 
@@ -87,8 +65,7 @@ Usage of `Math.round` depends on the logic used to accomplish the requirement
 
 <br />
 
-#### Q4
-### Write a program to reverse a string
+### Q. Write a program to reverse a string
 
 - String can be reversed by iterating it and storing it in reverse order
 - String can also be reversed by converting it to array, then joining it after reversing
@@ -117,8 +94,7 @@ The string can be tested if it is __palindrome__, by comparing the actual string
 <br />
 
 
-#### Q5
-### Write a program to reverse a string by words. Also show the reverse of each words in place
+### Q. Write a program to reverse a string by words. Also show the reverse of each words in place
 
 - The string can be reversed by words, by splitting the string with spaces and joining them back after reverse
 - If the the letters in each word have to be reversed, the string reversal procedure has to be followed after breaking the string with spaces
@@ -135,8 +111,7 @@ str.split(" ").map(val => val.split("").reverse().join("")).join(" ");          
 
 <br />
 
-#### Q6
-### Write a program to reverse a given integer number
+### Q. Write a program to reverse a given integer number
 
 - The remainder of the number can be fetched and the number can be divided by 10 to remvoe the the digit in loop till number becomes 0
 - A simple approach to reverse a number could also be to convert it in to a string and then reverse it
@@ -162,8 +137,7 @@ let numStr = String(num);
 
 <br />
 
-#### Q7
-### Write a code to replace all the spaces of the string with underscores
+### Q. Write a code to replace all the spaces of the string with underscores
 
 - The string can be split using the space character and can be joined back with underscore to replace all the spaces with strings
 - `replaceAll` is the inbuilt String function on prototype which can be used to replace a string with another string
@@ -185,8 +159,7 @@ str.replaceAll(" ", "_");
 
 <br />
 
-#### Q8
-### Write a function which can convert the time input given in 12 hours format to 24 hours format
+### Q. Write a function which can convert the time input given in 12 hours format to 24 hours format
 ```js
 // Example
 convertTo24HrsFormat("12:10AM");    // 00:10
@@ -223,8 +196,7 @@ Conversion of string to lowerCase helps in case insensitive comparision
 
 <br />
 
-#### Q9
-### Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'
+### Q. Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'
 ```js
 // Example
 getTheGapX('XeroX');                        // 4 
@@ -250,8 +222,7 @@ function getTheGapX(str) {
 
 <br />
 
-#### Q10
-### Write a function to truncate a string to a certain number of letters
+### Q. Write a function to truncate a string to a certain number of letters
 ```js
 // Example
 truncateString("JavaScript", 7)             // "Java..."
@@ -274,8 +245,7 @@ function truncateString(str, charCount) {
 
 <br />
 
-#### Q11
-### Write a code to truncate a string to a certain number of words
+### Q. Write a code to truncate a string to a certain number of words
 
 - The string can be broken in to words array and then `slice` method of array can be used to get the number of words which will then be joined back
 
@@ -288,8 +258,7 @@ str.split(' ').slice(0, wordLimit).join(' ');               // "JavaScript is si
 
 <br />
 
-#### Q12
-### Create a regular expression to validate if the given input is valid Indian mobile number or not
+### Q. Create a regular expression to validate if the given input is valid Indian mobile number or not
 ```js
 // Example 
 validateMobile('+919876543210');                // true
@@ -321,8 +290,7 @@ String has method `match` which returns array of matches or null
 
 <br />
 
-#### Q13
-### Write a function which returns a list of elements which contains at least one character as digit
+### Q. Write a function which returns a list of elements which contains at least one character as digit
 ```js
 // Example 
 numInStr(['1a', 'a', '2b', 'b']));              // ['1a', '2b']
@@ -343,8 +311,7 @@ function numInStr(mixArray){
 
 <br />
 
-#### Q14
-### Write a function which checks if a given search text is present either in the beginning of the first name or the second name
+### Q. Write a function which checks if a given search text is present either in the beginning of the first name or the second name
 ```js
 // Example
 validateName('Nedson PETER', "pet");            // true
@@ -368,8 +335,7 @@ Case insensitive match is happening for the search text in the string represente
 
 <br />
 
-#### Q15
-### Write a function to chop a string into chunks of a given length and return it as array
+### Q. Write a function to chop a string into chunks of a given length and return it as array
 ```js
 // Example
 stringChop('JavaScript');               // ["JavaScript"]
@@ -403,8 +369,7 @@ function stringChop(str, size = str.length) {
 
 <br />
 
-#### Q16
-### Write a code to remove all the vowels from a given string
+### Q. Write a code to remove all the vowels from a given string
 
 - `replace` method on String accepts a string or regex as the argument
 
@@ -418,8 +383,7 @@ str.replace(/[aeiou]/gi, '');            // _lv_JvScrpt
 
 <br />
 
-#### Q17
-### Create a function which returns random hex color code
+### Q. Create a function which returns random hex color code
 
 - The color code is popularly represented in hexadecimal format for RGB colors
 - The minimum value for the color is '#000000' and maximum is '#FFFFFF'
@@ -441,8 +405,7 @@ function getGetHEXColorCode() {
 
 <br />
 
-#### Q18
-### Write a function which accepts two valid dates and returns the difference between them as number of days
+### Q. Write a function which accepts two valid dates and returns the difference between them as number of days
 
 - The difference between 2 dates in JavaScript will give the time difference in milliseconds
 - Time difference can be converted in to days by dividing the 24Hrs time in milliseconds
