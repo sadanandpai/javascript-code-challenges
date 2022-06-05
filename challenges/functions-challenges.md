@@ -2,30 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Functions - challenges
+<h2 align="center">JavaScript challenges on Functions - challenges</h2>
 
-1. [Design a Calulator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface](#Q1)
-1. [Design a private counter function which exposes increment and retrive functionalities](#Q2)
-1. [Write a polyfill for bind function](#Q3)
-1. [Write a function which will create a function bounded to the context like `bind`, but can be overridden when the context is set explicitly](#Q4)
-1. [Write a function which helps to achieve multiply(a)(b) and returns product of a and b](#Q5)
-1. [Create a function which takes another function as an argument and makes it eligible for currying or partial application](#Q6)
-1. [Design a function which helps to do debouncing](#Q7)
-1. [Design a function which helps to do throttling](#Q8)
-1. [Design an interface which limits the number of function calls by executing the function once for a given count of calls](#Q9)
-1. [Write a singleton function to create an object only once](#Q10)
-1. [Design a function with toggle functionality for given list of inputs where toggle function accepts list of values to be toggled upon](#Q11)
-1. [Create a range function which returns an array for the provided inputs as start and end](#Q12)
-1. [Write a function which takes a function as an argument to achieve memoization](#Q13)
-1. [Create a single function which can perform sum(a, b, c), sum(a, b)(c), sum(a)(b, c) and sum(a)(b)(c) and returns sum of a, b and c](#Q14)
-1. [Design a function which can keep recieving the arguments on each function call and returns the sum when no argument is passed](#Q15)
-1. [Create an interface for a function such that whenever a function is triggered the system should log the time. Do not modify the function code](#Q16)
-1. [Create an interface exposing subscribe and publish functionality, which allows publishing data which in turn invokes all the subscribers with the data](#Q17)
+<br>
 
----
-
-#### Q1
-### Design a Calulator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface
+### Q. Design a Calulator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface
 ```js
 // Example
 const calc12And5 = Calculator(12, 5);
@@ -68,8 +49,7 @@ The solution provided is one of the way to achieve the interface. The design and
 
 <br />
 
-#### Q2
-### Design a private counter function which exposes increment and retrive functionalities
+### Q. Design a private counter function which exposes increment and retrive functionalities
 
 ```js
 function privateCounter(){
@@ -102,8 +82,7 @@ counter.retrieve();             // 8
 
 <br />
 
-#### Q3
-### Write a polyfill for bind function
+### Q. Write a polyfill for bind function
 
 - The `bind` method creates a new function that, when called, has its this keyword set to the provided context
 
@@ -129,8 +108,7 @@ This is a simple polyfill for bind without handling corner cases. It does not wo
 
 <br />
 
-#### Q4
-### Write a function which will create a function bounded to the context like `bind`, but can be overridden when the context is set explicitly
+### Q. Write a function which will create a function bounded to the context like `bind`, but can be overridden when the context is set explicitly
 
 - The functionality is similar to `bind` with exception that if there is a context set during the execution it will override
 
@@ -157,8 +135,7 @@ This functionality is also known as 'Soft Binding'
 
 <br />
 
-#### Q5
-### Write a function which helps to achieve multiply(a)(b) and returns product of a and b
+### Q. Write a function which helps to achieve multiply(a)(b) and returns product of a and b
 ```js
 // Example
 multiply(2)(4);                 // 8
@@ -180,8 +157,7 @@ function multiply(num1){
 
 <br />
 
-#### Q6
-### Create a function which takes another function as an argument and makes it eligible for currying or partial application
+### Q. Create a function which takes another function as an argument and makes it eligible for currying or partial application
 
 - Function can take another function as argument and accept the arguments on the returned functions till the expected arguments are reached
 - The arguments can be 1 or multiple, and the actual function will be called once the count of expected arguments are reached
@@ -213,8 +189,7 @@ sum(1,2)(3,4);                      // called like partial application
 
 <br />
 
-#### Q7
-### Design a function which helps to do debouncing
+### Q. Design a function which helps to do debouncing
 
 - The `debounce` function forces a function to wait a certain amount of time before running again
 - The function is built to limit the number of function calls to improve the performance
@@ -244,8 +219,7 @@ Context is replaced while debounce function call in presence of a context. If no
 
 <br />
 
-#### Q8
-### Design a function which helps to do throttling
+### Q. Design a function which helps to do throttling
 
 - The `throttling` function forces a function to run once in an amount of time for one or multiple calls
 - The function is built to limit the number of function calls to improve the performance
@@ -279,8 +253,7 @@ Last arguments to the throttled function is saved so that most recent arguments 
 
 <br />
 
-#### Q9
-### Design an interface which limits the number of function calls by executing the function once for a given count of calls
+### Q. Design an interface which limits the number of function calls by executing the function once for a given count of calls
 
 - function forces a function run to for specific number of times in a given number of execution calls
 - The function is built to limit the number of times a function is called
@@ -310,8 +283,7 @@ Sampling is different from throttling in the way that sampling limits the execut
 
 <br />
 
-#### Q10
-### Write a singleton function to create an object only once
+### Q. Write a singleton function to create an object only once
 
 - Singleton is a design pattern which restricts the creation of only one object from a given interface
 - When requested multiple times, same object is returned
@@ -348,8 +320,7 @@ Here both 'instance1' and 'instace2' are referencing to the same object
 
 <br />
 
-#### Q11
-### Design a function with toggle functionality for given list of inputs where toggle function accepts list of values to be toggled upon
+### Q. Design a function with toggle functionality for given list of inputs where toggle function accepts list of values to be toggled upon
 ```js
 // Example
 var hello = toggle("hello");
@@ -388,8 +359,7 @@ function toggle(...values){
 
 <br />
 
-#### Q12
-### Create a range function which returns an array for the provided inputs as start and end
+### Q. Create a range function which returns an array for the provided inputs as start and end
 ```js
 // Example
 range(3, 6)     // [3, 4, 5, 6]
@@ -421,8 +391,7 @@ function range(start, end) {
 
 <br />
 
-#### Q13
-### Write a function which takes a function as an argument to achieve memoization
+### Q. Write a function which takes a function as an argument to achieve memoization
 
 - Memoization is an optimization technique used primarily to speed up the programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
 - Function can be designed to use a cache storage (using `map` or `object`) which stores the values of function output against the input
@@ -461,8 +430,7 @@ Stringification of arguments done in order for the function to work for multiple
 
 <br />
 
-#### Q14
-### Create a single function which can perform sum(a, b, c), sum(a, b)(c), sum(a)(b, c) and sum(a)(b)(c) and returns sum of a, b and c
+### Q. Create a single function which can perform sum(a, b, c), sum(a, b)(c), sum(a)(b, c) and sum(a)(b)(c) and returns sum of a, b and c
 ```js
 // Example
 sum(2)(4)(6);            // 12
@@ -516,8 +484,7 @@ function sum() {
 
 <br />
 
-#### Q15
-### Design a function which can keep recieving the arguments on each function call and returns the sum when no argument is passed
+### Q. Design a function which can keep recieving the arguments on each function call and returns the sum when no argument is passed
 
 - The function can be designed to return another function which maintains the closure over the previous sum value
 - The check for breaking condition can be added using the argument check for `undefined`
@@ -565,8 +532,7 @@ In the code value is checked if it is undefined reason being 0 is a falsy value 
 
 <br />
 
-#### Q16
-### Create an interface for a function such that whenever a function is triggered the system should log the time. Do not modify the function code
+### Q. Create an interface for a function such that whenever a function is triggered the system should log the time. Do not modify the function code
 
 - Function call can be handled using Proxy in JavaScript
 - `apply` keyword in proxy can be used to achieve the functionality without modifying the existing function code
@@ -596,8 +562,7 @@ This technique is helpful in logging or managing the data being passed to & retu
 
 <br />
 
-#### Q17
-### Create an interface exposing subscribe and publish functionality, which allows publishing data which in turn invokes all the subscribers with the data
+### Q. Create an interface exposing subscribe and publish functionality, which allows publishing data which in turn invokes all the subscribers with the data
 
 - A simple module with publish and subscribe function can be exposed to achieve such functionality
 - List of subscribers can be maintained in an array and can be invoked in loop on each publish
