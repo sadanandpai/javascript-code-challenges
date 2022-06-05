@@ -28,7 +28,7 @@
 | Primitives  | Functions   | Objects     | Collections | Async | DOM |
 | ----------- | ----------- | ----------- | ----------- | --------------- | -------------- |
 | [Concepts](./challenges/primitives-concepts.md#home)      | [Concepts](./challenges/functions-concepts.md#home)      | [Concepts](./challenges/objects-concepts.md#home)      | [Concepts](./challenges/collections-concepts.md#home)       | [Concepts](./challenges/async-concepts.md#home)     | [Concepts](./challenges/dom-challenges.md#home) |
-| [Challenges](./challenges/primitives-challenges.md#home)  | [Challenges](./challenges/functions-challenges.md#home)  | [Challenges](./challenges/objects-challenges.md#home)  | [Challenges](./challenges/collections-challenges.md#home)   | [Challenges](./challenges/async-challenges.md#home) | [Challenges](./challenges/dom-challenges.md#home) |
+| [Challenges](./challenges/primitives-challenges.md#home)  | [Challenges](./challenges/functions-challenges.md#home)  | [Challenges](./challenges/objects-challenges.md#home)  | [Challenges](./challenges/collections-challenges.md#home)   | [Challenges](./challenges/async-challenges.md#home) | |
 
 </div>
 
