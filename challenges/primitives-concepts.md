@@ -2,7 +2,7 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-<h2 align="center">JavaScript interview code challenges on Primitives - concepts</h2>
+<h2 align="center">JavaScript challenges on Primitives - concepts</h2>
 
 <br>
 
