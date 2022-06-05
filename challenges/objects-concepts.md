@@ -2,33 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Objects - concepts
+<h2 align="center">JavaScript challenges on Objects - concepts</h2>
 
-1. [Show the different ways of creating an object](#Q1)
-1. [Display all the keys of an object](#Q2)
-1. [Display all the values of an object](#Q3)
-1. [Write a function which can check if a given object is empty or not](#Q4)
-1. [Create an empty object which has no prototype attached to it](#Q5)
-1. [Show the usage of 'Object.entries' to create an object from key value pairs](#Q6)
-1. [Connect 2 objects so that one object is prototypically connected to the other](#Q7)
-1. [Create an object with getter and setter for property](#Q8)
-1. [Show the different types of accessor properties available for object property and write a code defining them](#Q9)
-1. [Show the different options available to prevent the modifications to the object](#Q10)
-1. [Modify the given object so that it can be used inside a for...of loop](#Q11)
-1. [Show the creation of Regular Expression in JavaScript](#Q12)
-1. [Write a polyfill for Object.create](#Q13)
-1. [Write a code show Optional chaining for objects and functions](#Q14)
-1. [Show the usage of static variable & function in a class and accessing it from the code](#Q15)
-1. [Write a class which uses private variable and function](#Q16)
-1. [Show how inheritance works in Class and the use of super keyword with working example](#Q17)
-1. [Show the way of using Proxy for object](#Q18)
-1. [Show how can we use for..of loop to iterate on a range with given start and end values in an object](#Q19)
-1. [Prove that private looking variable in a function is not really private specific to that object](#Q20)
+<br>
 
----
-
-#### Q1
-### Show the different ways of creating an object
+### Q. Show the different ways of creating an object
 
 - Object can be created using Object constuctor
 - Object can also be created using Object literal form
@@ -68,8 +46,7 @@ const object = new Obj('key', 'value');
 
 <br />
 
-#### Q2
-### Display all the keys of an object
+### Q. Display all the keys of an object
 
 - The keys of an object can be obtained using `Object.keys`
 
@@ -105,8 +82,7 @@ Object.keys(obj).forEach((key) => {
 
 <br />
 
-#### Q3
-### Display all the values of an object
+### Q. Display all the values of an object
 
 - The values of an object can be obtained using `Object.values` which returns an array of values
 
@@ -140,8 +116,7 @@ for(let key in obj){
 
 <br />
 
-#### Q4
-### Write a function which can check if a given object is empty or not
+### Q. Write a function which can check if a given object is empty or not
 
 - Object is empty if it has no keys
 - Few objects such as `Date` object does not have any keys but still are not empty. Hence additional check can be implemented to verify the stringification of the object is also empty
@@ -163,8 +138,7 @@ function isObjectEmpty(obj){
 
 <br />
 
-#### Q5
-### Create an empty object which has no prototype attached to it
+### Q. Create an empty object which has no prototype attached to it
 
 - Objects created in JavaScript will have a prototype object on it connected to other object or `Object`
 - Object constructor can be used to create such an empty object
@@ -178,8 +152,7 @@ const obj = Object.create(null);
 
 <br />
 
-#### Q6
-### Show the usage of 'Object.entries' to create an object from key value pairs
+### Q. Show the usage of 'Object.entries' to create an object from key value pairs
 
 - The key value pairs can be directly converted to object using `entries` method of Object
 
@@ -198,8 +171,7 @@ const obj = Object.fromEntries(map);
 
 <br />
 
-#### Q7
-### Connect 2 objects so that one object is prototypically connected to the other
+### Q. Connect 2 objects so that one object is prototypically connected to the other
 
 - Objects in JavaScript are connected its prototype and is accessible for objects getPrototypeOf or `__proto__`
 - `setPrototypeOf` is used to set the prototype of the object
@@ -224,8 +196,7 @@ The lookup happens at the object level initially and if the key is not found, pr
 
 <br />
 
-#### Q8
-### Create an object with getter and setter for property
+### Q. Create an object with getter and setter for property
 
 - `getter` and `setter` on the properties of object can be used to control the read and write behavior
 
@@ -251,8 +222,7 @@ If the `this.data` is accessed directly, the function will call itself infinitel
 
 <br />
 
-#### Q9
-### Show the different types of accessor properties available for object property and write a code defining them
+### Q. Show the different types of accessor properties available for object property and write a code defining them
 
 - `value` accessor is used to set the value of the property
 - `writable` accessor is used to set if the property can be modified or not
@@ -278,8 +248,7 @@ Except `value`, other accessort mentioned accept true or false
 
 <br />
 
-#### Q10
-### Show the different options available to prevent the modifications to the object
+### Q. Show the different options available to prevent the modifications to the object
 
 - `preventExtensions` is an Object method which prevents addition of any new property to an object
 - `seal` is an Object method which prevents addition and deletion of any property in an object
@@ -308,8 +277,7 @@ Object.isFrozen(obj);           // true
 
 <br />
 
-#### Q11
-### Modify the given object so that it can be used inside a for...of loop
+### Q. Modify the given object so that it can be used inside a for...of loop
 
 - Symbol iterator can be used to define the iterator on the object
 - The values of the object can accessed with `for..of` the way we can do it for array
@@ -354,8 +322,7 @@ const obj = {
 
 <br />
 
-#### Q12
-### Show the creation of Regular Expression in JavaScript
+### Q. Show the creation of Regular Expression in JavaScript
 
 - Regular expressions are patterns used to match character combinations in strings
 - Regular expressions can be created using literal form or constructor form
@@ -380,8 +347,7 @@ In JavaScript, regular expressions are objects
 
 <br />
 
-#### Q13
-### Write a polyfill for Object.create
+### Q. Write a polyfill for Object.create
 
 - The creating of object can happen by making constructor call to the function
 
@@ -405,8 +371,7 @@ if (typeof Object.create !== 'function') {
 
 <br />
 
-#### Q14
-### Write a code show Optional chaining for objects and functions
+### Q. Write a code show Optional chaining for objects and functions
 
 - The optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects
 - The expression short-circuits with a return value of undefined in the absence of property
@@ -430,8 +395,7 @@ obj.func?.(args)
 
 <br />
 
-#### Q15
-### Show the usage of static variable & function in a class and accessing it from the code
+### Q. Show the usage of static variable & function in a class and accessing it from the code
 
 - Static members of the class are class level variables and not created for each instances of the class
 - Static members can be accessed directly using class name
@@ -464,8 +428,7 @@ Browser.areTheySameBrowsers(browser1, browser2);        // false
 
 <br />
 
-#### Q16
-### Write a class which uses private variable and function
+### Q. Write a class which uses private variable and function
 
 - Private members of the class are only accessible within the class and instances of the class do not have access to it
 - Private members can be created with the prefix '#' before the name of the class member
@@ -499,8 +462,7 @@ instance.publicFunc();                  // 7, 10
 
 <br />
 
-#### Q17
-### Show how inheritance works in Class and the use of super keyword with working example
+### Q. Show how inheritance works in Class and the use of super keyword with working example
 
 - Class level inheritance can happen when a class inherits from another class using the keyword `extends`
 - The child class can access parent class members using the keyword `super`
@@ -553,8 +515,7 @@ component.addValues(9, -4, 6, 2);               // Sum of 9,-4,6,2 is 13
 
 <br />
 
-#### Q18
-### Show the way of using Proxy for object
+### Q. Show the way of using Proxy for object
 
 - The Proxy object enables create a proxy for another object, which can intercept and redefine fundamental operations for that object
 - Proxy can be set for objects (including functions and arrays) to intercept the values which gives us the control on access and modification of the real object
@@ -590,8 +551,7 @@ There are lot of other traps used in Proxy apart from `get`, `set`, `apply`
 
 <br />
 
-#### Q19
-### Show how can we use for..of loop to iterate on a range with given start and end values in an object
+### Q. Show how can we use for..of loop to iterate on a range with given start and end values in an object
 ```js
 // Example
 let range = {
@@ -618,8 +578,7 @@ Object.defineProperty(range, Symbol.iterator, {
 
 <br />
 
-#### Q20
-### Prove that private looking variable in a function is not really private specific to that object
+### Q. Prove that private looking variable in a function is not really private specific to that object
 
 - Private looking variables can be created in a function and can given access by providing function interfaces
 - The functions maintain a closure over function variables and hence the function variables persist inside the function interfaces
