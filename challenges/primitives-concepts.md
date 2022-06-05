@@ -2,26 +2,11 @@
   <a href="/README.md#this-is-a-collection-of-modern-interview-code-challenges-on-javascript-suitable-for" id="home">Home</a>
 </div>
 
-## JavaScript interview code challenges on Primitives - concepts
+<h2 align="center">JavaScript interview code challenges on Primitives - concepts</h2>
 
-1. [Show the usage of `typeof` operator on different types of values](#Q1)
-1. [Show the different ways of concatenating numbers and strings](#Q2)
-1. [Show the conversion from number to string and vice versa](#Q3)
-1. [Write a code to operate on integer numbers outside the range of numbers in JavaScript](#Q4)
-1. [Show the usage of `||`, `&&`, `??` and `!!` with code examples](#Q5)
-1. [Show the frequently and commonly used methods available on `Number` object with coding examples](#Q6)
-1. [Write the polyfill for `Number.isNaN`](#Q7)
-1. [Show the frequently and commonly used methods available on `Math` object with coding examples](#Q8)
-1. [How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails](#Q9)
-1. [Write a code to iterate over a string](#Q10)
-1. [Show the usage of template literals, expression interpolation and tagged templates](#Q11)
-1. [Write a code to show the working of `try...catch...finally`](#Q12)
-1. [Show the creation and usage of `symbol` with code](#Q13)
+<br>
 
----
-
-#### Q1
-### Show the usage of `typeof` operator on different types of values
+### Q. Show the usage of `typeof` operator on different types of values
 
 - The `typeof` operator returns a string indicating the type of the operand
 
@@ -51,8 +36,8 @@ Arrays and functions are sub type of objects
 
 <br />
 
-#### Q2
-### Show the different ways of concatenating numbers and strings
+
+### Q. Show the different ways of concatenating numbers and strings
 
 - Concatenation of strings and numbers is a common practical use case
 
@@ -81,8 +66,8 @@ Arrays and functions are sub type of objects
 
 <br />
 
-#### Q3
-### Show the conversion from number to string and vice versa
+
+### Q. Show the conversion from number to string and vice versa
 
 - Conversion between numbers and strings is a common practical use case
 
@@ -112,8 +97,8 @@ If the number is floating, `parseFloat` can be used. `parseInt` and `parseFloat`
 
 <br />
 
-#### Q4
-### Write a code to operate on integer numbers outside the range of numbers in JavaScript
+
+### Q. Write a code to operate on integer numbers outside the range of numbers in JavaScript
 
 - `BigInt` is a datatype in JavaScript which facilitates the mathematical opertions on huge value of integer number
 - It is represented by a suffix 'n' for number value
@@ -135,8 +120,8 @@ The big integers cannot be operated directly with normal number datatype. `10n +
 
 <br />
 
-#### Q5
-### Show the usage of `||`, `&&`, `??` and `!!` with code examples
+
+### Q. Show the usage of `||`, `&&`, `??` and `!!` with code examples
 
 - The __logical OR__ (||) operator for a set of operands is true if and only if one or more of its operands is true
 - The __logical AND__ (&&) operator for a set of operands is true if and only if all of its operands are true
@@ -190,8 +175,8 @@ It is not possible to combine both the AND (&&) and OR operators (||) directly w
 
 <br />
 
-#### Q6
-### Show the frequently and commonly used methods available on `Number` object with coding examples
+
+### Q. Show the frequently and commonly used methods available on `Number` object with coding examples
 
 - `isInteger` is used to check if the given number is integer or not
 - `parseInt` is used to convert a given value in to integer
@@ -231,8 +216,8 @@ Number.isNaN("text");             // false
 
 <br />
 
-#### Q7
-### Write the polyfill for `Number.isNaN`
+
+### Q. Write the polyfill for `Number.isNaN`
 
 - A polyfill is a piece of code used to provide modern functionality on older browsers that do not natively support it
 - `NaN` is the only value which is not equal to itself and hence comparision operator cannot be used directly to check if a value is `NaN`
@@ -251,8 +236,8 @@ Even though the name says _Not a Number_, it is of type "number"
 
 <br />
 
-#### Q8
-### Show the frequently and commonly used methods available on `Math` object with coding examples
+
+### Q. Show the frequently and commonly used methods available on `Math` object with coding examples
 
 - `abs` is used to get the absolute value of the given number
 - `floor` is used to get the greatest integer smaller than or equal to the given number
@@ -281,8 +266,8 @@ Math.trunc(-6.3));                  // -6
 
 <br />
 
-#### Q9
-### How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails
+
+### Q. How can we solve the problem of comparision of 0.1 + 0.2 with 0.3 where `===` operator fails
 
 - The addition of 0.1 and 0.2 will result in to 0.30000000000000004 and the comparision with 0.3 fails
 - `Number.epsilon` is 2<sup>-52</sup>, which can be used to verify if this decimal values are matching
@@ -296,8 +281,8 @@ Math.trunc(-6.3));                  // -6
 
 <br />
 
-#### Q10
-### Write a code to iterate over a string
+
+### Q. Write a code to iterate over a string
 
 - String can be traversed using its string index or value as string can act like an iterable
 
@@ -328,8 +313,8 @@ for(let value of str){
 
 <br />
 
-#### Q11
-### Show the usage of template literals with expression interpolation and tagged templates
+
+### Q. Show the usage of template literals with expression interpolation and tagged templates
 
 - Template literals are string literals allowing embedded expressions and support multi lines
 - Template literals are enclosed by the backtick \`
@@ -364,8 +349,8 @@ myTag`Note: ${person} is a member of following communities: ${membership}`;     
 
 <br />
 
-#### Q12
-### Write a code to show the working of `try...catch...finally`
+
+### Q. Write a code to show the working of `try...catch...finally`
 
 - The `try` statement consists of a try-block, which contains one or more statements. At least one catch-block, or a finally-block, must be present
 - The exceptions and errors from try block are caught in catch block
@@ -391,8 +376,8 @@ try {
 
 <br />
 
-#### Q13
-### Show the creation and usage of `symbol` with code
+
+### Q. Show the creation and usage of `symbol` with code
 
 - A "symbol" represents a unique identifier
 - `Symbol.for` method searches for existing symbols in a runtime-wide symbol registry returns the same. If not found, creates a new Symbol
