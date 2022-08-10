@@ -243,7 +243,7 @@ position;                   // position of max number
 ```
 
 ```js
-const max = arr.reduce((a, b) => a < b ? a : b);
+const max = arr.reduce((a, b) => a > b ? a : b);
 arr.indexOf(max);           // position of max number
 ```
 
