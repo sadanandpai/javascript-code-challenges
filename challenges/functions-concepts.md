@@ -25,7 +25,7 @@ func(); // Hello
 
 ###### Notes
 
-Function can also be stored in variables like other values in JavaScript
+Functions can also be stored in variables like other values in JavaScript
 
 ###### References
 
@@ -34,10 +34,10 @@ Function can also be stored in variables like other values in JavaScript
 
 <br />
 
-### Q. Write a function which executes another function recieved as an argument
+### Q. Write a function which executes another function received as an argument
 
-- Functions can be passed as arguments to another functions
-- Passing the function as argument will pass its reference hence no parenthesis
+- Functions can be passed as arguments to another function
+- Passing the function as an argument will pass its reference hence no parenthesis
 
 ```js
 function callbackExecutor(callback) {
@@ -62,9 +62,9 @@ callbackExecutor(callbackFunc); // Callback function executed
 
 ### Q. Create a function having no parameters declared and print all the arguments passed to it
 
-- When a function is invoked the arguments passed to it are accessible using the defualt object called "arguments"
-- Numbers starting from 0 is set as key of the object "arguments" corresponding to each argument in the order
-- `arguments` object will have length property as well which gives count of arguments passed
+- When a function is invoked the arguments passed to it are accessible using the default object called "arguments"
+- Numbers starting from 0 are set as keys of the object "arguments" corresponding to each argument in the order
+- The `arguments` object will have a length property as well which gives count of arguments passed
 
 ```js
 function func() {
@@ -120,7 +120,7 @@ function func(a, b, c) {
 
 <br />
 
-### Q. Design a function which can recieve variable number of arguments in parameters and print them
+### Q. Design a function which can receive a variable number of arguments in parameters and print them
 
 ```js
 function varArgsFunc(...params) {
@@ -141,7 +141,7 @@ varArgsFunc("Hello", ",", "World", "!!!");
 
 ### Q. Show the most common ways of creating functions in JavaScript
 
-- The functions are most commonly created as function statements, function expression and arrow functions
+- Functions are most commonly created using function statements, function expressions and arrow functions
 - Function statements get hoisted unlike function expressions
 
 ```js
@@ -223,9 +223,9 @@ Arrow functions are also called fat arrow functions
 
 ### Q. Write a program where hoisting can be visualized
 
-- The function statement and variable declared with `var` are accessible before it appears in the code
+- The function statement and variable declared with `var` are accessible before they appear in the code
 - Declarations are put into memory before it executes any code segment that allows us to use a function before you declare it in your code
-- In hoisting the hoisted items are accessible in the scope it is declared
+- In hoisting the hoisted items are accessible in the scope they are declared in
 - Function expressions do not get hoisted
 
 ```js
@@ -244,7 +244,7 @@ var nonHoistedFunc = function () {
 
 ###### Notes
 
-Hoisting was thought up as a general way of thinking about how execution contexts work in JavaScript. In reality, code does not get hoisted, but affect is seen due to compilation and execution phases followed by JavaScript compiler
+Hoisting was thought up as a general way of thinking about how execution contexts work in JavaScript. In reality, the code does not get hoisted, but the effect is seen due to compilation and execution phases followed by JavaScript compiler
 
 ###### References
 
@@ -283,8 +283,8 @@ Hoisting was thought up as a general way of thinking about how execution context
 
 ### Q. Create an IIFE which receives arguments and executes
 
-- Arguments can be passed normally to an IIFE like we pass to while calling regular functions
-- Multiple arguments can be passed similar to function invokation with arguments
+- Arguments can be passed in the same way as when calling a regular functions
+- Multiple arguments can be passed similar to function invocation with arguments
 
 ```js
 (function IIFE(param1, param2) {
@@ -317,8 +317,8 @@ var randomNumber = (function () {
 
 ### Q. Write a function which can return multiple values from a function
 
-- Function in general is designed to return a single value.
-- Generators are special type of functions which returns iterator which in turn can be used to send & receive values.
+- In general functions are designed to return a single value.
+- Generators are a special type of functions which return an iterator which in turn can be used to send & receive values.
 
 ```js
 function multipleValueReturnFunc() {
@@ -366,7 +366,7 @@ Array and object are used in the programs to contain multiple values
 
 <br />
 
-### Q. Write a function which can set default value to the parameters of function when an argument is not passed. Also show how to use exisiting parameters to set the value of another parameter
+### Q. Write a function which can set default values to the parameters of function when an argument is not passed. Also show how to use exisiting parameters to set the value of another parameter
 
 - Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed
 
@@ -444,12 +444,12 @@ The context inside the function can be accessed using `this` keyword
 
 <br />
 
-### Q. Show the usage of function which can used as a constructor
+### Q. Show the usage of a function which can be used as a constructor
 
-- Function can be used to like a constructor by calling it with a `new` keyword
-- Constructor function is a normal function but generally used to create object and may also have functions in its prototype
-- Constructor function is generally preferred to start with Uppercase letter which is not mandatory
-- The return from the constructor function is new object created which is accessed with `this` inside the function
+- A function can be used like a constructor by calling it with the `new` keyword
+- A constructor function is a normal function but generally used to create an object and may also have functions in its prototype
+- A constructor function is generally preferred to start with a Uppercase letter which is not mandatory
+- The return from the constructor function is a new object created which is accessed with `this` inside the function
 - Constructor function can return an explicit object as well
 
 ```js
@@ -481,9 +481,9 @@ Constructor function can be called without new keyword as well, which executes t
 
 <br />
 
-### Q. Show the procedure of creating object using a factory function
+### Q. Show the procedure of creating an object using a factory function
 
-- Any function which is not a class or constructor that returns an object without a new keyword is known as factory function
+- Any function which is not a class or constructor that returns an object without a new keyword is known as a factory function
 - A normal function which can be modified to return an object which can be called by passing arguments
 
 ```js
@@ -512,8 +512,8 @@ const user = factoryFunc("admin", "password");
 
 ### Q. Achieve prototypal inheritance using functions to create objects in JavaScript
 
-- 2 functions can be used create objects with constructor call to the functions
-- The prototype of child function is connected with parent function to achieve the inheritance behavior
+- 2 functions can be used to create objects with constructor call to the functions
+- The prototype of the child function is connected with the parent function to achieve the inheritance behavior
 
 ```js
 function parent(name) {
@@ -544,7 +544,7 @@ console.log(pk.getName());
 
 ###### Notes
 
-Solution is one of the known way of achieving prototypal inheritance, but is not the only way to achieve it.
+The solution is one of the known ways of achieving prototypal inheritance, but it is not the only way to achieve it.
 
 ###### References
 
