@@ -248,7 +248,7 @@ arr.indexOf(max);           // position of max number
 ```
 
 ###### Notes
-Though 2nd solution is verbose compared but has good performance
+Though 1st solution is verbose compared to 2nd, but has good performance
 
 ###### References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
