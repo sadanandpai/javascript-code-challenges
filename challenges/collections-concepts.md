@@ -140,12 +140,15 @@ console.log(arr);               // [1, 2, 3, 4, 5]
 
 - Array can be emptied by giving a new reference of an empty array
 - Setting the `length` of the array to 0 will automatically makes the array empty
-- `pop` operation on array can also be used to empty the array where each elements get removed
+- `pop` and `shift` operation on array can also be used to empty the array where each elements get removed
 
 ```js
 arr = [];
 ```
 
+```js
+arr = new Array()
+```
 ```js
 arr.length = 0;
 ```
@@ -153,6 +156,12 @@ arr.length = 0;
 ```js
 while(arr.length > 0){
     arr.pop();
+}
+```
+
+```js
+while(arr.length > 0){
+    arr.shift()
 }
 ```
 
