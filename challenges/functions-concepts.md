@@ -264,12 +264,6 @@ Hoisting was thought up as a general way of thinking about how execution context
 ```
 
 ```js
-(function IIFE() {
-  console.log("I am an Immediately invoked function");
-})();
-```
-
-```js
 +(function IIFE() {
   console.log("I am an Immediately invoked function");
 })();
