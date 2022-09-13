@@ -205,7 +205,7 @@ Number.isNaN("text");             // false
 59..toFixed(3);                   // 59.000
 
 32.458.toPrecision('3');          // 32.5
-98.1.toPrecision(1);              // 9e+1
+98.1.toPrecision(1);              // 1e+2
 ```
 
 ###### Notes
