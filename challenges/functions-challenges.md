@@ -202,7 +202,7 @@ function debounce(fn, delay, context){
     return function(...args){
         if(timer) clearTimeout(timer);
         
-        context = this ?? context;
+        context = context ?? this;
         timer = setTimeout(()=>{
             fn.apply(context, args);
         }
@@ -232,13 +232,14 @@ function throttle(fn, delay, context){
 
     return function(...args){
         lastArgs = args;
-        context = this ?? context;
+        context = context ?? this;
         
         if(timer) return;
         
         timer = setTimeout(()=>{
             fn.apply(context, lastArgs);
             clearTimeout(timer);
+            timer = null;
         }
         , delay);
     };
@@ -265,7 +266,7 @@ function sampler(fn, count, context){
 
     return function(...args){
         lastArgs = args;
-        context = this ?? context;
+        context = context ?? this;
         
         if(++counter !== count) return;
         
