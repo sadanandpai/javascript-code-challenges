@@ -291,7 +291,7 @@ If an object is passed the object reference is copied to all the slots and not t
 - Set is a data structure which does not allow duplicate elements
 
 ```js
-const set = new Set(...arr);
+const set = new Set([...arr]);
 const distinctArr = [...set];
 ```
 
