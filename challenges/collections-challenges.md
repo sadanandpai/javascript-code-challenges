@@ -291,7 +291,7 @@ If an object is passed the object reference is copied to all the slots and not t
 - Set is a data structure which does not allow duplicate elements
 
 ```js
-const set = new Set(...arr);
+const set = new Set(arr);
 const distinctArr = [...set];
 ```
 
@@ -343,8 +343,8 @@ const itAvgSalaryGT10K = itTotalSalaryGT10K / itEmployeesWithSalaryGT10K.length;
 - The union array will be the result if all the elements from the 2 arrays are picked
 
 ```js
-const set1 = new Set(...arr1);
-const set2 = new Set(...arr2);
+const set1 = new Set(arr1);
+const set2 = new Set(arr2);
 const distinctArr = [...set1, ...set2];
 ```
 
