@@ -197,7 +197,7 @@ Number.parseFloat('-12.69x');     // -12.69
 
 Number.isNaN(NaN);                // true
 Number.isNaN("text" - 10);        // true
-Number.isNaN("text");             // false
+Number.isNaN("text");             // true
 ```
 
 ```js
