@@ -170,7 +170,7 @@ const obj = userObjectCreator(1);
 
 ###### Notes
 
-`obj.id` is a ready only property and does not allow overwriting
+`obj.id` is a read only property and does not allow overwriting
 
 <br />
 
@@ -461,7 +461,7 @@ Class in JavaScript is functionality to achieve class based model on top of prot
 
 <br />
 
-### Q. Write a program to make all the properties of an object ready only but allow the addition of new properties
+### Q. Write a program to make all the properties of an object read only but allow the addition of new properties
 
 - The exisiting properties of the object can be made read only with `set` keyword using Proxy
 
