@@ -1,0 +1,15 @@
+{
+  "index": {
+    "theme": {
+      "breadcrumb": false,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "navbar": false,
+      "footer": false
+    },
+    "display": "hidden"
+  },
+  "concepts": "Concepts",
+  "challenges": "Challenges"
+}
