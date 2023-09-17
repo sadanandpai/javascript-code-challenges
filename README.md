@@ -2,8 +2,11 @@
 	<h1>JavaScript Modern Interview Code Challenges</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
     	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="web/public/hero.png" alt="banner" width="500px"/></a>
+		<br/><br/>
+    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="web/public/hero.svg" alt="hero" width="350px"/></a>
 </div>
+
+<br/><br/>
 
 <div align="center">
     <p>
