@@ -2,18 +2,17 @@
 	<h1>JavaScript Modern Interview Code Challenges</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
     	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-		<br/><br/>
-    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="web/public/hero.svg" alt="hero" width="350px"/></a>
+	<br/>
+    	<a href="https://jscodechallenges.vercel.app/"><img src="web/public/hero.svg" alt="hero" width="350px"/></a>
 </div>
 
-<br/><br/>
+<br/>
 
 <div align="center">
     <p>
 	    <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
 	    <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
 	    <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
-	    <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
 	    <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
     </p>
 </div>
