@@ -1,45 +1,19 @@
 <div align="center">
-	<h1>JavaScript Modern Interview Code Challenges</h1>
+	<a href="https://jscodechallenges.vercel.app/"><img src="web/public/hero.svg" alt="hero" width="100px"/></a>
+	<h1>JavaScript Code Challenges</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
-    	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-	<br/>
-    	<a href="https://jscodechallenges.vercel.app/"><img src="web/public/hero.svg" alt="hero" width="350px"/></a>
-</div>
-
-<br/>
-
-<div align="center">
-    <p>
-	    <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
-	    <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
-	    <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
-	    <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
-    </p>
-</div>
-
-<div align="center">
+	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
+	<p>
+		<a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+		<a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+		<a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/javascript-code-challenges?logoColor=green&style=for-the-badge"></a>
+		<a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+	</p>
+	<h3>All challenges can be found at <a href="https://jscodechallenges.vercel.app/">JavaScript Code Challenges</a></h3>
 	<p>Show your support by giving a ⭐ to this repo</p>
-	<h5>Feel free to connect with me on <a href="https://linkedin.com/in/sadanandpai" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="sadanandpai" height="20" width="20" /></a></h5>
 </div>
 
 ---
-
-<div align="center">
-	<h2>JavaScript Modern Interview Code Challenges by topic</h2>
-
-| Primitives                                               | Functions                                               | Objects                                               | Collections                                               | Async                                               | DOM                                             |
-| -------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| [Concepts](./challenges/primitives-concepts.md#home)     | [Concepts](./challenges/functions-concepts.md#home)     | [Concepts](./challenges/objects-concepts.md#home)     | [Concepts](./challenges/collections-concepts.md#home)     | [Concepts](./challenges/async-concepts.md#home)     | [Concepts](./challenges/dom-challenges.md#home) |
-| [Challenges](./challenges/primitives-challenges.md#home) | [Challenges](./challenges/functions-challenges.md#home) | [Challenges](./challenges/objects-challenges.md#home) | [Challenges](./challenges/collections-challenges.md#home) | [Challenges](./challenges/async-challenges.md#home) |                                                 |
-
-</div>
-
----
-
-### Usage Guide and Study materials
-
-- [Usage Guide](./usageGuide.md)
-- [Study Materials](https://github.com/sadanandpai/frontend-learning-kit)
 
 ### Contributing Guide
 
