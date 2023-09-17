@@ -21,6 +21,7 @@ const config = {
       titleTemplate: "%s – JS Code Challenges",
     };
   },
+  gitTimestamp: null,
   footer: {
     text: (
       <span>
