@@ -3,13 +3,13 @@
 - The swapping of 2 variables is possible with simple Destructuring assignment using array
 - Traditional approach of swapping by using the given variables is also achievable
 
-```js
+```js copy
 let num1 = 10,
   num2 = 20;
 [num1, num2] = [num2, num1];
 ```
 
-```js
+```js copy
 let num1 = 10,
   num2 = 20;
 num1 = num1 + num2;
@@ -25,7 +25,7 @@ num1 = num1 - num2;
 
 ### 2. Write a function which returns true if given value of number is an integer without using any inbuilt functions
 
-```js
+```js copy
 // Example
 isInt(4.0); // true
 isInt(12.2); // false
@@ -34,7 +34,7 @@ isInt(0.3); // false
 
 - Modulo operator can be used to check if there is a remainder left when divided by 1
 
-```js
+```js copy
 function isInt(value) {
   return value % 1 === 0;
 }
@@ -46,7 +46,7 @@ function isInt(value) {
 
 - `Math.random` function returns a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive)
 
-```js
+```js copy
 function randomNumberGeneratorInRange(rangeStart, rangeEnd) {
   return rangeStart + Math.round(Math.random() * (rangeEnd - rangeStart));
 }
@@ -69,7 +69,7 @@ Usage of `Math.round` depends on the logic used to accomplish the requirement
 - String can be reversed by iterating it and storing it in reverse order
 - String can also be reversed by converting it to array, then joining it after reversing
 
-```js
+```js copy
 const str = "JavaScript is awesome";
 let reversedString = "";
 for (let i = 0; i < str.length; i++) {
@@ -79,7 +79,7 @@ for (let i = 0; i < str.length; i++) {
 reversedString; // "emosewa si tpircSavaJ"
 ```
 
-```js
+```js copy
 const str = "JavaScript is awesome";
 str.split("").reverse().join(""); // "emosewa si tpircSavaJ"
 ```
@@ -99,12 +99,12 @@ The string can be tested if it is **palindrome**, by comparing the actual string
 - The string can be reversed by words, by splitting the string with spaces and joining them back after reverse
 - If the the letters in each word have to be reversed, the string reversal procedure has to be followed after breaking the string with spaces
 
-```js
+```js copy
 const str = "JavaScript is awesome";
 str.split(" ").reverse().join(" "); // "awesome is JavaScript"
 ```
 
-```js
+```js copy
 const str = "JavaScript is awesome";
 str
   .split(" ")
@@ -119,7 +119,7 @@ str
 - The remainder of the number can be fetched and the number can be divided by 10 to remvoe the the digit in loop till number becomes 0
 - A simple approach to reverse a number could also be to convert it in to a string and then reverse it
 
-```js
+```js copy
 let num = 3849;
 
 let reversedNum = 0;
@@ -131,7 +131,7 @@ while (num !== 0) {
 reversedNum; // 9483
 ```
 
-```js
+```js copy
 let num = 3849;
 
 let numStr = String(num);
@@ -145,11 +145,11 @@ let numStr = String(num);
 - The string can be split using the space character and can be joined back with underscore to replace all the spaces with strings
 - `replaceAll` is the inbuilt String function on prototype which can be used to replace a string with another string
 
-```js
+```js copy
 str.split(" ").join("_");
 ```
 
-```js
+```js copy
 str.replaceAll(" ", "_");
 ```
 
@@ -166,7 +166,7 @@ str.replaceAll(" ", "_");
 
 ### 8. Write a function which can convert the time input given in 12 hours format to 24 hours format
 
-```js
+```js copy
 // Example
 convertTo24HrsFormat("12:10AM"); // 00:10
 convertTo24HrsFormat("5:00AM"); // 05:00
@@ -179,7 +179,7 @@ convertTo24HrsFormat("10:02PM"); // 22:02
 - The check for 'AM' and 'PM' can be verified using `endsWith` String method
 - An extra 0 would be needed if the hours have single digit
 
-```js
+```js copy
 function convertTo24HrsFormat(timeText) {
   var timeTextLower = timeText.toLowerCase();
   let [hours, mins] = timeTextLower.split(":");
@@ -205,7 +205,7 @@ Conversion of string to lowerCase helps in case insensitive comparision
 
 ### 9. Write a function which accepts a string argument and returns the count of characters between the first and last character 'X'
 
-```js
+```js copy
 // Example
 getTheGapX("XeroX"); // 4
 getTheGapX("Xamarin"); // -1       (If there is only single character 'X')
@@ -216,7 +216,7 @@ getTheGapX("F(X) !== G(X) !== F(X)"); // 18
 - `indexOf` and `lastIndexOf` are the methods on String which returns the position of the given string in the input string from start and end respectively
 - If the match is not found, these methods return -1
 
-```js
+```js copy
 function getTheGapX(str) {
   if (!str.includes("X")) {
     return -1;
@@ -232,7 +232,7 @@ function getTheGapX(str) {
 
 ### 10. Write a function to truncate a string to a certain number of letters
 
-```js
+```js copy
 // Example
 truncateString("JavaScript", 7); // "Java..."
 truncateString("JS is fun", 10); // "JS is fun"
@@ -242,7 +242,7 @@ truncateString("JS is funny", 10); // "JS is f..."
 - Text can be truncated by fetching the substring from start till the count of characters
 - `substr` methods of String can be used to fetch the part of the string
 
-```js
+```js copy
 function truncateString(str, charCount) {
   if (str.length > charCount) {
     return str.substr(0, charCount - 3) + "...";
@@ -258,7 +258,7 @@ function truncateString(str, charCount) {
 
 - The string can be broken in to words array and then `slice` method of array can be used to get the number of words which will then be joined back
 
-```js
+```js copy
 const str = "JavaScript is simple but not easy to master";
 const wordLimit = 3;
 
@@ -269,7 +269,7 @@ str.split(" ").slice(0, wordLimit).join(" "); // "JavaScript is simple"
 
 ### 12. Create a regular expression to validate if the given input is valid Indian mobile number or not
 
-```js
+```js copy
 // Example
 validateMobile("+919876543210"); // true
 validateMobile("+91 9876543210"); // true
@@ -281,14 +281,14 @@ validateMobile("99876543210"); // false
 - Regular expression check has to have an optional +91 or 0 in the beginning, then an optional space and 10 digits
 - `test` method of regular expression can be used to validate if the mobile number pattern matches or not
 
-```js
+```js copy
 function validateMobile(str) {
   const regexMobile = /^(\+91|0)?\s?\d{10}$/;
   return regexMobile.test(str);
 }
 ```
 
-```js
+```js copy
 function validateMobile(str) {
   const regexMobile = /^(\+91|0)?\s?\d{10}$/;
   return str.match(regexMobile) !== null;
@@ -303,7 +303,7 @@ String has method `match` which returns array of matches or null
 
 ### 13. Write a function which returns a list of elements which contains at least one character as digit
 
-```js
+```js copy
 // Example
 numInStr(['1a', 'a', '2b', 'b']));              // ['1a', '2b']
 numInStr(['abc', 'abc10']));                    // ['abc10']
@@ -313,7 +313,7 @@ numInStr(['this is a test', 'test1']));         // ['test1']
 
 - A test for digit after looping through the array would give the list of values having at least one digit string
 
-```js
+```js copy
 function numInStr(mixArray) {
   return mixArray.filter((value) => {
     return /[0-9]/.test(value);
@@ -325,7 +325,7 @@ function numInStr(mixArray) {
 
 ### 14. Write a function which checks if a given search text is present either in the beginning of the first name or the second name
 
-```js
+```js copy
 // Example
 validateName("Nedson PETER", "pet"); // true
 validateName("Peter Parker", "pet"); // true
@@ -336,7 +336,7 @@ validateName("John Doe Peter", "pet"); // false
 - The function can be designed to accept the name and the search text
 - Regular expression can be designed to validate if the name has search text the beginning of first or second name
 
-```js
+```js copy
 function validateName(str, searchText) {
   const regex = new RegExp("^(\\w*\\s)?" + searchText + "\\w*?", "i");
   return regex.test(str);
@@ -351,7 +351,7 @@ Case insensitive match is happening for the search text in the string represente
 
 ### 15. Write a function to chop a string into chunks of a given length and return it as array
 
-```js
+```js copy
 // Example
 stringChop("JavaScript"); // ["JavaScript"]
 stringChop("JavaScript", 2); // ["Ja", "va", "Sc", "ri", "pt"]
@@ -361,7 +361,7 @@ stringChop("JavaScript", 3); // ["Jav", "aSc", "rip", "t"]
 - String can be chopped using `slice` method of String
 - Regular expression can also be used effectively to this operation
 
-```js
+```js copy
 function stringChop(str, size = str.length) {
   const arr = [];
   let i = 0;
@@ -373,7 +373,7 @@ function stringChop(str, size = str.length) {
 }
 ```
 
-```js
+```js copy
 function stringChop(str, size = str.length) {
   return str.match(new RegExp(".{1," + size + "}", "g"));
 }
@@ -389,7 +389,7 @@ function stringChop(str, size = str.length) {
 
 - `replace` method on String accepts a string or regex as the argument
 
-```js
+```js copy
 const str = "I love JavaScript";
 str.replace(/[aeiou]/gi, ""); // _lv_JvScrpt
 ```
@@ -405,7 +405,7 @@ str.replace(/[aeiou]/gi, ""); // _lv_JvScrpt
 - The color code is popularly represented in hexadecimal format for RGB colors
 - The minimum value for the color is '#000000' and maximum is '#FFFFFF'
 
-```js
+```js copy
 function getGetHEXColorCode() {
   const rValue = Math.round(0xff * Math.random())
     .toString(16)
@@ -435,7 +435,7 @@ function getGetHEXColorCode() {
 - The difference between 2 dates in JavaScript will give the time difference in milliseconds
 - Time difference can be converted in to days by dividing the 24Hrs time in milliseconds
 
-```js
+```js copy
 const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
 
 function getDaysBetweenDates(dateText1, dateText2) {

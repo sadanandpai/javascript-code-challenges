@@ -1,6 +1,6 @@
 ### 1. Design a Calulator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface
 
-```js
+```js copy
 // Example
 const calc12And5 = Calculator(12, 5);
 calc12And5.sum(); // 17
@@ -11,7 +11,7 @@ calc12And5.dividend(); // 2
 
 - Simple revealing module pattern can be used which receives inputs and executes different operations exposed through functions
 
-```js
+```js copy
 function Calulator(num1, num2) {
   function sum() {
     return num1 + num2;
@@ -45,7 +45,7 @@ The solution provided is one of the way to achieve the interface. The design and
 
 ### 2. Design a private counter function which exposes increment and retrive functionalities
 
-```js
+```js copy
 function privateCounter(){
     var count = 0;
     return {
@@ -82,7 +82,7 @@ counter.retrieve();             // 8
 
 - The `bind` method creates a new function that, when called, has its this keyword set to the provided context
 
-```js
+```js copy
 if (!Function.prototype.bind) {
   Function.prototype.bind = function (context) {
     var fn = this;
@@ -110,7 +110,7 @@ This is a simple polyfill for bind without handling corner cases. It does not wo
 
 - The functionality is similar to `bind` with exception that if there is a context set during the execution it will override
 
-```js
+```js copy
 function softBind(fn, context) {
   var fnArgs = Array.prototype.slice.call(arguments, 2);
 
@@ -137,7 +137,7 @@ This functionality is also known as 'Soft Binding'
 
 ### 5. Write a function which helps to achieve multiply(a)(b) and returns product of a and b
 
-```js
+```js copy
 // Example
 multiply(2)(4); // 8
 multiply(5)(3); // 15
@@ -145,7 +145,7 @@ multiply(5)(3); // 15
 
 - The implementation of this can be achieved by calling a function which returns a function
 
-```js
+```js copy
 function multiply(num1) {
   return function (num2) {
     return num1 * num2;
@@ -164,7 +164,7 @@ function multiply(num1) {
 - Function can take another function as argument and accept the arguments on the returned functions till the expected arguments are reached
 - The arguments can be 1 or multiple, and the actual function will be called once the count of expected arguments are reached
 
-```js
+```js copy
 function curryFunc(fn) {
   return function curry(...args) {
     if (fn.length <= args.length) {
@@ -198,7 +198,7 @@ sum(1, 2)(3, 4); // called like partial application
 - The function is built to limit the number of function calls to improve the performance
 - Debounce function design can take function (to be debounced), delay and the optional context
 
-```js
+```js copy
 function debounce(fn, delay, context) {
   let timer;
 
@@ -229,7 +229,7 @@ Context is replaced while debounce function call in presence of a context. If no
 - The function is built to limit the number of function calls to improve the performance
 - Throttling function design can take function (to be throttled), delay and the optional context
 
-```js
+```js copy
 function throttle(fn, delay, context) {
   let timer;
   let lastArgs;
@@ -264,7 +264,7 @@ Last arguments to the throttled function is saved so that most recent arguments 
 - The function is built to limit the number of times a function is called
 - Throttling function design can take function (to be throttled), delay and the optional context
 
-```js
+```js copy
 function sampler(fn, count, context) {
   let counter = 0;
 
@@ -295,7 +295,7 @@ Sampling is different from throttling in the way that sampling limits the execut
 - Singleton is a design pattern which restricts the creation of only one object from a given interface
 - When requested multiple times, same object is returned
 
-```js
+```js copy
 var Singleton = (function () {
   var instance;
 
@@ -331,7 +331,7 @@ Here both 'instance1' and 'instace2' are referencing to the same object
 
 ### 11. Design a function with toggle functionality for given list of inputs where toggle function accepts list of values to be toggled upon
 
-```js
+```js copy
 // Example
 var hello = toggle("hello");
 var onOff = toggle("on", "off");
@@ -353,7 +353,7 @@ speed(); // "slow"
 - Toggle functionality can be obtained by returning the next value cyclically on each call to the function
 - The toggle function will return another function which maintains the closure over the values with which it was initialized
 
-```js
+```js copy
 function toggle(...values) {
   let state = -1;
   const length = values.length;
@@ -372,7 +372,7 @@ function toggle(...values) {
 
 ### 12. Create a range function which returns an array for the provided inputs as start and end
 
-```js
+```js copy
 // Example
 range(3, 6); // [3, 4, 5, 6]
 range(3)(5); // [3, 4, 5]
@@ -382,7 +382,7 @@ range(3)(0); // []
 - Range functionality can be obtained by returning the an array from start to end both inclusive
 - In case if 2nd argument is not passed, function will return another function which calls itself with once both the values are obtained
 
-```js
+```js copy
 function range(start, end) {
   if (end === undefined) {
     return function (end) {
@@ -409,7 +409,7 @@ function range(start, end) {
 - Memoization is an optimization technique used primarily to speed up the programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
 - Function can be designed to use a cache storage (using `map` or `object`) which stores the values of function output against the input
 
-```js
+```js copy
 function memoize(fn) {
   const cache = new Map();
   return function () {
@@ -447,7 +447,7 @@ Stringification of arguments done in order for the function to work for multiple
 
 ### 14. Create a single function which can perform sum(a, b, c), sum(a, b)(c), sum(a)(b, c) and sum(a)(b)(c) and returns sum of a, b and c
 
-```js
+```js copy
 // Example
 sum(2)(4)(6); // 12
 sum(3, 2)(5); // 10
@@ -458,7 +458,7 @@ sum(6, -3, 1); // 4
 - Sum functionality can be obtained by returning the sum when all the arguments are present
 - The cases when only 1 or 2 arguments are passed need to be managed and handled
 
-```js
+```js copy
 function sum(a, b, c) {
   if (a !== undefined && b !== undefined && c !== undefined) {
     return a + b + c;
@@ -479,7 +479,7 @@ function sum(a, b, c) {
 }
 ```
 
-```js
+```js copy
 const countOfValues = 3;
 
 function sum() {
@@ -507,7 +507,7 @@ function sum() {
 - The check for breaking condition can be added using the argument check for `undefined`
 - 3rd solution uses the property on function to store the total which will be updated on each call hence the same function can be returned
 
-```js
+```js copy
 // Example
 sum(2)(4)(6)(1)(); // 13
 sum(2)(4)(); // 6
@@ -516,7 +516,7 @@ sum(3)(); // 3
 
 - Sum functionality can be obtained by returning the recursively calling till the 2nd parameter value is undefined
 
-```js
+```js copy
 function sum(a) {
   return function (b) {
     if (b === undefined) {
@@ -527,11 +527,11 @@ function sum(a) {
 }
 ```
 
-```js
+```js copy
 const sum = (a) => (b) => b === undefined ? a : sum(a + b);
 ```
 
-```js
+```js copy
 function sum(a) {
   if (typeof a === "undefined") {
     return sum.total;
@@ -556,7 +556,7 @@ In the code value is checked if it is undefined reason being 0 is a falsy value 
 - Function call can be handled using Proxy in JavaScript
 - `apply` keyword in proxy can be used to achieve the functionality without modifying the existing function code
 
-```js
+```js copy
 function generateSecretObject(key, value) {
   return { [key]: value };
 }
@@ -587,7 +587,7 @@ This technique is helpful in logging or managing the data being passed to & retu
 - A simple module with publish and subscribe function can be exposed to achieve such functionality
 - List of subscribers can be maintained in an array and can be invoked in loop on each publish
 
-```js
+```js copy
 function pubSub() {
   const subscribers = [];
 

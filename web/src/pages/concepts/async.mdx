@@ -3,7 +3,7 @@
 - The asynchronous block of code can be a function which executes asynchronously
 - The execution of such function can be simulated using setTimeout to with delay and execute different blocks of code inside each
 
-```js
+```js copy
 function asyncFunc() {
   console.log("Started asyncFunc1");
   //Async1 code
@@ -36,7 +36,7 @@ The nested blocks of statements shown in the comments which get executed one aft
 - XHR requests can be initiated by creating the object and providing the arguments such as 'method', url etc
 - The success and failure of the request can be managed by callbacks
 
-```js
+```js copy
 const xhr = new XMLHttpRequest();
 xhr.open("GET", url);
 xhr.onload = function () {
@@ -67,7 +67,7 @@ XHR is used mainly in AJAX programming
 - `then` method on promise object is used to execute the user code after promise settles, which takes functions where 1st one is for success and 2nd for failure
 - Functions with success and failure of the promises are used to illustrate the basics of promise code
 
-```js
+```js copy
 function asyncResolveFunc() {
   function resolver(resolve, reject) {
     resolve("Success");
@@ -118,7 +118,7 @@ Once the promise is resolved or rejected, status will not change
 - Promise can be used to wrap the `setTimeout` to make the code more readable
 - Function can take delay as argument and return a promise which gets resolved after timeout is complete
 
-```js
+```js copy
 function setTimeoutPromise(delay) {
   function resolver(resolve) {
     setTimeout(resolve, delay);
@@ -144,7 +144,7 @@ timeoutPromise.then(() => {
 - The Promise can be used to wrap the XHR request and provide cleaner interface to user for AJAX requests
 - Success and failure of the XHR request can be handled to resolve or reject the promise respectively
 
-```js
+```js copy
 function fetchData(url) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -190,7 +190,7 @@ XHR reuqest is no more in use and all the modern browsers use `fetch` API which 
 - Fetch takes url as the 1st argument and an object with request details as 2nd optional argument
 - Response is a streamable object and hence we will have to invoke JSON / text method on it which returns promise which settles to the data
 
-```js
+```js copy
 const response = fetch("https://reqbin.com/echo/get/json", {
   method: "GET", // *GET, POST, PUT, DELETE, etc
   headers: {
@@ -221,7 +221,7 @@ response
 - `AbortController` is an interface which can be used to abort a fetch request
 - `signal` object of the AbortController object can be used as the part of the argument to `fetch` and abort on controller object can be used to stop the request
 
-```js
+```js copy
 const controller = new AbortController();
 var signal = controller.signal;
 fetch(url, { signal })
@@ -247,7 +247,7 @@ controller.abort();
 - `await` expects a promise and the execution will stop until the promise is resolved
 - If promise gets rejected, error is thrown with failure reason which can be handled using simple try-catch block
 
-```js
+```js copy
 async function asyncAwaitFunc() {
   try {
     console.log("Executes normally when invoked");
@@ -276,7 +276,7 @@ async function asyncAwaitFunc() {
 - It receives array of promises as an argument to it
 - Array of results will be the success data if all the promises resolves or the error data on failure of the first one
 
-```js
+```js copy
 const asyncArr = [async1, async2, async3];
 const promiseArr = asyncArr.map((async) => async());
 finalResolution = Promise.all(promiseArr);
@@ -289,7 +289,7 @@ finalResolution
   .catch((err) => console.log(err));
 ```
 
-```js
+```js copy
 const asyncArr = [async1, async2, async3];
 const promiseArr = asyncArr.map((async) => async());
 (async function () {
@@ -320,7 +320,7 @@ On failure of one of the promise, rest of the pending promises will be cancelled
 - It receives array of promises as an argument to it
 - Array of results will be the output after completion of all promises with status as 'fulfilled' or 'rejected'
 
-```js
+```js copy
 const asyncArr = [async1, async2, async3];
 const promiseArr = asyncArr.map((async) => async());
 finalResolution = Promise.allSettled(promiseArr);
@@ -338,7 +338,7 @@ finalResolution
   });
 ```
 
-```js
+```js copy
 const asyncArr = [async1, async2, async3];
 const promiseArr = asyncArr.map((async) => async());
 (async function () {
@@ -367,7 +367,7 @@ const promiseArr = asyncArr.map((async) => async());
 
 - The `Promise.race` method returns a promise that fulfills or rejects as soon as one of the promises fulfills or rejects, with the success or failure
 
-```js
+```js copy
 function asyncFunc1() {
   return new Promise((resolve) =>
     setTimeout(() => {
@@ -408,7 +408,7 @@ Promise.race(promiseArr).then(console.log).catch(console.log); // Rejected async
 - Generator when called returns an `iterator` which can be used to call `next` on it
 - `yield` keyword can be used inside such a function and stops the execution
 
-```js
+```js copy
 function* generatorFunc(param) {
   const num1 = yield;
   const num2 = yield;
@@ -438,7 +438,7 @@ Data between generator and iterator can be passed in both direction
 - The code consuming the parent generator need to be aware of it and can be used directly
 - As the generator return iterator, for..of loop can be used on generator
 
-```js
+```js copy
 function* gen1() {
   yield 1;
   yield* gen2();
@@ -468,7 +468,7 @@ for (let value of gen1()) {
 - List of callbacks to `then` to be invoked can be stores in the array of success and failure list
 - Once resolved or rejected, promise cannot change the state
 
-```js
+```js copy
 function MyPromise(resolver) {
   let successList = [];
   let failureList = [];
@@ -528,7 +528,7 @@ ES6 Promise is much more complex and sophesticated than the above shown implemen
 
 - `Promise.all` method is fail fast procedure to return all the promise resolved data in array or failed reason
 
-```js
+```js copy
 function PromiseAll(promiseArr) {
   return new Promise((resolve, reject) => {
     const dataArr = new Array(promiseArr.length);
@@ -574,7 +574,7 @@ PromiseAll([
 - Generator can be used with promises where yield will return a promise and promise resolution can trigger continuation
 - Helper function is used to manage this flow which takes generator function as an argument and executes it
 
-```js
+```js copy
 // asynchronous helper function returning a promise which gets resolved after the specified delay with data
 function asyncFunc(data, delay) {
   return new Promise((resolve) => setTimeout(resolve, delay, data));

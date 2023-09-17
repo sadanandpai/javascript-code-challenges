@@ -3,7 +3,7 @@
 - `typeof` operator on value gives the type of value
 - Recursive solution can be used to iterate over all the nested objects
 
-```js
+```js copy
 function keyValuePrinter(obj) {
   for (let key in obj) {
     if (typeof obj[key] !== "object") {
@@ -22,7 +22,7 @@ function keyValuePrinter(obj) {
 - Object can be emptied by removing all the keys present on it
 - Alternatively, a new object can be created and the prototype of the new object can be set as prototype of old object
 
-```js
+```js copy
 for (let key in obj) {
   if (obj.hasOwnProperty(key)) {
     delete obj[key];
@@ -30,7 +30,7 @@ for (let key in obj) {
 }
 ```
 
-```js
+```js copy
 const newObj = {};
 Object.setPrototypeOf(newObj, obj);
 ```
@@ -45,19 +45,19 @@ Object.setPrototypeOf(newObj, obj);
 
 - Deep copy is done by copying all the properties of the object to another object
 
-```js
+```js copy
 Object.assign({}, obj);
 ```
 
-```js
+```js copy
 { ...obj};
 ```
 
-```js
+```js copy
 JSON.parse(JSON.stringify(obj));
 ```
 
-```js
+```js copy
 function deepCopy(obj) {
   if (!obj) return obj;
 
@@ -88,7 +88,7 @@ deepCopy(obj);
 - As the object is not nested, the key-value pairs can be obtained directly by using Object.entries
 - Map can be initialized with key-value pairs
 
-```js
+```js copy
 const map = new Map(Object.entries(obj));
 ```
 
@@ -102,7 +102,7 @@ const map = new Map(Object.entries(obj));
 
 - `getter` and `setter` on the properties of object can be used to control the read and write behavior
 
-```js
+```js copy
 const obj = { marks: 0 };
 
 Object.defineProperty(obj, "marks", {
@@ -116,7 +116,7 @@ Object.defineProperty(obj, "marks", {
 });
 ```
 
-```js
+```js copy
 const obj = {
   _marks: 0,
 
@@ -145,7 +145,7 @@ const obj = {
 
 - Property accessor `writable` to `false` sets the property to be read only
 
-```js
+```js copy
 function userObjectCreator(id) {
   const obj = {};
 
@@ -168,7 +168,7 @@ const obj = userObjectCreator(1);
 
 ### 7. Stringify an object by excluding the 'password' property
 
-```js
+```js copy
 // Example
 const obj = {
   id: 1,
@@ -181,11 +181,11 @@ const obj = {
 - `JSON.stringify` is the method which can be used for stringification of an object or any other value
 - It accepts 2nd argument which can be a function or array
 
-```js
+```js copy
 JSON.stringify(obj, (key, value) => (key === "password" ? undefined : value)); // {"id":1,"username":"John","email":"john@email.com"}
 ```
 
-```js
+```js copy
 JSON.stringify(obj, ["id", "username", "email"]); // {"id":1,"username":"John","email":"john@email.com"}
 ```
 
@@ -199,7 +199,7 @@ JSON.stringify(obj, ["id", "username", "email"]); // {"id":1,"username":"John","
 
 - The function returned `next` will return an object which contains value and done properties
 
-```js
+```js copy
 function makeIterator(array) {
   let nextIndex = 0;
   return {
@@ -233,7 +233,7 @@ it.next().done; // true
 
 - For achieving chaining functionality, each function can return the calling context itself so that context is retained
 
-```js
+```js copy
 var obj = {
   id: 1,
   username: "Jane",
@@ -274,7 +274,7 @@ Order of calling the functions does not matter as all the functions are returnin
 
 ### 10. Create an object with property counter which keeps incrementing on every access
 
-```js
+```js copy
 const obj = counterObject();
 obj.counter; // 1
 obj.counter; // 2
@@ -284,7 +284,7 @@ obj.counter; // 3
 - The access to the property of the object can be configured through property `getter`
 - A separate private variable can be maintained track the value and getter on each access to increment and return the value
 
-```js
+```js copy
 function counterObject() {
   const symCounter = Symbol("counter");
 
@@ -314,7 +314,7 @@ Symbol is used to maintain the private variable in the object. Using the private
 - Object does not have by default a property named 'length' and hence we can define it on object which helps to track the length
 - 'push' and 'pop' functions can be added to the object which internally calls the Array methods `push` and `pop` by passing the object context
 
-```js
+```js copy
 const arrayLikeObject = {
   length: 0,
   push: function (item) {
@@ -340,7 +340,7 @@ As the context for array methods is set object, length of the object changes whe
 
 ### 12. Write a function which can be used to deeply compare 2 nested objects
 
-```js
+```js copy
 // Example
 const obj1 = {
   name: "John",
@@ -363,7 +363,7 @@ deepEqual(obj1, obj2); // true
 
 - The objects can be deeply compared by checking the key value pairs recursively
 
-```js
+```js copy
 function deepEqual(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
@@ -408,7 +408,7 @@ Stringification of both objects and comparision will also work, but fails on key
 - The constructor method is a special method for creating and initializing an object created with a class
 - Objects of the class can be created using `new` keyword followed by classname
 
-```js
+```js copy
 class Employee {
   constructor(id, name) {
     if (typeof id !== "undefined" && typeof name !== "undefined") {
@@ -457,7 +457,7 @@ Class in JavaScript is functionality to achieve class based model on top of prot
 
 - The exisiting properties of the object can be made read only with `set` keyword using Proxy
 
-```js
+```js copy
 const readOnlyObj = new Proxy(obj, {
   get: function (target, key) {
     return target[key];
@@ -484,7 +484,7 @@ If condition takes care whether the property is new or existing to handle the re
 
 ### 15. Write a program which can return a boolean if value is present in the range with given start and end values in an object
 
-```js
+```js copy
 // Example
 let range = {
   start: 10,
@@ -497,7 +497,7 @@ let range = {
 
 - The object `in` can be trapped using Proxy trap `has`, to check if the value is in the range or not
 
-```js
+```js copy
 range = new Proxy(range, {
   has(target, value) {
     return value >= target.start && value <= target.end;
@@ -509,7 +509,7 @@ range = new Proxy(range, {
 
 ### 16. Write a function which accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tagname
 
-```js
+```js copy
 // Example
 const tagManager = TagManager();
 tagManager.addTags("React", "Redux, JSX, JavaScript, VDOM");
@@ -523,7 +523,7 @@ tagManager.getTopics.getTopics("JavaScript"); // React, Angular, Vue
 - The tags can be stored as keys and array of topics as values in a map
 - Function module can be desgined to expose 'addTags' and 'getTopics' by tagname
 
-```js
+```js copy
 function TagManager() {
   const map = new Map();
 
@@ -554,7 +554,7 @@ function TagManager() {
 
 ### 17. Write a function which accepts a collection of values & an iteratee as arguments and returns a grouped object
 
-```js
+```js copy
 // Example
 groupBy([6.1, 4.2, 6.3], Math.floor); // { 6: [6.1, 6.3], 4: [4.2] }
 groupBy(["one", "two", "three"], "length"); // { 3: ['one', 'two'], 5: ['three'] }
@@ -563,7 +563,7 @@ groupBy(["one", "two", "three"], "length"); // { 3: ['one', 'two'], 5: ['three']
 - As the 2nd argument is either a functin or property, the iteratee can be perfrom accordingly on the value of arrays
 - An empty object can be created and used to push the values of array to respective property of the iteratee output
 
-```js
+```js copy
 function groupBy(values, iteratee) {
   const obj = {};
   for (let value of values) {
@@ -588,7 +588,7 @@ function groupBy(values, iteratee) {
 - `Weakset` can be a prefered way to use as collection for objects created through it as the dereferencing the object helps in garbage collection
 - A context validation within prototype method can be set if the object is created by the function itself or not
 
-```js
+```js copy
 function ProtectedFunction() {
   const objectCollection = new WeakSet();
   objectCollection.add(this);
@@ -614,7 +614,7 @@ ProtectedFunction.prototype.method.call(obj); // Incompatible object!
 
 ### 19. Design a utility on an array of objects where the access can be made to the object using index (as usual) and also from primary key of the object
 
-```js
+```js copy
 // Example
 const employees = [
   { name: "John", id: "1" },
@@ -629,7 +629,7 @@ flexEmployees["doe"]; // undefined
 
 - The access to the index happens for arrays by default and the Proxy can be setup to enable the fetching of object using primary key (any other key can also be coded)
 
-```js
+```js copy
 const flexEmployees = new Proxy(employees, {
   get(target, handler) {
     if (handler in target) {
@@ -647,7 +647,7 @@ const flexEmployees = new Proxy(employees, {
 
 ### 20. Write a function which receives an object and returns a true if the object has circular reference
 
-```js
+```js copy
 // Example
 var circularReferenceObj = { data: 123 };
 circularReferenceObj.myself = circularReferenceObj;
@@ -655,7 +655,7 @@ circularReferenceObj.myself = circularReferenceObj;
 
 - Stringification of an object having circular references will throw error
 
-```js
+```js copy
 function doesObjectHaveCircularRef(obj) {
   try {
     JSON.stringify(circularReference);
@@ -678,7 +678,7 @@ function doesObjectHaveCircularRef(obj) {
 - The circular references can be eliminated by passing a function to take care of circular references during stringification
 - The circular references can be also be eliminated by setting the such property value to null on the object itself
 
-```js
+```js copy
 const getCircularReplacer = () => {
   const seen = new WeakSet();
   return (key, value) => {
@@ -695,7 +695,7 @@ const getCircularReplacer = () => {
 JSON.stringify(circularReferenceObj, getCircularReplacer());
 ```
 
-```js
+```js copy
 function removeCircularRef(obj) {
   const set = new WeakSet([obj]);
 
@@ -726,7 +726,7 @@ function removeCircularRef(obj) {
 - A proxy can designed to create such nested object properties on demand whenever such non existent property is requested and attempted to set with value
 - `get` trap of proxy can be used to create the objects dynamically and set the value
 
-```js
+```js copy
 function ProxyObject(obj) {
   return new Proxy(obj, {
     get: (target, property) => {

@@ -3,7 +3,7 @@
 - setTimeout takes a function as the 1st argument and optional timeout delay & list of values as the function parameters
 - setTimeout returns an id (number) which can be used to stop the setTimeout using clearTimeout function
 
-```js
+```js copy
 setTimeout(
   function (text) {
     console.log(text);
@@ -13,11 +13,11 @@ setTimeout(
 );
 ```
 
-```js
+```js copy
 setTimeout(() => console.log("Hello, World"), 3000);
 ```
 
-```js
+```js copy
 setTimeout(console.log, 3000, "Hello, World");
 ```
 
@@ -33,7 +33,7 @@ Zero or more values that represent any parameters you want to pass to the functi
 
 ### 2. Create a function which receives a function as argument and executes it after 2 seconds
 
-```js
+```js copy
 function callbackExec(callback) {
   if (typeof callback === "function") {
     setTimeout(() => {
@@ -54,7 +54,7 @@ callbackExec(displayHello);
 
 ### 3. Print numbers from 1 to 10 with delay of 1 second between each value being printed
 
-```js
+```js copy
 const num1 = 1,
   num2 = 10;
 for (let i = num1; i <= num2; i++) {
@@ -62,7 +62,7 @@ for (let i = num1; i <= num2; i++) {
 }
 ```
 
-```js
+```js copy
 const num1 = 1,
   num2 = 10;
 +(function displayWithDelay(i) {
@@ -86,7 +86,7 @@ In the 2nd solution, recursive setTimeout is used.
 - `setInterval` function repeats a block of code at every given timing event
 - `clearInterval` is used to stop the setInterval execution
 
-```js
+```js copy
 const num1 = 1,
   num2 = 10;
 let i = num1;
@@ -103,7 +103,7 @@ const intervalId = setInterval(() => {
 - We can use 3rd parameter of setTimeout to pass the value of iteration which creates a new scope each time loop iterates
 - We can also use an inner function scope (IIFE) within the for loop for each iteration
 
-```js
+```js copy
 var num1 = 10,
   num2 = 1;
 for (var i = num1; i >= num2; i--) {
@@ -111,7 +111,7 @@ for (var i = num1; i >= num2; i--) {
 }
 ```
 
-```js
+```js copy
 var num1 = 10,
   num2 = 1;
 for (var i = num1; i >= num2; i--) {
@@ -134,7 +134,7 @@ for (var i = num1; i >= num2; i--) {
 - The functionality to start and stop can be exposed from a function which internally takes care of incrementing and displaying data
 - `setInterval` can be used to achieve the task and handle the start & stop of data display
 
-```js
+```js copy
 function timer(init = 0, step = 1) {
   var intervalId;
   var count = init;
@@ -179,7 +179,7 @@ The function can also be modified to have completion after which timer can not b
 - The array of functions execution can be managed by having a function which takes care of execution of all the async functions
 - Asynchronous functions need not be aware of the function to be executed and will take a callback as argument and execute it after completion
 
-```js
+```js copy
 function asyncFunc1(callback) {
   console.log("Started asyncFunc1");
   setTimeout(() => {
@@ -226,7 +226,7 @@ callbackManager([asyncFunc1, asyncFunc2, asyncFunc3]);
 
 ### 8. Execute the given list of asynchronous functions in parallel and return the results as an array to the callback
 
-```js
+```js copy
 // Example
 function asyncFunc1(callback) {
   setTimeout(() => {
@@ -254,7 +254,7 @@ asyncParallel([asyncFunc1, asyncFunc2, asyncFunc3], (result) => {
 - The async functions can be executed in parallel using the loop and can be tracked for completion with a counter
 - The callback function can be sent to the async functions and the results will be stored in the array which will be returned after the completion of all
 
-```js
+```js copy
 function asyncParallel(asyncFuncArr, callback) {
   const resultArr = new Array(asyncFuncArr.length);
   let resultCounter = 0;
@@ -283,7 +283,7 @@ function asyncParallel(asyncFuncArr, callback) {
 - `then` method on Promise also returns a promise which can be used to perform `then` on the returned promise
 - The errors in promise / promise chaining can be handled with the error callback for each promise when it settles or with a generic catch block
 
-```js
+```js copy
 asyncFunc1().then(
   () => {
     console.log("Completed async1");
@@ -311,7 +311,7 @@ asyncFunc1().then(
 );
 ```
 
-```js
+```js copy
 asyncFunc1()
   .then(asyncFunc2)
   .then(asyncFunc3)
@@ -334,7 +334,7 @@ If `then` method has a return statement which is a promise then it will be consi
 
 - Async function with `await` for each promise can be used to execute in sequence
 
-```js
+```js copy
 +async function executor(){
     try{
         await asyncFunc1();
@@ -355,7 +355,7 @@ If `then` method has a return statement which is a promise then it will be consi
 - The promise which gets rejected will invoke the 2nd function argument to `then` handler
 - The failure handler will receive the error and continue with next execution which will not propagate failures
 
-```js
+```js copy
 async1()
   .then(
     () => {
@@ -392,7 +392,7 @@ async1()
 - Unlike promises, `try-catch` block can be used on async functions
 - `catch` block for each asynchronous function can be used to catch errors and continue with next execution which will not propagate failures
 
-```js
+```js copy
 +(async function executor() {
   try {
     await asyncFunc1();
@@ -423,7 +423,7 @@ async1()
 - Asynchronous functions can be executed and promises can be captured in an array
 - Array method `reduce` can be used to make the sequential execution on promise settlement
 
-```js
+```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
 asyncFuncArr.reduce((acc, async) => {
@@ -431,7 +431,7 @@ asyncFuncArr.reduce((acc, async) => {
 }, Promise.resolve());
 ```
 
-```js
+```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
 asyncFuncArr.reduce(async (acc, asyncFunc) => {
@@ -451,7 +451,7 @@ asyncFuncArr.reduce(async (acc, asyncFunc) => {
 - Array method `reduce` can be used to make the simultaneously execution on promise settlement
 - Unlike sequential execution, the parallel execution of asynchronous functions happen but the output will executed in order of sequence
 
-```js
+```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
 asyncFuncArr
@@ -461,7 +461,7 @@ asyncFuncArr
   }, Promise.resolve());
 ```
 
-```js
+```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
 asyncFuncArr
@@ -479,7 +479,7 @@ asyncFuncArr
 - Timeout feature can be set by adding a function returning a promise which rejects after specified amount of time
 - If any promise resolves before timeout the promise which settles first will be the output else timeout will cause rejection
 
-```js
+```js copy
 function timeoutFunc() {
     const delay = 500;
     return new Promise((resolve, reject) => {
@@ -500,7 +500,7 @@ Promise.race(promiseArr).then(console.log).catch(console.log);
 - The `fetch` request attempts to make calls after increasing time delay on failure
 - If all the attempts by to get response fails, promise gets rejected
 
-```js
+```js copy
 function requestManager(url, attempts = 3) {
   return new Promise(async (resolve, reject) => {
     for (let i = 0; i < attempts; i++) {
@@ -541,7 +541,7 @@ requestManager("https://reqbin.com/echo/get/json", 3).then(
 - The generation of random number can be implemented in the normal way in the function but will returned and function yields
 - The function will again continue to execute in loop to return a new random number
 
-```js
+```js copy
 function* generatorFunc(param) {
   while (true) {
     yield Math.ceil(Math.random() * 100);
@@ -570,7 +570,7 @@ Genertor function need not complete its execution
 - Instead of function seaching for the key by passing the callback or key, the logic can be implemented in the controlling code
 - For..of loop calling the recursive generator function on object can be used to achieve this
 
-```js
+```js copy
 function* objectReader(obj) {
   for (let key in obj) {
     if (typeof obj[key] === "object") {

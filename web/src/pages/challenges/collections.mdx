@@ -3,19 +3,19 @@
 - Function can take 2 arguments which concatenates arrays
 - 2nd array parameter can be defaulted to 1st array if the value is not passed
 
-```js
+```js copy
 function mergeArray(arr1, arr2 = arr1) {
   return [...arr1, ...arr2];
 }
 ```
 
-```js
+```js copy
 function mergeArray(arr1, arr2 = arr1) {
   return arr1.concat(...arr2);
 }
 ```
 
-```js
+```js copy
 function mergeArray(arr1, arr2 = arr1) {
   arr1.push(...arr2);
   return arr1;
@@ -37,7 +37,7 @@ When 2nd argument is not passed, the case is same as duplicating the array
 - `slice` method on array can be used to fetch the values of range in the array
 - `splice` method on array can be used to replace the value of range in the array
 
-```js
+```js copy
 const a = [1, 2, 3, 4, 5];
 const b = [4, 0, 0, 0, 8];
 
@@ -61,7 +61,7 @@ The center most 3 values of array 'a' is replaced by 'b'
 - `sort` method sorts the elements of an array in place and returns the sorted array
 - It receives a function as an argument, which is used for comparision
 
-```js
+```js copy
 arr.sort((a, b) => a - b); // ascending
 arr.sort((a, b) => b - a); // descending
 ```
@@ -78,7 +78,7 @@ If function is not passed an argument, default sorting will happen
 
 ### 4. Sort the given array of objects in ascending order according the authors lastname
 
-```js
+```js copy
 // Example
 const books = [
   { name: "Harry Potter", author: "Joanne Rowling" },
@@ -90,7 +90,7 @@ const books = [
 - `sort` takes a function and expects the return value to be an integer for sorting
 - The last names of the author can be compared and the result can be returned for sorting
 
-```js
+```js copy
 books.sort((book1, book2) => {
   const authorLastName1 = book1.author.split(" ")[1];
   const authorLastName2 = book2.author.split(" ")[1];
@@ -109,12 +109,12 @@ Returning a true or false will not work as the algorithm expects an integer valu
 - `filter` is the method on Array which can be used to filter. It receives a function which can return boolean to filter the elements
 - `map` is the method on Array which can be used to map the values to new values. It receives a function which can return the modified value
 
-```js
+```js copy
 const positiveArr = arr.filter((value) => value >= 0);
 const squaredPositiveArr = arr.map((value) => value * value);
 ```
 
-```js
+```js copy
 const squaredPositiveArr = arr
   .filter((value) => value >= 0)
   .map((value) => value * value);
@@ -137,7 +137,7 @@ const squaredPositiveArr = arr
 - The shuffling can be achieved simply by sorting the array using a function which randomly returns positive or negative numbers
 - The shuffling of the values can be also done by picking a value from a random index from the current array and moving it in to a new array
 
-```js
+```js copy
 function rangeGenFunc(start = 1, end = 0) {
   const arr = [];
   for (let i = start; i <= end; i++) {
@@ -150,7 +150,7 @@ const arr = rangeGenFunc(1, 10); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 arr.sort(() => 0.5 - Math.random()); // [6, 8, 5, 10, 4, 3, 9, 2, 7, 1]
 ```
 
-```js
+```js copy
 function* rangeGen(start = 1, end = 0) {
   for (let i = start; i <= end; i++) {
     yield i;
@@ -175,16 +175,16 @@ console.log(shuffledArr); // [5, 4, 7, 10, 3, 6, 8, 2, 1, 9]
 
 ### 7. Check if the user with the name "John" exists in the array of objects
 
-```js
+```js copy
 const doesJohnExist = arr.some((obj) => obj.name === "John");
 ```
 
-```js
+```js copy
 const jonhObject = arr.find((obj) => obj.name === "John");
 const doesJohnExist = jonhObject ? true : false;
 ```
 
-```js
+```js copy
 const jonhIndex = arr.findIndex((obj) => obj.name === "John");
 const doesJohnExist = jonhIndex < 0 ? false : true;
 ```
@@ -195,7 +195,7 @@ const doesJohnExist = jonhIndex < 0 ? false : true;
 
 - To manipulate array of objects `map` method can be used
 
-```js
+```js copy
 const employeesListWithFullName = arr.map((obj) => {
   return { id, fullName: obj.firstName + " " + obj.lastName };
 });
@@ -208,15 +208,15 @@ const employeesListWithFullName = arr.map((obj) => {
 - Sum of the values of an array can calculated by iterating and adding all the values of the array
 - `reduce` method of array can be used efficiently to calculate the sum with or without initial value
 
-```js
+```js copy
 const sum = arr.reduce((acc, value) => acc + value, 0);
 ```
 
-```js
+```js copy
 const sum = arr.reduce((acc, value) => acc + value);
 ```
 
-```js
+```js copy
 const sum = 0;
 for (let value of arr) {
   sum = sum + value;
@@ -238,12 +238,12 @@ for (let value of arr) {
 - `Math.max` is a method which returns maximum value from a given list of values
 - `reduce` can also be designed to return the maximum value of each comparision
 
-```js
+```js copy
 const max = Math.max(...arr);
 arr.indexOf(max); // position of max number
 ```
 
-```js
+```js copy
 let max = a[0],
   position = 0;
 for (let index in arr) {
@@ -256,7 +256,7 @@ for (let index in arr) {
 position; // position of max number
 ```
 
-```js
+```js copy
 const max = arr.reduce((a, b) => (a > b ? a : b));
 arr.indexOf(max); // position of max number
 ```
@@ -276,7 +276,7 @@ Though 1st solution is verbose compared to 2nd, but has good performance
 
 - `filter` method can be used to fetch all the minimum values and we can get the count of those valuses
 
-```js
+```js copy
 const min = Math.min(...arr);
 minArr = arr.filter((value) => value === min);
 minArr.length; // count of minimum value occurences
@@ -288,7 +288,7 @@ minArr.length; // count of minimum value occurences
 
 - `fill` is a method on Array prototype which fills all the slots of array with the value given passed as the argument
 
-```js
+```js copy
 const n = 5;
 const arr = new Array(n);
 arr.fill(10);
@@ -308,7 +308,7 @@ If an object is passed the object reference is copied to all the slots and not t
 
 - Set is a data structure which does not allow duplicate elements
 
-```js
+```js copy
 const set = new Set(arr);
 const distinctArr = [...set];
 ```
@@ -319,7 +319,7 @@ const distinctArr = [...set];
 
 - Flat function can be used to flatten the array by recursive call
 
-```js
+```js copy
 function flat(arr) {
   const flatArr = [];
   arr.forEach((value) => {
@@ -339,7 +339,7 @@ function flat(arr) {
 
 - `every` is a method on Array prototype which returns true only if all the elements condition satisfies the condition
 
-```js
+```js copy
 const isAllPass = students.every((student) => student.marks >= 40);
 ```
 
@@ -347,7 +347,7 @@ const isAllPass = students.every((student) => student.marks >= 40);
 
 ### 16. Get the average of all the salaries which is greater than 10000 from the department of "IT" from the array of objects)
 
-```js
+```js copy
 const itEmployeesWithSalaryGT10K = employees.filter(
   (employee) => employee.salary > 10000 && employee.dept === "IT"
 );
@@ -364,7 +364,7 @@ const itAvgSalaryGT10K = itTotalSalaryGT10K / itEmployeesWithSalaryGT10K.length;
 
 - The union array will be the result if all the elements from the 2 arrays are picked
 
-```js
+```js copy
 const set1 = new Set(arr1);
 const set2 = new Set(arr2);
 const distinctArr = [...set1, ...set2];
@@ -376,12 +376,12 @@ const distinctArr = [...set1, ...set2];
 
 - The intersection array will be the result if the common elements from the 2 arrays are picked
 
-```js
+```js copy
 const intersectionArr = arr1.filter((value) => arr2.includes(value));
 const distinctIntersectionArr = [...new Set(intersectionArr)];
 ```
 
-```js
+```js copy
 const set1 = new Set(arr1);
 const set2 = new Set(arr2);
 const distinctIntersectionArr = [...set1].filter((value) => set2.has(value));
@@ -393,7 +393,7 @@ const distinctIntersectionArr = [...set1].filter((value) => set2.has(value));
 
 - The only present elements of 1st list will be the result when all the elements of 1st list not present in the 2nd are chosen
 
-```js
+```js copy
 const set1 = new Set(arr1);
 const set2 = new Set(arr2);
 const intersectionArr = [...set1].filter((value) => !set2.has(value));
@@ -409,7 +409,7 @@ Elements of 2nd list only can be obtained by checking for all the elements of li
 
 - The function added to Array prototype are accessible to all the objects of Array
 
-```js
+```js copy
 Array.prototype.average = function () {
   let total = 0;
 
@@ -424,7 +424,7 @@ Array.prototype.average = function () {
 
 ### 21. Write a code to eliminate duplicate objects in an array where each object has an 'id' property which can be used to identify the object and the duplicate object with lower rank to be removed
 
-```js
+```js copy
 // Example
 const arr = [
   {
@@ -454,7 +454,7 @@ const arr = [
 - `Map` can be used to have 'id' as the key and object as value
 - If 'id' is already present in the array, object with the higher rank can be retained
 
-```js
+```js copy
 const map = new Map();
 
 arr.forEach((obj) => {
@@ -477,7 +477,7 @@ distinctArr = [...map.values()];
 - Array in JavaScript a collection of values of any type by default
 - Proxy can be used to validate and insert to the array only if the value satisfies the condition using `set` trap
 
-```js
+```js copy
 var stringsArr = [];
 
 var stringsArr = new Proxy(stringsArr, {
@@ -502,7 +502,7 @@ The functionality of the code can be modified to make the array accept any one o
 
 ### 23. Create a Proxy object through which the array can be accessed as usual but also allow to access the values through negative indices
 
-```js
+```js copy
 // Example
 let arr = [10, 20, 30];
 
@@ -512,7 +512,7 @@ arr[-2]; // 20
 
 - `get` trap of proxy can be used to map the negative index to the valid array position
 
-```js
+```js copy
 arr = new Proxy(arr, {
   get(target, handler) {
     if (handler < 0) return target[target.length + Number(handler)];
