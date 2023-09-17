@@ -2,7 +2,7 @@
 	<h1>JavaScript Modern Interview Code Challenges</h1>
 	<h3>Collection of modern interview code challenges on JavaScript suitable for</h3>
     	<h4>Interviewees | Interviewers | Knowledge test | Practice</h4>
-    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="banner.png" alt="banner" width="500px"/></a>
+    	<a href="#javascript-modern-interview-code-challenges-by-topic"><img src="web/public/hero.png" alt="banner" width="500px"/></a>
 </div>
 
 <div align="center">
@@ -25,10 +25,10 @@
 <div align="center">
 	<h2>JavaScript Modern Interview Code Challenges by topic</h2>
 
-| Primitives  | Functions   | Objects     | Collections | Async | DOM |
-| ----------- | ----------- | ----------- | ----------- | --------------- | -------------- |
-| [Concepts](./challenges/primitives-concepts.md#home)      | [Concepts](./challenges/functions-concepts.md#home)      | [Concepts](./challenges/objects-concepts.md#home)      | [Concepts](./challenges/collections-concepts.md#home)       | [Concepts](./challenges/async-concepts.md#home)     | [Concepts](./challenges/dom-challenges.md#home) |
-| [Challenges](./challenges/primitives-challenges.md#home)  | [Challenges](./challenges/functions-challenges.md#home)  | [Challenges](./challenges/objects-challenges.md#home)  | [Challenges](./challenges/collections-challenges.md#home)   | [Challenges](./challenges/async-challenges.md#home) | |
+| Primitives                                               | Functions                                               | Objects                                               | Collections                                               | Async                                               | DOM                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------- |
+| [Concepts](./challenges/primitives-concepts.md#home)     | [Concepts](./challenges/functions-concepts.md#home)     | [Concepts](./challenges/objects-concepts.md#home)     | [Concepts](./challenges/collections-concepts.md#home)     | [Concepts](./challenges/async-concepts.md#home)     | [Concepts](./challenges/dom-challenges.md#home) |
+| [Challenges](./challenges/primitives-challenges.md#home) | [Challenges](./challenges/functions-challenges.md#home) | [Challenges](./challenges/objects-challenges.md#home) | [Challenges](./challenges/collections-challenges.md#home) | [Challenges](./challenges/async-challenges.md#home) |                                                 |
 
 </div>
 

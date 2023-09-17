@@ -9,7 +9,7 @@ const config = {
     link: "https://github.com/sadanandpai/javascript-code-challenges/",
   },
   docsRepositoryBase:
-    "https://github.com/sadanandpai/javascript-code-challenges/",
+    "https://github.com/sadanandpai/javascript-code-challenges/tree/main/web",
   search: {
     placeholder: "Search",
   },
