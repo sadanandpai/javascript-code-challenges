@@ -17,7 +17,7 @@ const metaTags = (
     <meta
       name="image"
       property="og:image"
-      content="https://jscodechallenges.vercel.app/hero.svg"
+      content="https://jscodechallenges.vercel.app/banner.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="jscodechallenges.vercel.app" />
@@ -32,7 +32,7 @@ const metaTags = (
     />
     <meta
       name="twitter:image"
-      content="https://jscodechallenges.vercel.app/hero.svg"
+      content="https://jscodechallenges.vercel.app/banner.png"
     />
     <meta name="author" content="Sadanand Pai" />
   </>
