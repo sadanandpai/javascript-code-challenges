@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 const metaTags = (
   <>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -13,6 +15,7 @@ const metaTags = (
       content="Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice"
     />
     <meta
+      name="image"
       property="og:image"
       content="https://jscodechallenges.vercel.app/hero.svg"
     />
@@ -31,6 +34,7 @@ const metaTags = (
       name="twitter:image"
       content="https://jscodechallenges.vercel.app/hero.svg"
     />
+    <meta name="author" content="Sadanand Pai" />
   </>
 );
 
@@ -49,8 +53,15 @@ const config = {
   toc: { backToTop: true },
   feedback: { content: null },
   useNextSeoProps() {
+    const { asPath } = useRouter();
+    if (asPath === "/") {
+      return {
+        titleTemplate: "JavaScript Code Challenges",
+      };
+    }
+
     return {
-      titleTemplate: "%s – JS Code Challenges",
+      titleTemplate: "%s - JavaScript Code Challenges",
     };
   },
   gitTimestamp: null,

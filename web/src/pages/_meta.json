@@ -1,11 +1,13 @@
 {
   "index": {
+    "title": "Home",
     "theme": {
-      "navbar": false,
       "footer": false,
-      "timestamp": false
+      "toc": false,
+      "breadcrumb": false,
+      "pagination": false,
+      "sidebar": true
     },
-    "type": "page",
     "display": "hidden"
   },
   "concepts": "Concepts",
