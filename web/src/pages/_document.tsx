@@ -6,6 +6,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta
+          name="description"
+          content="Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice"
+        />
         <Script
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
