@@ -65,7 +65,7 @@ for (let i = num1; i <= num2; i++) {
 
 ```js
 const num1 = 1, num2 = 10;
-+function displayWithDelay(i){
+function displayWithDelay(i){
     console.log(i);
     if(i !== num2)
         setTimeout(displayWithDelay, 1000, ++i);
@@ -113,7 +113,9 @@ for (var i = num1; i >= num2; i--) {
 var num1 = 10, num2 = 1;
 for (var i = num1; i >= num2; i--) {
     (function (i) {
-        setTimeout(function() { console.log(i); }, (num1 - i) * 1000);
+        setTimeout(function() {
+            console.log(i);
+        }, (num1 - i) * 1000);
     })(i);
 }
 ```
@@ -250,8 +252,8 @@ function asyncParallel(asyncFuncArr, callback) {
     const resultArr = new Array(asyncFuncArr.length);
     let resultCounter = 0;
     
-    asyncFuncArr.forEach((async, index) => {
-        async(value => {
+    asyncFuncArr.forEach((asyncFun, index) => {
+        asyncFun(value => {
             resultArr[index] = value;
             resultCounter++;
             if (resultCounter >= asyncFuncArr.length) {
@@ -321,14 +323,13 @@ If `then` method has a return statement which is a promise then it will be consi
 - Async function with `await` for each promise can be used to execute in sequence
 
 ```js
-+async function executor(){
-    try{
+async function executor(){
+    try {
         await asyncFunc1();
         await asyncFunc2();
         await asyncFunc3();
         console.log('All succeeded');
-    }
-    catch(){
+    } catch(){
         console.log("Error occured);
     }
 }();
@@ -379,7 +380,7 @@ async1()
 - `catch` block for each asynchronous function can be used to catch errors and continue with next execution which will not propagate failures
 
 ```js
-+(async function executor() {
+(async function executor() {
     try {
         await asyncFunc1();
         console.log('Async1 success');
