@@ -65,7 +65,7 @@ for (let i = num1; i <= num2; i++) {
 ```js copy
 const num1 = 1,
   num2 = 10;
-+(function displayWithDelay(i) {
+(function displayWithDelay(i) {
   console.log(i);
   if (i !== num2) setTimeout(displayWithDelay, 1000, ++i);
 })(1);
@@ -259,8 +259,8 @@ function asyncParallel(asyncFuncArr, callback) {
   const resultArr = new Array(asyncFuncArr.length);
   let resultCounter = 0;
 
-  asyncFuncArr.forEach((async, index) => {
-    async((value) => {
+  asyncFuncArr.forEach((asyncFn, index) => {
+    asyncFn((value) => {
       resultArr[index] = value;
       resultCounter++;
       if (resultCounter >= asyncFuncArr.length) {
@@ -335,14 +335,13 @@ If `then` method has a return statement which is a promise then it will be consi
 - Async function with `await` for each promise can be used to execute in sequence
 
 ```js copy
-+async function executor(){
-    try{
+async function executor(){
+    try {
         await asyncFunc1();
         await asyncFunc2();
         await asyncFunc3();
         console.log('All succeeded');
-    }
-    catch(){
+    } catch(){
         console.log("Error occured);
     }
 }();
@@ -393,7 +392,7 @@ async1()
 - `catch` block for each asynchronous function can be used to catch errors and continue with next execution which will not propagate failures
 
 ```js copy
-+(async function executor() {
+(async function executor() {
   try {
     await asyncFunc1();
     console.log("Async1 success");
@@ -426,17 +425,17 @@ async1()
 ```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
-asyncFuncArr.reduce((acc, async) => {
-  return acc.then(() => async().then(console.log));
+asyncFuncArr.reduce((acc, asyncFn) => {
+  return acc.then(() => asyncFn().then(console.log));
 }, Promise.resolve());
 ```
 
 ```js copy
 const asyncFuncArr = [asyncFunc1, asyncFunc2, asyncFunc3];
 
-asyncFuncArr.reduce(async (acc, asyncFunc) => {
+asyncFuncArr.reduce(async (acc, asyncFn) => {
   await acc;
-  console.log(await asyncFunc());
+  console.log(await asyncFn());
 }, Promise.resolve());
 ```
 
