@@ -208,7 +208,7 @@ function callbackManager(asyncFuncs) {
   function nextFuncExecutor() {
     const nextAsyncFunc = asyncFuncs.shift();
     if (nextAsyncFunc && typeof nextAsyncFunc === "function") {
-      nextAsyncFunc(nextFuncExecutor, asyncFuncs);
+      nextAsyncFunc(nextFuncExecutor);
     }
   }
   nextFuncExecutor();
