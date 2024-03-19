@@ -658,7 +658,7 @@ circularReferenceObj.myself = circularReferenceObj;
 ```js copy
 function doesObjectHaveCircularRef(obj) {
   try {
-    JSON.stringify(circularReference);
+    JSON.stringify(obj);
     return false;
   } catch {
     return true;
