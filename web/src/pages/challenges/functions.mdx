@@ -165,16 +165,13 @@ function multiply(num1) {
 - The arguments can be 1 or multiple, and the actual function will be called once the count of expected arguments are reached
 
 ```js copy
-function curryFunc(fn) {
-  return function curry(...args) {
-    if (fn.length <= args.length) {
-      return fn.apply(this, args);
-    } else {
-      return function (...args2) {
-        return curry.apply(this, args.concat(args2));
-      };
+function curryFunc(func) {
+    return function curry(...ip) {
+        if(ip.length < func.length) {
+            return curry.bind(this, ...ip);
+        }
+        return func(...ip);
     }
-  };
 }
 
 // driver code
