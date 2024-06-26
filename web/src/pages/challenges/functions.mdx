@@ -168,9 +168,9 @@ function multiply(num1) {
 function curryFunc(fn) {
     return function curry(...args) {
         if(args.length < fn.length) {
-            return curry.bind(null, ...args);
+            return curry.bind(this, ...args);
         }
-        return fn(...args);
+        return fn.apply(this, args);
     }
 }
 
