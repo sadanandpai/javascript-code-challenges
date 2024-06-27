@@ -166,15 +166,12 @@ function multiply(num1) {
 
 ```js copy
 function curryFunc(fn) {
-  return function curry(...args) {
-    if (fn.length <= args.length) {
-      return fn.apply(this, args);
-    } else {
-      return function (...args2) {
-        return curry.apply(this, args.concat(args2));
-      };
+    return function curry(...args) {
+        if(args.length < fn.length) {
+            return curry.bind(this, ...args);
+        }
+        return fn.apply(this, args);
     }
-  };
 }
 
 // driver code
