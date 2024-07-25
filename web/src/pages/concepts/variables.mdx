@@ -1,0 +1,139 @@
+ ### 1. Create a Variable using var Keyword and log it to the console
+ - Variables declared with var can be redeclared within the same scope without causing an error.
+
+ ```JS copy
+    var num = 10;
+    console.log(num); // 10
+ ```
+
+ **Notes**
+
+- var variables have function scope, meaning they are only accessible within the function they are declared in, or globally if declared outside any function.
+- Declarations with var are hoisted to the top of their scope, but not the initializations.
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var
+- https://www.geeksforgeeks.org/javascript-var/
+
+---
+
+### 2. Create a Variable using let Keyword and log it to the console
+
+- Variables declared with let cannot be redeclared within the same scope, which helps prevent accidental redeclarations and errors.
+
+```JS copy
+    let Str = "Hello World";
+    console.log(Str); // "Hello World"
+```
+
+**Notes**
+
+- let variables are hoisted but not initialized, leading to a "temporal dead zone" where the variable cannot be accessed until the declaration is encountered.
+- let variables have block scope, meaning they are only accessible within the block they are declared in (e.g., inside a set of curly braces {}).
+- let is a keyword introduced in ES6 for declaring variables in JavaScript
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+- https://www.w3schools.com/js/js_let.asp
+
+---
+
+### 3. Create a constant using const Keyword and log it to the console
+
+- Variables declared with const cannot be redeclared within the same scope, helping to prevent accidental redeclarations and potential bugs.
+
+```JS copy
+    const bool = true;
+    console.log(bool); // True
+```
+
+**Notes**
+
+- Variables declared with const cannot be reassigned after their initial assignment. However, if the variable is an object or array, its contents can still be modified.
+- const variables have block scope, meaning they are only accessible within the block they are declared in (e.g., inside a set of curly braces {}).
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+- https://www.w3schools.com/js/js_const.asp
+
+---
+
+### 4. Make variables with different data types and print their type to the console using typeof method
+
+- The typeof operator is used to determine the type of a given variable or expression, returning a string indicating the type.
+
+```JS copy
+    let number = 10;
+    let string = "hello World";
+    let boolean = true;
+    let object = {
+       name: "Chai",
+       key: "code"
+    };
+    let array = ['Fruits', 'Chai', 'Vegetable'];
+
+    console.log(typeof number);  // number
+    console.log(typeof string);  // string
+    console.log(typeof boolean); // boolean
+    console.log(typeof object);  // object
+    console.log(typeof array);   // object (arrays are of type object in JavaScript)
+```
+
+**Notes**
+
+- It returns common type strings such as 'number', 'string', 'boolean', 'object', 'function', and 'undefined'.
+- Both arrays and objects return 'object', so typeof does not differentiate between them directly.
+
+**References**
+
+- https://www.w3schools.com/js/js_typeof.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
+---
+
+### 5. Declare a variable using let Keyword and assign it a value and reassign its value
+
+- Variables declared with let can be reassigned new values after their initial declaration.
+
+```JS copy
+    let a = "Hello World";
+    console.log(a); // "Hello World"
+    a = "Hello World 2";
+    console.log(a); // "Hello World 2"
+```
+
+**Notes**
+
+- Reassignment is subject to the variable's block scope; it can only be reassigned within the same block.
+- While reassignment is allowed, let variables cannot be redeclared in the same scope.
+
+**References**
+
+- https://medium.com/@jsutcliffe1991/reassignment-redeclaration-of-javascript-variables-var-let-const-3135dc02e769
+- https://www.w3schools.com/js/js_let.asp
+
+---
+
+### 6: Make a constant using const Keyword and try to reassign the value and Identify the error
+
+- Variables declared with const cannot be reassigned a new value after their initial assignment.
+
+```JS copy
+    const a = "js Concepts";
+    console.log(a); // "js Concepts"
+    a = "JS Concepts & Challenges"; // This line will cause an error
+```
+
+**Notes**
+
+- The const keyword provides a constant reference to a value, but for objects and arrays, the contents (properties/elements) can still be modified.
+-  Like let, const variables have block scope, meaning they are only accessible within the block they are declared in.
+
+**References**
+
+- https://www.w3schools.com/js/js_const.asp
+- https://www.geeksforgeeks.org/javascript-const/
+- https://dev.to/shearytan/here-is-how-i-change-the-value-of-const-keyword-in-javascript-2gkd
