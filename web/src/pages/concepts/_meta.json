@@ -3,5 +3,6 @@
   "functions": "Functions",
   "objects": "Objects",
   "collections": "Collections",
-  "async": "Asynchronous"
+  "async": "Asynchronous",
+  "variables": "Variables"
 }
