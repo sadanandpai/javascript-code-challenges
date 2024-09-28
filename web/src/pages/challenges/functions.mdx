@@ -1,4 +1,4 @@
-### 1. Design a Calulator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface
+### 1. Design a Calculator interface for 2 number inputs which can perform sum, difference, product and dividend whenever invoked on the same interface
 
 ```js copy
 // Example
@@ -412,7 +412,7 @@ function memoize(fn) {
   return function () {
     const key = JSON.stringify(arguments);
 
-    // if the caculations have already been done for inputs, return the value from cache
+    // if the calculations have already been done for inputs, return the value from cache
     if (cache.has(key)) {
       return cache.get(key);
     } else {
