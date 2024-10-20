@@ -306,3 +306,118 @@ function hasDuplicateId(tree, idSet = new Set()) {
   return false;
 }
 ```
+
+### 11. 11. Implement a function to get all descendants of a given DOM node
+
+- This function retrieves all child elements, regardless of depth.
+
+```js copy
+/**
+ * @param {HTMLElement | null} tree
+ * @return {Array}
+ */
+function getAllDescendants(root) {
+  if (!root) return [];
+
+  let descendants = [];
+
+  const helper = (node) => {
+    if (node) {
+      descendants.push(node);
+      if (node.children.length) {
+        for (let child of node.children) {
+          helper(child);
+        }
+      }
+    }
+  };
+
+  helper(root);
+  return descendants;
+}
+```
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children
+
+---
+
+### 12. Implement a function to clone a DOM tree
+
+- This function creates a deep copy of the given DOM node and its descendants.
+
+```js copy
+/**
+ * @param {HTMLElement | null} tree
+ * @return {HTMLElement | null}
+ */
+function cloneDOMTree(root) {
+  return root ? root.cloneNode(true) : null;
+}
+
+```
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode
+
+---
+
+### 13. Implement a function to count all elements in a DOM tree
+
+- This function counts all child elements, regardless of depth.
+
+```js copy
+/**
+ * @param {HTMLElement | null} tree
+ * @return {number}
+ */
+function countElements(root) {
+  if (!root) return 0;
+
+  let count = 1; // Count this element
+
+  if (root.hasChildNodes()) {
+    for (let child of root.children) {
+      count += countElements(child);
+    }
+  }
+
+  return count;
+}
+```
+---
+### 14. Implement a function to serialize a DOM tree into a string
+
+- This function converts a DOM tree into a string representation.
+
+```js copy
+/**
+ * @param {HTMLElement | null} tree
+ * @return {string}
+ */
+function serializeDOM(root) {
+  if (!root) return '';
+
+  let str = `<${root.tagName.toLowerCase()}`;
+
+  for (let attr of root.attributes) {
+    str += ` ${attr.name}="${attr.value}"`;
+  }
+
+  str += '>';
+
+  if (root.hasChildNodes()) {
+    for (let child of root.children) {
+      str += serializeDOM(child);
+    }
+  }
+
+  str += `</${root.tagName.toLowerCase()}>`;
+  return str;
+}
+```
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
+
+---
