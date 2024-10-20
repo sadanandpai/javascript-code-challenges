@@ -368,20 +368,19 @@ function cloneDOMTree(root) {
 
 ```js copy
 /**
- * @param {HTMLElement | null} tree
- * @return {number}
+ * Counts all child elements in a DOM tree.
+ *
+ * @param {HTMLElement | null} root - The root element from which to start counting.
+ * @return {number} - The total number of child elements.
  */
 function countElements(root) {
   if (!root) return 0;
 
-  let count = 1; // Count this element
+  let count = 1; 
 
-  if (root.hasChildNodes()) {
-    for (let child of root.children) {
-      count += countElements(child);
-    }
+  for (let child of root.children) {
+    count += countElements(child);
   }
-
   return count;
 }
 ```
