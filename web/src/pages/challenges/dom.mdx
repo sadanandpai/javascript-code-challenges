@@ -378,11 +378,9 @@ function countElements(root) {
 
   let count = 1; 
 
-  // Iterate over all child elements
   for (let child of root.children) {
     count += countElements(child);
   }
-
   return count;
 }
 ```
