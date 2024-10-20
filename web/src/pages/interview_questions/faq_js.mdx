@@ -300,3 +300,159 @@
       console.error('An error occurred:', error.message);
     }
     ```
+
+### 21. What are template literals in JavaScript? Provide an example.
+  *Answer:*
+  - Template literals are a feature introduced in ES6 that allow for easier string interpolation and multi-line strings. They are enclosed by backticks (`)        instead of single or double quotes.
+
+    ```javascript
+    const name = 'Alice';
+    const greeting = `Hello, ${name}!`;
+    console.log(greeting); // Output: Hello, Alice!
+    ```
+
+### 22. Explain the concept of "prototypal inheritance" in JavaScript.
+  *Answer:*
+  - Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects. This is achieved through the            prototype chain.
+
+    ```javascript
+    const animal = {
+      speak() {
+        console.log('Animal speaks');
+      },
+    };
+
+    const dog = Object.create(animal);
+    dog.speak(); // Output: Animal speaks
+    ```
+
+### 23. What are Promise.all() and Promise.race()? Provide examples of their usage.
+  *Answer:*
+  - Promise.all() takes an array of promises and returns a single promise that resolves when all of the promises in the array have resolved, or rejects if any     promise is rejected.
+  - Promise.race() returns a promise that resolves or rejects as soon as one of the promises in the array resolves or rejects.
+
+    ```javascript
+    // Example of Promise.all
+    Promise.all([
+      Promise.resolve(1),
+      Promise.resolve(2),
+      Promise.resolve(3),
+    ]).then(values => {
+      console.log(values); // Output: [1, 2, 3]
+    });
+
+    // Example of Promise.race
+    Promise.race([
+      new Promise((resolve) => setTimeout(() => resolve('First'), 1000)),
+      new Promise((resolve) => setTimeout(() => resolve('Second'), 500)),
+    ]).then(result => {
+      console.log(result); // Output: 'Second'
+    });
+    ```
+
+### 24. What are higher-order functions in JavaScript? Provide an example.
+  *Answer:* 
+   - Higher-order functions are functions that take other functions as arguments or return functions as their result. This allows for more abstract and             reusable code.
+
+    ```javascript
+    function createMultiplier(multiplier) {
+      return function(x) {
+        return x * multiplier;
+      };
+    }
+
+    const double = createMultiplier(2);
+    console.log(double(5)); // Output: 10
+    ```
+
+### 25. What is the difference between shallow copy and deep copy?
+  *Answer:*
+  - A shallow copy duplicates the top-level properties of an object. If the properties are references to other objects, the references are copied, not the         actual objects.
+  - A deep copy creates a new object and recursively copies all properties and their values.
+
+  ```javascript
+  const original = { a: 1, b: { c: 2 } };
+
+  // Shallow copy
+  const shallowCopy = Object.assign({}, original);
+  shallowCopy.b.c = 3; // Changes 'c' in both objects
+  console.log(original.b.c); // Output: 3
+
+  // Deep copy
+  const deepCopy = JSON.parse(JSON.stringify(original));
+  deepCopy.b.c = 4; // Changes 'c' only in deepCopy
+  console.log(original.b.c); // Output: 3
+  ```
+
+### 26. What is the purpose of setTimeout and setInterval in JavaScript? Provide examples.
+  *Answer:*
+  - setTimeout is used to execute a function after a specified delay (in milliseconds).
+  - setInterval is used to repeatedly execute a function at specified intervals.
+
+  ```javascript
+  setTimeout(() => {
+    console.log('Executed after 1 second');
+  }, 1000);
+
+  let count = 0;
+  const intervalId = setInterval(() => {
+    console.log('Count:', count++);
+    if (count === 5) clearInterval(intervalId); // Stop after 5 counts
+    }, 1000);
+  ```
+
+### 27. What are the JavaScript data types?
+  *Answer:* 
+  - JavaScript has several data types, including:
+
+  - Primitive Types:
+
+    1.  string: Represents text values.
+    2.  number: Represents numeric values.
+    3.  boolean: Represents true or false.
+    4.  null: Represents an intentional absence of any object value.
+    5.  undefined: Represents a variable that has been declared but not yet assigned a value.
+    6.  symbol: Represents a unique identifier (introduced in ES6).
+    7.  bigint: Represents integers with arbitrary precision (introduced in ES11).
+
+  - Reference Types:
+
+    1.  object: Represents complex data structures like arrays and objects.
+
+
+### 28. What is the difference between synchronous and asynchronous programming in JavaScript?
+  *Answer:*
+  - Synchronous programming executes code in a sequential manner, where each operation must complete before the next one starts.
+  - Asynchronous programming allows for operations to be executed independently of the main program flow, enabling code to run in the background while other       operations continue.
+
+  ```javascript
+  // Synchronous example
+  console.log('First');
+  console.log('Second');
+
+  // Asynchronous example
+  setTimeout(() => {
+    console.log('Asynchronous operation');
+  }, 1000);
+  console.log('Third');
+  ```
+
+### 29. How can you check if a variable is an array in JavaScript?
+  *Answer:*
+  - You can use the Array.isArray() method to check if a variable is an array.
+
+  ```javascript
+  const arr = [1, 2, 3];
+  console.log(Array.isArray(arr)); // Output: true
+
+  const obj = {};
+  console.log(Array.isArray(obj)); // Output: false
+  ```
+
+### 30. What is the difference between static and dynamic typing in JavaScript?
+  *Answer:*
+  - Static typing requires variable types to be declared explicitly, enabling type checking at compile time (not supported in 
+    JavaScript).
+  - Dynamic typing allows variables to hold values of any type without explicit type declaration, enabling type checking at runtime.
+
+
