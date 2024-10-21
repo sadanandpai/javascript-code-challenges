@@ -1,0 +1,297 @@
+### 1. Handling a Click Event to Change Text Content
+
+- In JavaScript, you can add event listeners to elements to respond to various events like mouse clicks, keyboard input, etc.
+- The addEventListener method is used to attach an event handler to an HTML element.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event Example</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <p id="myText">Original Text</p>
+
+    <script>
+        const button = document.getElementById('myButton');
+        const text = document.getElementById('myText');
+
+        button.addEventListener('click', () => {
+            text.textContent = 'Text Changed!';
+        });
+    </script>
+</body>
+</html>
+```
+
+When the button is clicked, the text content of the paragraph is changed.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+---
+
+### 2. Mouse Hover Event to Change Background Color
+   
+- The mouseover and mouseout events can be used to change the background color of an element when the mouse is hovered over it.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Example</title>
+</head>
+<body>
+    <div id="hoverDiv" style="width: 200px; height: 100px; background-color: lightgrey;">
+        Hover over me!
+    </div>
+
+    <script>
+        const div = document.getElementById('hoverDiv');
+
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'lightblue';
+        });
+
+        div.addEventListener('mouseout', () => {
+            div.style.backgroundColor = 'lightgrey';
+        });
+    </script>
+</body>
+</html>
+```
+
+When the mouse pointer enters the element, the background color changes to light blue, and when it leaves, it reverts to light grey.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
+
+----
+
+### 3. Form Submission Event to Prevent Default Behavior
+
+- The submit event can be used to intercept form submissions, and you can prevent the default behavior using event.preventDefault().
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Enter text" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Form submission intercepted!');
+        });
+    </script>
+</body>
+</html>
+```
+
+The form submission is prevented, and an alert is displayed instead.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+---
+
+### 4. Keyboard Event to Detect Key Presses
+
+- The keydown and keyup events can be used to detect when a key is pressed or released.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something..." />
+
+    <script>
+        const inputField = document.getElementById('inputField');
+
+        inputField.addEventListener('keydown', (event) => {
+            console.log('Key pressed:', event.key);
+        });
+    </script>
+</body>
+</html>
+```
+
+When you type in the input field, the key pressed is logged to the console.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+
+---
+
+### 5. Event Delegation to Handle Events on Multiple Elements
+
+- Event delegation is a technique of using a single event listener to manage events for multiple child elements.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+</head>
+<body>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        const itemList = document.getElementById('itemList');
+
+        itemList.addEventListener('click', (event) => {
+            if (event.target && event.target.nodeName === 'LI') {
+                console.log('Clicked item:', event.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
+Clicking on any list item triggers the event listener, logging the item's text.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation
+
+---
+
+### 6. Double Click Event to Toggle Element Visibility
+
+- The dblclick event is used to handle double-click actions.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click Event Example</title>
+</head>
+<body>
+    <p id="toggleText">Double-click to hide/show this text.</p>
+
+    <script>
+        const text = document.getElementById('toggleText');
+
+        text.addEventListener('dblclick', () => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
+```
+
+Double-clicking the paragraph toggles its visibility.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
+
+---
+
+### 7. Triggering a Custom Event
+
+- You can create and trigger custom events using the CustomEvent constructor.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Event Example</title>
+</head>
+<body>
+    <button id="triggerButton">Trigger Custom Event</button>
+
+    <script>
+        const button = document.getElementById('triggerButton');
+
+        button.addEventListener('myCustomEvent', (event) => {
+            console.log('Custom event triggered:', event.detail);
+        });
+
+        button.addEventListener('click', () => {
+            const customEvent = new CustomEvent('myCustomEvent', { detail: 'Some custom data' });
+            button.dispatchEvent(customEvent);
+        });
+    </script>
+</body>
+</html>
+```
+
+Clicking the button triggers a custom event, and the custom data is logged.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
+
+---
+
+### 8. Debouncing an Input Event to Improve Performance
+
+- Debouncing limits the rate at which a function is executed.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing Example</title>
+</head>
+<body>
+    <input type="text" id="debounceInput" placeholder="Type something..." />
+
+    <script>
+        const input = document.getElementById('debounceInput');
+
+        let debounceTimeout;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                console.log('Debounced input:', input.value);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+```
+
+The function is only executed after the user stops typing for 300 milliseconds.
+
+References
+
+https://developer.mozilla.org/en-US/docs/Web/API/setTimeout

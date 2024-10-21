@@ -4,5 +4,6 @@
   "objects": "Objects",
   "collections": "Collections",
   "async": "Asynchronous",
-  "dom": "DOM"
+  "dom": "DOM",
+  "event": "Event"
 }
