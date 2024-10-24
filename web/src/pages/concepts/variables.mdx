@@ -137,3 +137,65 @@
 - https://www.w3schools.com/js/js_const.asp
 - https://www.geeksforgeeks.org/javascript-const/
 - https://dev.to/shearytan/here-is-how-i-change-the-value-of-const-keyword-in-javascript-2gkd
+---
+### 7. Demonstrate Hoisting with var
+Show how var is hoisted to the top of its scope.
+
+```javascript
+
+console.log(myVar); // undefined
+var myVar = "Hoisted!";
+console.log(myVar); // "Hoisted!"
+```
+**Notes**
+
+- Variable declarations with var are hoisted to the top of their scope, but their initializations are not.
+
+**References**
+ - https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+---
+
+### 8. Create a Function to Demonstrate Scope of let
+Demonstrate the difference between block scope and function scope using let.
+
+```javascript
+
+function testScope() {
+    let x = "I'm inside the function";
+    if (true) {
+        let y = "I'm inside the block";
+        console.log(y); // "I'm inside the block"
+    }
+    // console.log(y); // Uncaught ReferenceError: y is not defined
+    console.log(x); // "I'm inside the function"
+}
+testScope();
+```
+**Notes**
+
+- This example illustrates how let is scoped to the nearest enclosing block, preventing access outside of it.
+
+**References**
+ - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+---
+### 9. Create Variables with Object and Array and Log Their Types
+Show how to create and log an object and an array's type.
+
+```javascript
+
+let user = {
+    name: "Alice",
+    age: 30
+};
+let colors = ["red", "green", "blue"];
+
+console.log(typeof user); // "object"
+console.log(typeof colors); // "object" (arrays are objects)
+```
+**Notes**
+
+- Both arrays and objects are identified as "object" type in JavaScript.
+
+**References**
+ - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
+---
