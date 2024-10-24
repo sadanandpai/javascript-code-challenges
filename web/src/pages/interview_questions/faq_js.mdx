@@ -456,3 +456,56 @@
   - Dynamic typing allows variables to hold values of any type without explicit type declaration, enabling type checking at runtime.
 
 
+### 40. What are the main differences between ES5 and ES6?
+1. Variable Declarations
+ES5: Uses var (function-scoped).
+ES6: Introduces let and const (block-scoped).
+
+2. Arrow Functions
+ES5: Regular functions with function.
+ES6: Arrow functions (() => {}) with lexical this.
+
+3. Template Literals
+ES5: String concatenation with +.
+ES6: Template literals using backticks for interpolation.
+
+4. Destructuring Assignment
+ES5: Manual extraction of values.
+ES6: Simplified destructuring for arrays and objects.
+
+5. Modules
+ES5: No native support; relies on libraries.
+ES6: Native import and export for modules.
+
+6. Promises
+ES5: Callbacks for async operations.
+ES6: Promises for better async handling.
+
+7. Iterators and Generators
+ES5: No support for iterators.
+ES6: Introduces iterators and generator functions.
+
+### 41. How do you implement inheritance in JavaScript?
+
+Inheritance can be implemented using prototypes or the class syntax introduced in ES6.
+```javascript
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.speak = function() {
+  console.log(`${this.name} makes a noise.`);
+};
+
+function Dog(name) {
+  Animal.call(this, name);
+}
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.bark = function() {
+  console.log(`${this.name} barks.`);
+};
+```
+---
+### 42. What is a memory leak in JavaScript, and how can you avoid it?
+- A memory leak occurs when memory that is no longer needed is not released. Common causes include global variables, closures, and forgotten timers. 
+  You can avoid memory leaks by ensuring proper cleanup of unused objects and avoiding unnecessary global variables.
+---
