@@ -420,3 +420,61 @@ function serializeDOM(root) {
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
 
 ---
+### 15. What is event delegation in the DOM and how can it be implemented in JavaScript?
+- Event delegation allows you to attach a single event listener to a parent element to manage events from its child elements, leveraging event bubbling. This improves performance and simplifies handling dynamically added elements.
+
+Here’s an example of how event delegation works:
+```js copy
+document.querySelector('#parent').addEventListener('click', function(event) {
+  if (event.target && event.target.matches('button')) {
+    console.log('Button clicked:', event.target.textContent);
+  }
+});
+```
+
+This approach optimizes performance and reduces memory usage, as fewer event listeners are attached to individual elements.
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes
+---
+
+### 16. How can you find all leaf nodes in a given DOM tree?
+- Leaf nodes in a DOM tree are elements that do not have any child elements. You can traverse the tree recursively to collect all leaf nodes.
+
+Implementation:
+```js copy
+function getLeafNodes(element) {
+  let leafNodes = [];
+
+  // Base case: if the element has no children, it's a leaf node
+  if (!element.children || element.children.length === 0) {
+    leafNodes.push(element);
+    return leafNodes;
+  }
+
+  // Recursive case: traverse through each child
+  for (let i = 0; i < element.children.length; i++) {
+    leafNodes = leafNodes.concat(getLeafNodes(element.children[i]));
+  }
+
+  return leafNodes;
+}
+
+// Example usage:
+const leafNodes = getLeafNodes(document.body);
+console.log('Leaf nodes:', leafNodes);
+
+```
+
+In this implementation:
+
+The function checks if the current element has no children. If so, it adds it to the leafNodes array.
+Otherwise, it recursively collects leaf nodes from each child.
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children
+---
+
+
