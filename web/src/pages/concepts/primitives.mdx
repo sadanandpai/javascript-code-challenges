@@ -443,3 +443,56 @@ const filePathExample = "Path: C:\\\\Program Files\\\\MyApp";
 console.log(filePathExample);
 // Output: Path: C:\\Program Files\\MyApp
 ```
+---
+### 15. Show the usage of instanceof operator on different types of objects
+The instanceof operator checks if an object is an instance of a specific class or constructor function.
+
+```javascript
+console.log([] instanceof Array); // true
+console.log({} instanceof Object); // true
+console.log(function() {} instanceof Function); // true
+console.log(new Date() instanceof Date); // true
+console.log("text" instanceof String); // false (primitive string, not an object)
+console.log(new String("text") instanceof String); // true (String object)
+```
+**References**
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
+---
+### 16. Demonstrate the usage of Array.isArray() to check for arrays
+The Array.isArray() method determines whether the provided value is an array.
+
+```javascript
+
+console.log(Array.isArray([])); // true
+console.log(Array.isArray({})); // false
+console.log(Array.isArray("string")); // false
+console.log(Array.isArray(new Array())); // true
+```
+**References**
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+---
+
+### 17. Show how to create and use a WeakMap with objects
+WeakMaps are collections of key-value pairs where keys are objects and can be garbage-collected if there are no other references.
+
+```javascript
+
+const weakMap = new WeakMap();
+
+let obj1 = {};
+let obj2 = {};
+
+weakMap.set(obj1, "Object 1");
+weakMap.set(obj2, "Object 2");
+
+console.log(weakMap.get(obj1)); // "Object 1"
+console.log(weakMap.get(obj2)); // "Object 2"
+
+obj1 = null; // obj1 can be garbage collected now
+// weakMap entry for obj1 will also be removed automatically
+```
+**References**
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
+---
+
+
