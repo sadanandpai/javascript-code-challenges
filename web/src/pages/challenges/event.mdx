@@ -294,4 +294,117 @@ The function is only executed after the user stops typing for 300 milliseconds.
 
 References
 
-https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+- https://developer.mozilla.org/en-US/docs/Web/API/setTimeout.
+
+---
+### 9. Using the once Option in Event Listener
+
+The once option lets an event listener execute only once, after which it automatically removes itself.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Once Event Listener Example</title>
+</head>
+<body>
+    <button id="oneClickButton">Click me only once</button>
+
+    <script>
+        const button = document.getElementById('oneClickButton');
+
+        button.addEventListener('click', () => {
+            alert('Button clicked once!');
+        }, { once: true });
+    </script>
+</body>
+</html>
+```
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#parameters
+---
+
+### 10.  Handling focus and blur Events for Input Validation
+
+The focus and blur events are helpful for form validation, showing messages when an input gains or loses focus.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus and Blur Example</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter username" />
+    <p id="message" style="display: none; color: red;">Username is required!</p>
+
+    <script>
+        const input = document.getElementById('username');
+        const message = document.getElementById('message');
+
+        input.addEventListener('focus', () => {
+            message.style.display = 'none';
+        });
+
+        input.addEventListener('blur', () => {
+            if (!input.value) {
+                message.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
+**References**
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
+---
+### 11. Preventing Event Propagation
+
+Sometimes, you might want to prevent an event from propagating to parent elements using stopPropagation.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation Example</title>
+</head>
+<body>
+    <div id="outer" style="padding: 20px; background-color: lightcoral;">
+        Outer Div
+        <div id="inner" style="padding: 20px; background-color: lightblue;">
+            Inner Div
+        </div>
+    </div>
+
+    <script>
+        const outer = document.getElementById('outer');
+        const inner = document.getElementById('inner');
+
+        outer.addEventListener('click', () => {
+            alert('Outer div clicked');
+        });
+
+        inner.addEventListener('click', (event) => {
+            alert('Inner div clicked');
+            event.stopPropagation();  // Prevents the outer div click from triggering
+        });
+    </script>
+</body>
+</html>
+```
+
+**References**
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
+---
