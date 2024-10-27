@@ -259,6 +259,44 @@ References
 https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
 
 ---
+### 8. Debouncing an Input Event to Improve Performance
+
+- Debouncing limits the rate at which a function is executed.
+  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing Example</title>
+</head>
+<body>
+    <input type="text" id="debounceInput" placeholder="Type something..." />
+
+    <script>
+        const input = document.getElementById('debounceInput');
+
+        let debounceTimeout;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                console.log('Debounced input:', input.value);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+```
+
+The function is only executed after the user stops typing for 300 milliseconds.
+
+References
+
+- https://developer.mozilla.org/en-US/docs/Web/API/setTimeout.
+
+---
+
 
 ### 9. Using the once Option in Event Listener
 
