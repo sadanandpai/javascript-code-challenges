@@ -15,6 +15,16 @@
 
 ---
 
+### Stargazers
+
+[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/stargazers)
+
+### Forkers
+
+[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/network/members)
+
+---
+
 ### Contributing Guide
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./contributing.md)
