@@ -445,7 +445,7 @@ emp.getSalary(); // 11000
 
 **Notes**
 
-Class in JavaScript is a functionality to achieve class based model on top of prototype based programming model of JavaScript
+Class in JavaScript is a functionality to achieve a class-based model on top of the prototype-based programming model of JavaScript
 
 **References**
 
@@ -453,9 +453,9 @@ Class in JavaScript is a functionality to achieve class based model on top of pr
 
 ---
 
-### 14. Write a program to make all the properties of an object read only but allow the addition of new properties
+### 14. Write a program to make all the properties of an object read-only but allow the addition of new properties
 
-- The exisiting properties of the object can be made read only with `set` keyword using Proxy
+- The existing properties of the object can be made read-only with the `set` keyword using the Proxy
 
 ```js copy
 const readOnlyObj = new Proxy(obj, {
@@ -463,9 +463,9 @@ const readOnlyObj = new Proxy(obj, {
     return target[key];
   },
 
-  set: function () {
+  set: function (target, key, value) {
     if (target.hasOwnProperty(key)) {
-      throw new Error("Object properties are read only");
+      throw new Error("Object properties are read-only");
     }
     target[key] = value;
   },
@@ -474,7 +474,7 @@ const readOnlyObj = new Proxy(obj, {
 
 **Notes**
 
-If condition takes care whether the property is new or existing to handle the read only scenario
+If the condition takes care of whether the property is new or existing to handle the read-only scenario
 
 **References**
 
@@ -482,7 +482,7 @@ If condition takes care whether the property is new or existing to handle the re
 
 ---
 
-### 15. Write a program which can return a boolean if value is present in the range with given start and end values in an object
+### 15. Write a program that can return a boolean if value is present in the range with given start and end values in an object
 
 ```js copy
 // Example
@@ -507,7 +507,7 @@ range = new Proxy(range, {
 
 ---
 
-### 16. Write a function which accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tagname
+### 16. Write a function that accepts a topic and a list of related tags to store the information. The same function should return all the topics when requested with a tag name
 
 ```js copy
 // Example
@@ -520,8 +520,8 @@ tagManager.getTopics.getTopics("VDOM"); // React, Vue
 tagManager.getTopics.getTopics("JavaScript"); // React, Angular, Vue
 ```
 
-- The tags can be stored as keys and array of topics as values in a map
-- Function module can be desgined to expose 'addTags' and 'getTopics' by tagname
+- The tags can be stored as keys and an array of topics as values in a map
+- Function module can be designed to expose 'addTags' and 'getTopics' by tag name
 
 ```js copy
 function TagManager() {
@@ -552,7 +552,7 @@ function TagManager() {
 
 ---
 
-### 17. Write a function which accepts a collection of values & an iteratee as arguments and returns a grouped object
+### 17. Write a function that accepts a collection of values & an iteratee as arguments and returns a grouped object
 
 ```js copy
 // Example
@@ -560,8 +560,8 @@ groupBy([6.1, 4.2, 6.3], Math.floor); // { 6: [6.1, 6.3], 4: [4.2] }
 groupBy(["one", "two", "three"], "length"); // { 3: ['one', 'two'], 5: ['three'] }
 ```
 
-- As the 2nd argument is either a functin or property, the iteratee can be perfrom accordingly on the value of arrays
-- An empty object can be created and used to push the values of array to respective property of the iteratee output
+- As the 2nd argument is either a function or property, the iteratee can be performed accordingly on the value of arrays
+- An empty object can be created and used to push the values of the array to the respective property of the iteratee output
 
 ```js copy
 function groupBy(values, iteratee) {
@@ -582,10 +582,10 @@ function groupBy(values, iteratee) {
 
 ---
 
-### 18. Create a constructor function which allows its functions present on prototype to be accessed only by the objects created by calling it
+### 18. Create a constructor function that allows its functions present on the prototype to be accessed only by the objects created by calling it
 
-- The list of objects created by the function can be kept in track using a collection object inside function
-- `Weakset` can be a prefered way to use as collection for objects created through it as the dereferencing the object helps in garbage collection
+- The list of objects created by the function can be kept track of using a collection object inside the function
+- `Weakset` can be a preferred way to use as a collection for objects created through it as the dereferencing of the object helps in garbage collection
 - A context validation within prototype method can be set if the object is created by the function itself or not
 
 ```js copy
@@ -612,7 +612,7 @@ ProtectedFunction.prototype.method.call(obj); // Incompatible object!
 
 ---
 
-### 19. Design a utility on an array of objects where the access can be made to the object using index (as usual) and also from primary key of the object
+### 19. Design a utility on an array of objects where access can be made to the object using the index (as usual) and also from the primary key of the object
 
 ```js copy
 // Example
@@ -627,7 +627,7 @@ flexEmployees["Pai"]; // { name: 'Pai', id: '0' }
 flexEmployees["doe"]; // undefined
 ```
 
-- The access to the index happens for arrays by default and the Proxy can be setup to enable the fetching of object using primary key (any other key can also be coded)
+- The access to the index happens for arrays by default and the Proxy can be set to enable the fetching of objects using the primary key (any other key can also be coded)
 
 ```js copy
 const flexEmployees = new Proxy(employees, {
@@ -645,7 +645,7 @@ const flexEmployees = new Proxy(employees, {
 
 ---
 
-### 20. Write a function which receives an object and returns a true if the object has circular reference
+### 20. Write a function that receives an object and returns a true if the object has a circular reference
 
 ```js copy
 // Example
@@ -653,7 +653,7 @@ var circularReferenceObj = { data: 123 };
 circularReferenceObj.myself = circularReferenceObj;
 ```
 
-- Stringification of an object having circular references will throw error
+- Stringification of an object having circular references will throw an error
 
 ```js copy
 function doesObjectHaveCircularRef(obj) {
@@ -672,11 +672,11 @@ function doesObjectHaveCircularRef(obj) {
 
 ---
 
-### 21. Write a code which can eliminate circular references in an object (Cyclic reference in an object)
+### 21. Write a code that can eliminate circular references in an object (Cyclic reference in an object)
 
-- Circular / cyclic reference exists when the object property value forms a cycle
+- Circular/cyclic reference exists when the object property value forms a cycle
 - The circular references can be eliminated by passing a function to take care of circular references during stringification
-- The circular references can be also be eliminated by setting the such property value to null on the object itself
+- The circular references can also be eliminated by setting such property value to null on the object itself
 
 ```js copy
 const getCircularReplacer = () => {
@@ -716,14 +716,14 @@ function removeCircularRef(obj) {
 
 **Notes**
 
-`circularReferenceObj` is assumed to be an object with cyclic reference
+`circularReferenceObj` is assumed to be an object with a cyclic reference
 
 ---
 
 ### 22. Provide an object on which a value can be set to nested property even if it does not exist.
 
 - The nested object can be accessed only if all the nested properties are defined on the object
-- A proxy can designed to create such nested object properties on demand whenever such non existent property is requested and attempted to set with value
+- A proxy can designed to create such nested object properties on demand whenever such non-existent property is requested and attempted to set with value
 - `get` trap of proxy can be used to create the objects dynamically and set the value
 
 ```js copy
