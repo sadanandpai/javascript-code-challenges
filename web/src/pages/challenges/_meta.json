@@ -1,9 +1,0 @@
-{
-  "primitives": "Primitives",
-  "functions": "Functions",
-  "objects": "Objects",
-  "collections": "Collections",
-  "async": "Asynchronous",
-  "dom": "DOM",
-  "event": "Event"
-}

@@ -1,0 +1,46 @@
+import Image from "next/image";
+import { Cards } from "nextra/components";
+
+export const metadata = {
+  title: "JS Code Challenges",
+  description: "Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice",
+  keywords: ["javascript", "code Challenges"],
+  authors: [
+    {
+      name: "Sadanand",
+      url: "https://github.com/sadanandpai",
+    },
+  ],
+};
+
+<div style={{textAlign: 'center'}}>
+# Welcome to JS Code Challenges1
+
+Collection of modern interview code challenges on JavaScript suitable for <br />
+**Interviewees | Interviewers | Knowledge test | Practice**
+
+<Image
+  src="/hero.svg"
+  alt="hero banner"
+  width={400}
+  height={350}
+  style={{
+    margin: 'auto',
+    marginTop: '4rem',
+    marginBottom: '4rem',
+  }}
+/>
+</div>
+
+<Cards num={2} className="cards">
+  <Cards.Card title="Concepts" href="/concepts/variables" />
+  <Cards.Card title="Challenges" href="/challenges/primitives" />
+</Cards>
+
+<br />
+<br />
+
+<div style={{textAlign: 'center'}}>
+  Show your support by giving a ★ <br /> to [JavaScript Code
+  Challenges](https://github.com/sadanandpai/javascript-code-challenges) repo
+</div>
