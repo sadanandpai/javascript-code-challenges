@@ -1,20 +1,14 @@
 import Image from "next/image";
 import { Cards } from "nextra/components";
+import "./app.css";
 
 export const metadata = {
-  title: "JS Code Challenges",
-  description: "Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice",
-  keywords: ["javascript", "code Challenges"],
-  authors: [
-    {
-      name: "Sadanand",
-      url: "https://github.com/sadanandpai",
-    },
-  ],
-};
+  title: "JavaScript Code Challenges",
+}
 
 <div style={{textAlign: 'center'}}>
-# Welcome to JS Code Challenges1
+<br/>
+# Welcome to JS Code Challenges
 
 Collection of modern interview code challenges on JavaScript suitable for <br />
 **Interviewees | Interviewers | Knowledge test | Practice**
@@ -32,9 +26,9 @@ Collection of modern interview code challenges on JavaScript suitable for <br />
 />
 </div>
 
-<Cards num={2} className="cards">
-  <Cards.Card title="Concepts" href="/concepts/variables" />
-  <Cards.Card title="Challenges" href="/challenges/primitives" />
+<Cards num={2}>
+  <Cards.Card className="card" title="Concepts" href="/concepts/variables" />
+  <Cards.Card className="card" title="Challenges" href="/challenges/primitives" />
 </Cards>
 
 <br />

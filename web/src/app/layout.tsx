@@ -3,25 +3,49 @@ import "nextra-theme-docs/style.css";
 import { Layout, Navbar } from "nextra-theme-docs";
 
 import { Head } from "nextra/components";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { ReactNode } from "react";
 import { getPageMap } from "nextra/page-map";
 
 export const metadata: Metadata = {
   title: "JavaScript Code Challenges",
-  description: "JavaScript Code Challenges",
+  description:
+    "Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice",
   keywords: ["javascript", "code Challenges"],
   authors: [
     {
-      name: "Sadanand",
+      name: "Sadanand Pai",
       url: "https://github.com/sadanandpai",
     },
   ],
+
+  openGraph: {
+    url: "https://jscodechallenges.vercel.app/",
+    type: "website",
+    title: "JavaScript Code Challenges",
+    description:
+      "Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice",
+    images: [
+      {
+        url: "https://jscodechallenges.vercel.app/banner.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "jscodechallenges.vercel.app",
+    title: "JavaScript Code Challenges",
+    description:
+      "Collection of modern interview code challenges on JavaScript suitable for Interviewees | Interviewers | Knowledge test | Practice",
+    images: ["https://jscodechallenges.vercel.app/banner.png"],
+  },
+  creator: "Sadanand Pai",
+  publisher: "Sadanand Pai",
 };
 
 const navbar = (
   <Navbar
-    logo={<>JavaScript Code Challenges</>}
+    logo={<strong>JavaScript Code Challenges</strong>}
     projectLink="https://github.com/sadanandpai/javascript-code-challenges"
   />
 );
@@ -40,16 +64,14 @@ export default async function RootLayout({
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
     >
-      <Head
-      // ... Your additional head options
-      >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+      <Head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
         <Layout
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+          docsRepositoryBase="https://github.com/sadanandpai/javascript-code-challenges/tree/main/web"
         >
           {children}
         </Layout>
