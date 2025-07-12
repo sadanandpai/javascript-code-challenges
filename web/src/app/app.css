@@ -1,0 +1,16 @@
+.cards.cards {
+   gap: 2rem;
+}
+
+.card span {
+  display: flex;
+  justify-content: center;
+}
+
+.dark .card  {
+  border-color: rgb(150, 150, 150);
+}
+
+.dark .card:hover {
+  border-color: white;
+}
