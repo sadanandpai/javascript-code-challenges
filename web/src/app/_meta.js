@@ -7,6 +7,7 @@ const meta = {
       breadcrumb: false,
       pagination: false,
       sidebar: true,
+      timestamp: false,
     },
     display: "hidden",
   },

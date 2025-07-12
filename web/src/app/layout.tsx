@@ -1,8 +1,8 @@
 import "nextra-theme-docs/style.css";
 
+import { Head, Search } from "nextra/components";
 import { Layout, Navbar } from "nextra-theme-docs";
 
-import { Head } from "nextra/components";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { getPageMap } from "nextra/page-map";
@@ -72,6 +72,8 @@ export default async function RootLayout({
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/sadanandpai/javascript-code-challenges/tree/main/web"
+          search={<Search placeholder="Search" />}
+          feedback={{ content: null }}
         >
           {children}
         </Layout>
