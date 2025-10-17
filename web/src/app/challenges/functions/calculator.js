@@ -17,7 +17,7 @@ function Calculator(num1, num2) {
     return Math.floor(num1 / num2);
   }
 
-  // Expose public methods
+ 
   return { sum, difference, product, dividend };
 }
 
