@@ -22,12 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: web/package-lock.json
 
       - name: Install dependencies
         working-directory: ./web
-        run: npm ci
+        run: npm install
 
       - name: Run ESLint
         working-directory: ./web
