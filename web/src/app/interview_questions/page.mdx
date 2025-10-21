@@ -509,3 +509,25 @@ Dog.prototype.bark = function() {
 - A memory leak occurs when memory that is no longer needed is not released. Common causes include global variables, closures, and forgotten timers. 
   You can avoid memory leaks by ensuring proper cleanup of unused objects and avoiding unnecessary global variables.
 ---
+
+
+### 34. Reverse words in a sentence
+
+#### Important points
+- Given a sentence (string), return a new string with the order of words reversed but keep characters in each word same
+- Words may be separated by multiple spaces; output should have single spaces only
+- Leading and trailing spaces should be trimmed
+
+#### Solution program
+```js
+// Approach: split on whitespace, filter empty strings, reverse array, join with single space
+function reverseWords(sentence) {
+  const words = sentence.trim().split(/\s+/)
+  words.reverse()
+  return words.join(' ')
+}
+
+// Example usages
+console.log(reverseWords("Hello   world")) // Output: world Hello
+console.log(reverseWords("  one two   three  ")) // Output: three two one
+console.log(reverseWords("")) // Output: 
