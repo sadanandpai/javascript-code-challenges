@@ -15,6 +15,113 @@
 
 ---
 
+## 📚 Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Build](#build)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+---
+
+## 🎯 About
+
+JavaScript Code Challenges is a comprehensive collection of modern JavaScript interview questions and coding challenges. Whether you're preparing for technical interviews, testing your knowledge, or looking to practice your JavaScript skills, this repository has you covered.
+
+## ✨ Features
+
+- 📝 **Organized by Topics**: Challenges categorized into Primitives, Collections, Functions, Objects, Async, DOM, and Events
+- 💡 **Conceptual Explanations**: Detailed concept guides for better understanding
+- 🔍 **Multiple Solutions**: Many challenges include multiple approaches to solve the same problem
+- 📖 **Well Documented**: Each challenge includes examples, notes, and references
+- 🎨 **Modern UI**: Built with Next.js and Nextra for an excellent browsing experience
+- 🔎 **Searchable**: Integrated search functionality to find challenges quickly
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- **Node.js** (version 18.x or higher)
+- **npm** or **yarn** package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sadanandpai/javascript-code-challenges.git
+   cd javascript-code-challenges
+   ```
+
+2. **Navigate to the web directory**
+   ```bash
+   cd web
+   ```
+
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+### Development
+
+To run the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:3000`
+
+### Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To run the production build:
+
+```bash
+npm start
+```
+
+---
+
+## 📁 Project Structure
+
+```
+javascript-code-challenges/
+├── .github/              # GitHub configuration files
+│   ├── workflows/        # GitHub Actions CI/CD
+│   └── ISSUE_TEMPLATE/   # Issue templates
+├── web/                  # Next.js application
+│   ├── src/
+│   │   └── app/
+│   │       ├── challenges/    # Challenge pages
+│   │       ├── concepts/      # Concept explanation pages
+│   │       └── interview_questions/
+│   ├── public/           # Static assets
+│   └── package.json
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── contributing.md
+├── usageGuide.md
+└── README.md
+```
+
+---
+
 ### Stargazers
 
 [![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/javascript-code-challenges)](https://github.com/sadanandpai/javascript-code-challenges/stargazers)
@@ -25,10 +132,28 @@
 
 ---
 
+---
+
 ### Contributing Guide
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./contributing.md)
+
+**Quick Contribution Tips:**
+- 🐛 Found a bug? [Report it](https://github.com/sadanandpai/javascript-code-challenges/issues/new?template=bug_report.md)
+- 💡 Have an idea? [Share it](https://github.com/sadanandpai/javascript-code-challenges/issues/new?template=feature_request.md)
+- 🔧 Want to contribute code? Check our [contribution guidelines](./contributing.md)
+
 <br/><br/>
+
+### Support
+
+If you find this project helpful:
+- ⭐ Star the repository
+- 🐛 Report bugs and issues
+- 💡 Suggest new challenges or improvements
+- 📢 Share with others who might benefit
+
+---
 
 ### License
 
