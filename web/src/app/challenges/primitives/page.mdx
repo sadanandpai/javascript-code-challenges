@@ -2,10 +2,10 @@ export const metadata = {
   title: "Primitives | Challenges",
 }
 
-### 1. Swap two integers present in variables num1 and num2 without using temporary variable
+### 1. Swap two integers present in variables num1 and num2 without using a temporary variable
 
-- The swapping of 2 variables is possible with simple Destructuring assignment using array
-- Traditional approach of swapping by using the given variables is also achievable
+- The swapping of 2 variables is possible with simple Destructuring assignment using an array
+- The traditional approach of swapping by using the given variables is also achievable
 
 ```js copy
 let num1 = 10, num2 = 20;
@@ -21,11 +21,11 @@ num1 = num1 - num2;
 
 **Notes**
 
-2nd solution can fail due to overflow of number range if the numbers are very big
+2nd solution can fail due to overflow of the number range if the numbers are very big
 
 ---
 
-### 2. Write a function which returns true if given value of number is an integer without using any inbuilt functions
+### 2. Write a function that returns true if the given value of a number is an integer without using any inbuilt functions
 
 ```js copy
 // Example
@@ -34,7 +34,7 @@ isInt(12.2); // false
 isInt(0.3); // false
 ```
 
-- Modulo operator can be used to check if there is a remainder left when divided by 1
+- The modulo operator can be used to check if there is a remainder left when divided by 1
 
 ```js copy
 function isInt(value) {
@@ -44,13 +44,13 @@ function isInt(value) {
 
 ---
 
-### 3. Create a function which returns a random number in the given range of values both inclusive
+### 3. Create a function that returns a random number in the given range of values, both inclusive
 
 - `Math.random` function returns a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive)
 
 ```js copy
 function randomNumberGeneratorInRange(rangeStart, rangeEnd) {
-  return rangeStart + Math.round(Math.random() * (rangeEnd - rangeStart));
+  return rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) 
 }
 
 randomNumberGeneratorInRange(10, 50); // 12
@@ -68,8 +68,8 @@ Usage of `Math.round` depends on the logic used to accomplish the requirement
 
 ### 4. Write a program to reverse a string
 
-- String can be reversed by iterating it and storing it in reverse order
-- String can also be reversed by converting it to array, then joining it after reversing
+- A string can be reversed by iterating over it and storing it in reverse order
+- A string can also be reversed by converting it to an array, then joining it after reversing
 
 ```js copy
 const str = "JavaScript is awesome";
